@@ -1,0 +1,7454 @@
+fileFormatVersion: 2
+guid: fa7cdf6daef6acf4a80a54f32cd5edb2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Food Sprites 01_0
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 3816
+        width: 189
+        height: 157
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15b91303058a484b993b1f190ccba9a
+      internalID: -126760634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_1
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 3815
+        width: 167
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6a75627eda1114e8e7f039f922ae50
+      internalID: 997645070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_2
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 3824
+        width: 122
+        height: 143
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10582f953ed293249be8bcfe603ad41d
+      internalID: -1071674139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_3
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 3825
+        width: 141
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f6964cd5cd4284dbd589f8c1083aa5
+      internalID: -1187601798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_4
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 3823
+        width: 181
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4997ab6a171fb41893aeec0a57b5bf
+      internalID: 142247909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_5
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 3859
+        width: 170
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5037f9cd51561444bef3003a7665283
+      internalID: 1432903770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_6
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 3858
+        width: 164
+        height: 114
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e98760fa47da245bdf59989b34c554
+      internalID: 2139350776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_7
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 3865
+        width: 150
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312f96e0bb662a94684da6c205de3cd1
+      internalID: -1187273150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_8
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 3859
+        width: 155
+        height: 114
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4746500fd7d06149a80ac93b36fa344
+      internalID: -973100489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_9
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 3859
+        width: 170
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d14629b703b094cbc476d6cfaa1e03
+      internalID: 826543952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_10
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 3781
+        width: 55
+        height: 182
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e8c4c1854066b4eb018ad46f7af62e
+      internalID: -1246921653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_11
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 3775
+        width: 66
+        height: 200
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b07a3870c3ea434d8d7c01208028391
+      internalID: 1769176753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_12
+      rect:
+        serializedVersion: 2
+        x: 2408
+        y: 3771
+        width: 72
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b69bc0cbc7d584dbf6a3d7387dd248
+      internalID: -1801990485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_13
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 3776
+        width: 87
+        height: 190
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc31596778b96f1498a1102c37c5b5a2
+      internalID: 1169557344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_14
+      rect:
+        serializedVersion: 2
+        x: 2691
+        y: 3783
+        width: 41
+        height: 192
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261510a23523229438ed966b9cfee00c
+      internalID: -1537604265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_15
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 3777
+        width: 57
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab5d23820f384c42bc10834e97e1224
+      internalID: -111341009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_16
+      rect:
+        serializedVersion: 2
+        x: 2933
+        y: 3766
+        width: 75
+        height: 206
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2edd5395370bfe41bed102f8ce3ae25
+      internalID: 2127597500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_17
+      rect:
+        serializedVersion: 2
+        x: 3139
+        y: 3852
+        width: 105
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4212fb3e3b2b48f408d0dfbdc7dfba66
+      internalID: -1769540093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_18
+      rect:
+        serializedVersion: 2
+        x: 3692
+        y: 3848
+        width: 128
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efeca7d6c1f8de24c990cb129a4e41b7
+      internalID: 877977087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_19
+      rect:
+        serializedVersion: 2
+        x: 3884
+        y: 3856
+        width: 155
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c6ed58ca442c445a8f29b6e89f7c23
+      internalID: -577187752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_20
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 3581
+        width: 207
+        height: 165
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eddad2023d7e2b48bc3fcbc9f7f3dfe
+      internalID: -967866118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_21
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 3577
+        width: 129
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343afc7b7f00bc94ab32a1b7c86dbdbe
+      internalID: 1020255214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_22
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 3591
+        width: 126
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f62814595be77646926a09b0d657270
+      internalID: 1994723133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_23
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 3589
+        width: 131
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf307cc6cc1bad4db0b787df27c107d
+      internalID: 189904406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_24
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 3569
+        width: 172
+        height: 193
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21637dd98ed4fb42818c32fa9cfb9a3
+      internalID: -1858004781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_25
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 3662
+        width: 173
+        height: 127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bfe1941d896aee45a81b8a4ef0e1089
+      internalID: -424118886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_26
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 3671
+        width: 157
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134e39cad83bb154cb9a9c06a8553817
+      internalID: 685229846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_27
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 3668
+        width: 161
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf5b3fb62e197047b62ac542ba1ac86
+      internalID: -186837159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_28
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 3669
+        width: 160
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2685d842417c8d54f88de3627f9e4ef6
+      internalID: -352037966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_29
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 3667
+        width: 163
+        height: 115
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8048ae5417ec75c408a1484370a06fc5
+      internalID: 422540038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_30
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 3471
+        width: 81
+        height: 252
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4244767e2c795e441910060da48fdcc3
+      internalID: -213501815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_31
+      rect:
+        serializedVersion: 2
+        x: 2269
+        y: 3469
+        width: 72
+        height: 255
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f5b59563523434b9c685da0caa7656
+      internalID: 1959234643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_32
+      rect:
+        serializedVersion: 2
+        x: 2426
+        y: 3476
+        width: 43
+        height: 250
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf3666956be94e48b877cd29a0a569a
+      internalID: -75853380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_33
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 3475
+        width: 102
+        height: 250
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3ac7dd71fe3ce4abec6a1bf8768b11
+      internalID: 640336326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_34
+      rect:
+        serializedVersion: 2
+        x: 2694
+        y: 3475
+        width: 58
+        height: 255
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684665dc17f69c044bc5c6146304062c
+      internalID: 1500793197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_35
+      rect:
+        serializedVersion: 2
+        x: 2801
+        y: 3478
+        width: 75
+        height: 253
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfefb2e96744acc48a3ed4d31faad12f
+      internalID: 1525386211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_36
+      rect:
+        serializedVersion: 2
+        x: 2923
+        y: 3482
+        width: 80
+        height: 247
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95de226dff02f1468cc58526c0553b6
+      internalID: -1654796185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_37
+      rect:
+        serializedVersion: 2
+        x: 3109
+        y: 3696
+        width: 151
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19cdccec0023c34e97899eacc9240c5
+      internalID: -775702348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_38
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 3696
+        width: 148
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5833beb33b9174096a4f9cb16974ee
+      internalID: -1735053037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_39
+      rect:
+        serializedVersion: 2
+        x: 3686
+        y: 3701
+        width: 144
+        height: 96
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c18e85dbf128e649b4934cee33d9b3f
+      internalID: 1279675952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_40
+      rect:
+        serializedVersion: 2
+        x: 3887
+        y: 3697
+        width: 151
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b2d11102a01974fa31d1b96b1eca11
+      internalID: -1894460344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_41
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 3472
+        width: 160
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee7de99ea84d6a4982f737a79e8644d
+      internalID: 2016318178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_42
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 3473
+        width: 135
+        height: 132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3419d3083ae23544394750d1638f1b00
+      internalID: -125542131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_43
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 3483
+        width: 141
+        height: 112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419821fc5abe2444c9caed6bbab7e9d5
+      internalID: 393801814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_44
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 3481
+        width: 156
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42b514509324f84dbabf87be4b2c249
+      internalID: -1031631943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_45
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 3476
+        width: 184
+        height: 122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a57f7a113487454d837b0bb856878db
+      internalID: -168696483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_46
+      rect:
+        serializedVersion: 2
+        x: 3105
+        y: 3549
+        width: 147
+        height: 99
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0cd7dbcb912eca439243b253d1fd5b7
+      internalID: -588813448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_47
+      rect:
+        serializedVersion: 2
+        x: 3282
+        y: 3540
+        width: 167
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb67c7556ac73f54788df4447e876d33
+      internalID: 535988668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_48
+      rect:
+        serializedVersion: 2
+        x: 3886
+        y: 3540
+        width: 152
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29beb66b93ca2ab44a23355ffcf8fd73
+      internalID: -740686920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3311
+        width: 162
+        height: 158
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026070a0413cfeb498f4478bb676f1cd
+      internalID: -594186462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_50
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 3316
+        width: 120
+        height: 153
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b20b1a0d8352b045a4b1cc41c67ada6
+      internalID: -892515894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_51
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 3324
+        width: 99
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f627077644fef540846c1f43bad4c03
+      internalID: 2128559242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_52
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 3308
+        width: 73
+        height: 165
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97e2316b4b2e644ca4fcd5f5faaaeae
+      internalID: -1200574178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_53
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 3309
+        width: 132
+        height: 164
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4765493acf1be64d9fb7588c3f8fc53
+      internalID: -126443571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_54
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 3273
+        width: 161
+        height: 131
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f31d458413e5443892064249d2239a
+      internalID: -578309479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_55
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 3280
+        width: 170
+        height: 127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c9db395b7f8964a848640934689dbd
+      internalID: -2083354625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_56
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 3401
+        width: 107
+        height: 94
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111a0851a3075544c9360c7338bf7428
+      internalID: 998361848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_57
+      rect:
+        serializedVersion: 2
+        x: 3312
+        y: 3364
+        width: 96
+        height: 141
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2feab8d258f0bd846ab9c26bd7713e4a
+      internalID: -1013454692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_58
+      rect:
+        serializedVersion: 2
+        x: 3451
+        y: 3365
+        width: 143
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc19303ada75a9429461a412ff2231c
+      internalID: 964904692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_59
+      rect:
+        serializedVersion: 2
+        x: 3634
+        y: 3374
+        width: 217
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e5b910b6fa00148a2dd289545c7c44
+      internalID: 1479179988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_60
+      rect:
+        serializedVersion: 2
+        x: 3894
+        y: 3379
+        width: 148
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d3279699e61fd4091c92d0a373a92a
+      internalID: 815423960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_61
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 3272
+        width: 157
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e433fd95e2b8543be8f9278be99b3c
+      internalID: -1447114685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_62
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 3271
+        width: 156
+        height: 115
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea08e9b31f165340b8182b425c4d5b9
+      internalID: 1080497275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_63
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 3272
+        width: 175
+        height: 112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165e49cb27521b04a87960c384acce3b
+      internalID: 458218509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_64
+      rect:
+        serializedVersion: 2
+        x: 2197
+        y: 3181
+        width: 194
+        height: 139
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ecfaba3331aba14e90d3bb87e53f937
+      internalID: -744198030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_65
+      rect:
+        serializedVersion: 2
+        x: 2464
+        y: 3170
+        width: 137
+        height: 160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df655c1261db06047b74d904e461f703
+      internalID: 316047594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_66
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 3170
+        width: 167
+        height: 144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6b93ad0c4fb8a4aa4d3f0096795fbd
+      internalID: -1103591143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_67
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 3200
+        width: 150
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ed71fe98baef448a1e4fa6e57a792c
+      internalID: -624941271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_68
+      rect:
+        serializedVersion: 2
+        x: 3308
+        y: 3198
+        width: 132
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa7cb83414202845bdb7140277c50a5
+      internalID: 1094205942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_69
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 3198
+        width: 176
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abd4c568574a61489fd7dd1cb5eb9cc
+      internalID: 158787685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_70
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 3207
+        width: 135
+        height: 99
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3974b39840963e3438ef4878fcb35a33
+      internalID: 139755659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_71
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 3052
+        width: 172
+        height: 151
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e7fe5f9643b36428090bb3616dc12b
+      internalID: 1921582995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_72
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 3046
+        width: 152
+        height: 168
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e8ad1817aa307409cb239203684c5b
+      internalID: -1885525023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_73
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 3050
+        width: 97
+        height: 185
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a6a3950deef2443ae41cfbebb2adea
+      internalID: -150246664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_74
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 3054
+        width: 94
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369565a190a8dd04b971cf3981aeae47
+      internalID: 1456930129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_75
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 3049
+        width: 196
+        height: 161
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72f1a8671270814ea9c37f2c91b7f68
+      internalID: 615163492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_76
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 3059
+        width: 164
+        height: 151
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ab805e18c4a294a8a5078e2893779f
+      internalID: -1620690318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_77
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 3067
+        width: 150
+        height: 143
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db0eed0c92bfeac409fadbbbaa5765f6
+      internalID: -553837622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_78
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 3065
+        width: 211
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e79be0f53d31cd4faf2b56b896c435d
+      internalID: 1600586664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_79
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 3067
+        width: 116
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c3e9a428268b049869145bedf825da
+      internalID: -1259910374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_80
+      rect:
+        serializedVersion: 2
+        x: 1859
+        y: 3066
+        width: 189
+        height: 154
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1ff63397148f4428f3a8ef543b7971
+      internalID: 319923475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_81
+      rect:
+        serializedVersion: 2
+        x: 3114
+        y: 3040
+        width: 139
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb448f0900ec2b04c9c39ff7fffc0cac
+      internalID: 2038420405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_82
+      rect:
+        serializedVersion: 2
+        x: 3299
+        y: 3045
+        width: 143
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8f382ce76fe9d41886452fd88c0801
+      internalID: 1331437264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_83
+      rect:
+        serializedVersion: 2
+        x: 3686
+        y: 3050
+        width: 156
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6037c8b538b6dd4696e3e9bd4878fcf
+      internalID: -31747425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_84
+      rect:
+        serializedVersion: 2
+        x: 3887
+        y: 3027
+        width: 155
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a074639053683fe42a81c48ecbd56473
+      internalID: -1410467735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_85
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 2820
+        width: 174
+        height: 143
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530f7c977105f1a409332b8983576a62
+      internalID: 32463710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_86
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 2821
+        width: 179
+        height: 141
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e240443ee084845adbb5edc09aabb7
+      internalID: 1694625785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_87
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 2821
+        width: 243
+        height: 136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9b92b62647b024c93772d7d4e62afc
+      internalID: 1850068652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_88
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 2818
+        width: 189
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5e134c5c0739f4cb8aefb093df8a61
+      internalID: 1174399419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_89
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 2752
+        width: 172
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef9a9a8b81ea4847861d7608a74b31d
+      internalID: 1580299782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_90
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 2751
+        width: 183
+        height: 228
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3366f2910508cc4e9ec8dbfa784f4bd
+      internalID: -273689346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_91
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 2752
+        width: 167
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e72435fadd598a64fba73162e6377886
+      internalID: 834193710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_92
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 2752
+        width: 166
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0297be3505015c34c874854e63fac6e6
+      internalID: 1318652858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_93
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 2826
+        width: 124
+        height: 188
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008bde7d31195d64aa6b807579d630a0
+      internalID: -2056714450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_94
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 2831
+        width: 221
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcaba92abc167df41b01f88ead85735d
+      internalID: 1664867285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_95
+      rect:
+        serializedVersion: 2
+        x: 2624
+        y: 2822
+        width: 185
+        height: 184
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59179834f63e504c88f5e8f590c49e9
+      internalID: -2046793676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_96
+      rect:
+        serializedVersion: 2
+        x: 2837
+        y: 2835
+        width: 200
+        height: 167
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce299504f4c37d4db816c2ca7bf4e46
+      internalID: -62832182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_97
+      rect:
+        serializedVersion: 2
+        x: 3109
+        y: 2823
+        width: 174
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d095c3c3c76ae1a4eb2b236c22df3a54
+      internalID: -1469899519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_98
+      rect:
+        serializedVersion: 2
+        x: 3334
+        y: 2823
+        width: 178
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc8cd538e0b25f4ca9dd4abde5c6449
+      internalID: -1651632326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_99
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 2826
+        width: 202
+        height: 142
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c4b9532c834df4286e2382714cfeee
+      internalID: -739079487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_100
+      rect:
+        serializedVersion: 2
+        x: 3802
+        y: 2826
+        width: 203
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f487f5d7caa42054b933d2be4da484f2
+      internalID: -659661876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_101
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 2567
+        width: 188
+        height: 167
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313b7fa32b1e1ab448082115a47a338c
+      internalID: -612759925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_102
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 2584
+        width: 175
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97417fc624b9002469e73fa3139ab4f2
+      internalID: 1605970296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_103
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 2574
+        width: 199
+        height: 122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f011460ed0304444ba8063a58d29dc76
+      internalID: -1206448671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_104
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 2560
+        width: 205
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6616b76959b654140b64fc5176046939
+      internalID: 1407112676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_105
+      rect:
+        serializedVersion: 2
+        x: 2137
+        y: 2687
+        width: 115
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af58bc7d0991e147bedf707c4685c2d
+      internalID: -48982791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_106
+      rect:
+        serializedVersion: 2
+        x: 2292
+        y: 2680
+        width: 130
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62eeab69562ba53418341d3a507792ca
+      internalID: -972715853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_107
+      rect:
+        serializedVersion: 2
+        x: 2451
+        y: 2683
+        width: 128
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3fd996f57a18243b483cf88ad926e7
+      internalID: 897765874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_108
+      rect:
+        serializedVersion: 2
+        x: 2653
+        y: 2675
+        width: 134
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4965273286e2954887d5d26e814b8c7
+      internalID: 65213775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_109
+      rect:
+        serializedVersion: 2
+        x: 2858
+        y: 2674
+        width: 152
+        height: 122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a6dc2ef722d914494002c032fc8d41
+      internalID: -1487046049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_110
+      rect:
+        serializedVersion: 2
+        x: 3133
+        y: 2663
+        width: 133
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31ec244d98641a4baa658531bf40cfc
+      internalID: -1923897009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_111
+      rect:
+        serializedVersion: 2
+        x: 3313
+        y: 2663
+        width: 139
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c37a5f4945acc845b037a73b37ec476
+      internalID: 2051322977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_112
+      rect:
+        serializedVersion: 2
+        x: 3492
+        y: 2667
+        width: 129
+        height: 112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea105f9c6d4b5f04da37df258c054e4c
+      internalID: -731497087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_113
+      rect:
+        serializedVersion: 2
+        x: 3657
+        y: 2661
+        width: 177
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce48f20da532da4f9349ddcec5ad0d8
+      internalID: 832119035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_114
+      rect:
+        serializedVersion: 2
+        x: 3843
+        y: 2665
+        width: 168
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c828370a2920104ea62835c23ca05da
+      internalID: 546513925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_115
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 2487
+        width: 186
+        height: 143
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49da178bbb3b11f47b053ab13beb5533
+      internalID: 772191879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_116
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 2509
+        width: 189
+        height: 143
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cfee080230573489322608d65d1c4f
+      internalID: -953807707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_117
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 2494
+        width: 225
+        height: 182
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc758b88cbb999438cd415288ec29c7
+      internalID: -951841893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_118
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 2486
+        width: 208
+        height: 194
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c03a84bf4444648bb9813b573b00c0
+      internalID: 238467066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_119
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 2541
+        width: 129
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1adcc5a49abf443b2644de8526d5d4
+      internalID: -1493494240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_120
+      rect:
+        serializedVersion: 2
+        x: 2294
+        y: 2536
+        width: 184
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24019b4c6eb3d1146961e28927d4f804
+      internalID: 1369110304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_121
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 2531
+        width: 239
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5496188273402fb4e8c280bdde5a41ec
+      internalID: 204414109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_122
+      rect:
+        serializedVersion: 2
+        x: 2826
+        y: 2538
+        width: 199
+        height: 84
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e891e1ab072b2b341a1565b5b57a56af
+      internalID: -517474888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_123
+      rect:
+        serializedVersion: 2
+        x: 3132
+        y: 2527
+        width: 133
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f04124aaa2ed648b147aceaaa52105
+      internalID: -1843126092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_124
+      rect:
+        serializedVersion: 2
+        x: 3309
+        y: 2528
+        width: 134
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a871276fdbe814a9e5fd0d2e428ac6
+      internalID: -1848206337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_125
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 2538
+        width: 147
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0926a2072174284392ca3dea5570564
+      internalID: -1469142523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_126
+      rect:
+        serializedVersion: 2
+        x: 3669
+        y: 2537
+        width: 153
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effb6eda3bd030a459a0d453164ec9d8
+      internalID: 998051605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_127
+      rect:
+        serializedVersion: 2
+        x: 3851
+        y: 2537
+        width: 140
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23355c270e0ab0438659411b7b3b761
+      internalID: -2083942399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_128
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 2275
+        width: 183
+        height: 199
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1363fcd622b652a4194290142155b75b
+      internalID: 1617011784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_129
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2292
+        width: 192
+        height: 186
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a627a7543007fa42a0000db50ac4afc
+      internalID: 2084981505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_130
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 2385
+        width: 165
+        height: 97
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7303884dc7e9945b755770705342b4
+      internalID: -1061656727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_131
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 2379
+        width: 200
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e03c375c5a5e2944bc25f3fe5c59b9e
+      internalID: -1444953965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_132
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 2273
+        width: 161
+        height: 133
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d813048accf60e141a368ab1ddac15a1
+      internalID: -206118435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_133
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 2282
+        width: 168
+        height: 141
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5da78941f0ddc44b41c6891d1370ab
+      internalID: 2065075081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_134
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 2276
+        width: 193
+        height: 136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaef0408eaa50e845bef6f33a3fa0c91
+      internalID: 1036331439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_135
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 2283
+        width: 170
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f4af28307b0d34e8b75ccd2e6933da
+      internalID: -1979881526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_136
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 2338
+        width: 91
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd16424641fbd8445a7f4c5a8865ef7a
+      internalID: -236724050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_137
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 2338
+        width: 99
+        height: 160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3048533dc4f7e4143a6a546bb9047250
+      internalID: -1094342201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_138
+      rect:
+        serializedVersion: 2
+        x: 2381
+        y: 2335
+        width: 184
+        height: 163
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e796e45011b6742b8bf800b1a3906c
+      internalID: -1255664519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_139
+      rect:
+        serializedVersion: 2
+        x: 2617
+        y: 2321
+        width: 180
+        height: 182
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a75ca125a3a95e4c96baa6a54a58c7d
+      internalID: -7595416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_140
+      rect:
+        serializedVersion: 2
+        x: 2836
+        y: 2321
+        width: 193
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c28c719627d24489c4dbb4e9f87563
+      internalID: 493501832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_141
+      rect:
+        serializedVersion: 2
+        x: 3122
+        y: 2388
+        width: 137
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9179999c8b6564ca43376c649c42ea
+      internalID: 1297454862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_142
+      rect:
+        serializedVersion: 2
+        x: 3297
+        y: 2385
+        width: 172
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26274c9ce4aed949a93beb0707a2104
+      internalID: 1750104674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_143
+      rect:
+        serializedVersion: 2
+        x: 3484
+        y: 2383
+        width: 148
+        height: 97
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c891991a8de6fc84e8f9f78f3440aa6c
+      internalID: -1078232719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_144
+      rect:
+        serializedVersion: 2
+        x: 3657
+        y: 2385
+        width: 180
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9adf2d398381742a2675454ea164f2
+      internalID: -1201536506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_145
+      rect:
+        serializedVersion: 2
+        x: 3855
+        y: 2384
+        width: 154
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a311779ecb680ba478bdde28b8bcbef1
+      internalID: 652610998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_146
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 2252
+        width: 76
+        height: 101
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3adb6d7dbfdf148a831e691772d780
+      internalID: 332610453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_147
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 2254
+        width: 73
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65554b9c3de6a9b46a40e835b7cd7c73
+      internalID: -604337864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_148
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 2252
+        width: 94
+        height: 97
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8523c7fe203ad41b899405404b0ec1
+      internalID: -1498934707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_149
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 2262
+        width: 112
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294fe463a696d5d4094161d7952076bd
+      internalID: -795940855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_150
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 2071
+        width: 197
+        height: 234
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbc7285d41652c439e30c6b61e46848
+      internalID: 1683004441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_151
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 2080
+        width: 101
+        height: 199
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d699604ea66ce04089419f4eca89943
+      internalID: -1450425043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_152
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 2083
+        width: 114
+        height: 190
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f9a2055cfa9f041aeaff0be62aac46
+      internalID: -620156421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_153
+      rect:
+        serializedVersion: 2
+        x: 2665
+        y: 2081
+        width: 152
+        height: 185
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a87bc3ecb89c764b999ca0b66acede5
+      internalID: -537915179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_154
+      rect:
+        serializedVersion: 2
+        x: 2875
+        y: 2095
+        width: 143
+        height: 178
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb02aa9149741d49b172d36048cca64
+      internalID: 324379164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_155
+      rect:
+        serializedVersion: 2
+        x: 3116
+        y: 2243
+        width: 145
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bda984139f21ab4e92b596f91239176
+      internalID: -1612384581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_156
+      rect:
+        serializedVersion: 2
+        x: 3303
+        y: 2244
+        width: 130
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a367ac1a2e85d841ad4c41f20bdb25a
+      internalID: -1239216321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_157
+      rect:
+        serializedVersion: 2
+        x: 3476
+        y: 2252
+        width: 122
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f266890bdeb5eb40835bab12adf4540
+      internalID: -1499848808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_158
+      rect:
+        serializedVersion: 2
+        x: 3653
+        y: 2236
+        width: 130
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277c0ec8cfb9e914eba9df6df91012e5
+      internalID: -430529377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_159
+      rect:
+        serializedVersion: 2
+        x: 3835
+        y: 2230
+        width: 182
+        height: 127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31e54d070f24224ca96245623d9342b
+      internalID: -248314123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_160
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 2045
+        width: 185
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ab6fae0051d204b8afaf88de8a50c9
+      internalID: -1397120677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_161
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2046
+        width: 186
+        height: 142
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c2543e76c7415469e39a9970db985b
+      internalID: 239947843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_162
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 2055
+        width: 206
+        height: 136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc62aa72e39517b438d3a2e7c02abb93
+      internalID: 1643675946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_163
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 2051
+        width: 193
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca1e23e239a7a648ba399c380b754f2
+      internalID: -1230429858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_164
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 2054
+        width: 195
+        height: 160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2c4ca95f65a0644b6361e05fc26f07
+      internalID: -1753861046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_165
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 2055
+        width: 196
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18088f47cd09e6745b8dd10638cbd60f
+      internalID: -937483253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_166
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 2052
+        width: 180
+        height: 164
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ec956bc38027b47beb73d96acf215e
+      internalID: -1993407347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_167
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 2048
+        width: 221
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ebbd0a596e515c4287c2d83cf991222
+      internalID: 66475230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_168
+      rect:
+        serializedVersion: 2
+        x: 3106
+        y: 2026
+        width: 193
+        height: 141
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cedd20663189ee458e10417a4c91c37
+      internalID: -1656696337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_169
+      rect:
+        serializedVersion: 2
+        x: 3349
+        y: 2031
+        width: 180
+        height: 136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aebf24f5a63bca84f8be8d2af4f0a119
+      internalID: -1059017228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_170
+      rect:
+        serializedVersion: 2
+        x: 3577
+        y: 2036
+        width: 213
+        height: 149
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c91f1724b52c94685596f64c1137df
+      internalID: 1327289169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_171
+      rect:
+        serializedVersion: 2
+        x: 3818
+        y: 2032
+        width: 198
+        height: 149
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0853cb00e3115b845bafc2a8a19a6509
+      internalID: -1240868243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_172
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1743
+        width: 164
+        height: 220
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ec2439e57a76746a7701cdd69cf360
+      internalID: 1372968136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_173
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1742
+        width: 167
+        height: 226
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23cc8fbcc78e03849a712736408b55b9
+      internalID: 506216047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_174
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 1745
+        width: 197
+        height: 217
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809aaa806f0534c45838340791c5bdc6
+      internalID: -396094402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_175
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1746
+        width: 193
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bded05b1ad6a654a9972b9635643502
+      internalID: 1830774475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_176
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 1792
+        width: 149
+        height: 175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45d3540a15df93488404b4ce7193ace
+      internalID: 1119446222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_177
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 1793
+        width: 148
+        height: 175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a222b22131763488c512911b48305e
+      internalID: 1449986615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_178
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 1760
+        width: 134
+        height: 208
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040db801da4382947a8e992bd6854ffe
+      internalID: -406021829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_179
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 1756
+        width: 177
+        height: 198
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0251f0edc88d45f44b8c04421a579b57
+      internalID: 1527835977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_180
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 1813
+        width: 154
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56262d13821980745a641f4d259b3464
+      internalID: 1848979138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_181
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 1813
+        width: 128
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fed37ce53ed854bb42da1cd4fe78a6
+      internalID: -1069701372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_182
+      rect:
+        serializedVersion: 2
+        x: 2501
+        y: 1812
+        width: 145
+        height: 139
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408ac401bdbbda54db53c2e3b8f3afe2
+      internalID: -1362955507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_183
+      rect:
+        serializedVersion: 2
+        x: 2687
+        y: 1816
+        width: 146
+        height: 115
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c537fa5bf9854264b80a025cf83e7967
+      internalID: 2076637795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_184
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 1810
+        width: 149
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670ca2e902df4834eb88b425dde9645e
+      internalID: -1648739003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_185
+      rect:
+        serializedVersion: 2
+        x: 3109
+        y: 1833
+        width: 189
+        height: 115
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138de07be0ef99c43a673ab4d4d5d33e
+      internalID: 1323217833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_186
+      rect:
+        serializedVersion: 2
+        x: 3333
+        y: 1834
+        width: 196
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a109afd28115e4f40bd652e7af281de2
+      internalID: -122515408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_187
+      rect:
+        serializedVersion: 2
+        x: 3573
+        y: 1834
+        width: 185
+        height: 112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7870a6fe23c53c74bb1ac8fab27770c3
+      internalID: 1875277501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_188
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 1835
+        width: 196
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d5535d63218874797c1d8b8704e196
+      internalID: -1567509113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_189
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1511
+        width: 169
+        height: 205
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ba0ecebc536cc4593071f0eb19d7c0
+      internalID: -1758737466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_190
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1515
+        width: 167
+        height: 172
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7612595b3a6a70542a13cc72b02d1c84
+      internalID: -168296743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_191
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 1515
+        width: 177
+        height: 172
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d48c04f8e4afd43acabec9752c6274
+      internalID: 1142101376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_192
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 1514
+        width: 158
+        height: 169
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f44dbe59675f624099ecf4a65d34012
+      internalID: -1430685302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_193
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 1522
+        width: 142
+        height: 161
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01452d4bfec35144d888e04992cb3e99
+      internalID: -192960241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_194
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 1515
+        width: 180
+        height: 172
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: addb35428d3d81646a05fa671686eecd
+      internalID: -1032665355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_195
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 1518
+        width: 205
+        height: 179
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e17ea0dcedc064e909b06e0ebd050d
+      internalID: 624232773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_196
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 1552
+        width: 204
+        height: 164
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638a1f98e4eaf8249ad5886d7facfa7c
+      internalID: 2002620338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_197
+      rect:
+        serializedVersion: 2
+        x: 2347
+        y: 1553
+        width: 111
+        height: 180
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63885e20a3520843ab635d5bf94e90d
+      internalID: -2074200226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_198
+      rect:
+        serializedVersion: 2
+        x: 2498
+        y: 1563
+        width: 155
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06af6e61813188d4fb9c5775e68be3db
+      internalID: -642036715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_199
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 1553
+        width: 142
+        height: 198
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99bc0844bf2af543abf0ca0fb8a693b
+      internalID: -539027168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_200
+      rect:
+        serializedVersion: 2
+        x: 2858
+        y: 1558
+        width: 161
+        height: 183
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6454cf8b4e217c49a07588ba8a10005
+      internalID: 640261479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_201
+      rect:
+        serializedVersion: 2
+        x: 3106
+        y: 1654
+        width: 183
+        height: 139
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4599ac8f88b4d418e610cb210c84c9
+      internalID: -77221386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_202
+      rect:
+        serializedVersion: 2
+        x: 3339
+        y: 1654
+        width: 186
+        height: 132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e30980ed6df3ea4e9c337c3c61e57c2
+      internalID: -1269478307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_203
+      rect:
+        serializedVersion: 2
+        x: 3571
+        y: 1653
+        width: 186
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12772f508384e474f9768bf4e5f116cd
+      internalID: 336471528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_204
+      rect:
+        serializedVersion: 2
+        x: 3808
+        y: 1654
+        width: 187
+        height: 143
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35e44c579e23f24d8a0d1b6d08ca051
+      internalID: 137298444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_205
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1514
+        width: 156
+        height: 132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ab2ae4a3c5bf34cb45ea98a4ed823e
+      internalID: -1015845577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_206
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1515
+        width: 85
+        height: 87
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9892834840140cc45a04d2fbac9a87ae
+      internalID: -1775870094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_207
+      rect:
+        serializedVersion: 2
+        x: 2325
+        y: 1306
+        width: 142
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfb76d47fb105e429208718bfdcba6e
+      internalID: 551997137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_208
+      rect:
+        serializedVersion: 2
+        x: 3109
+        y: 1496
+        width: 181
+        height: 132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300ac47e44eeb5141af9e852b6cf11aa
+      internalID: -878221819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_209
+      rect:
+        serializedVersion: 2
+        x: 3339
+        y: 1495
+        width: 182
+        height: 131
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86995297570dabd4ba45e16c076ec7ac
+      internalID: 1906381818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_210
+      rect:
+        serializedVersion: 2
+        x: 3573
+        y: 1495
+        width: 185
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faffca4072f43e841b1f972153980027
+      internalID: 1912697268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_211
+      rect:
+        serializedVersion: 2
+        x: 3809
+        y: 1495
+        width: 186
+        height: 138
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc08b580611b6f24092ed8f1541984bd
+      internalID: -1260800657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_212
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1304
+        width: 149
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2c49a64b4fe5f469230fff8e006121
+      internalID: -2078060622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_213
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1296
+        width: 168
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785742eb380f2c9458ac58b438f609c8
+      internalID: 1797997658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_214
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1303
+        width: 160
+        height: 165
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ced7da2487d9445b3be898c289d1ce
+      internalID: -2018634904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_215
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 1302
+        width: 161
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4a165b34b854544bee5db2bb77c8b3
+      internalID: -1122031247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_216
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 1276
+        width: 154
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20cb97482005da048811b4bd0aa5b944
+      internalID: -1250148528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_217
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 1275
+        width: 199
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4f6a8fd1539f34e82ede1118d44fab
+      internalID: 1776266050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_218
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 1273
+        width: 199
+        height: 157
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8686a02b938824db337cccc46bdc4e
+      internalID: -1504472727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_219
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 1272
+        width: 232
+        height: 136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d329f320d8e6954596aad1ce0884e6d
+      internalID: 1500513781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_220
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 1303
+        width: 136
+        height: 201
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37144eb11e042244193d65e3954df6cd
+      internalID: 427114810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_221
+      rect:
+        serializedVersion: 2
+        x: 2501
+        y: 1303
+        width: 148
+        height: 184
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1650378cef08b2a4d8354726a2441b9c
+      internalID: -301272552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_222
+      rect:
+        serializedVersion: 2
+        x: 2682
+        y: 1300
+        width: 157
+        height: 141
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c816423906e402945b29402bf822b8bb
+      internalID: -502081878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_223
+      rect:
+        serializedVersion: 2
+        x: 2874
+        y: 1309
+        width: 107
+        height: 183
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eda6b9d903357a42a4bfe07742aa981
+      internalID: -2006862782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_224
+      rect:
+        serializedVersion: 2
+        x: 3109
+        y: 1330
+        width: 177
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94dc5301a2273ed42869c6c35aefbf6a
+      internalID: -1388885896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_225
+      rect:
+        serializedVersion: 2
+        x: 3338
+        y: 1331
+        width: 186
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fd19d10e208bc488cd6596abb13461
+      internalID: -112992387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_226
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 1327
+        width: 183
+        height: 139
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01006d3c7a7675459e97bf06f546ddc
+      internalID: -1902268286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_227
+      rect:
+        serializedVersion: 2
+        x: 3811
+        y: 1329
+        width: 177
+        height: 133
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f3d766decd99a4393dc7aacb48e28e
+      internalID: 1048191466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_228
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1038
+        width: 183
+        height: 195
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508ecdd3d0c0078469a4b57f7768ad2b
+      internalID: 1806239797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_229
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1039
+        width: 176
+        height: 195
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb1e31bcdd9af448b19be801f6c4814
+      internalID: -428040797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_230
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 1031
+        width: 178
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e388876e67a0f38459fe89ee3ebc5c41
+      internalID: -72943454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_231
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 1055
+        width: 184
+        height: 152
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4bc79b437ffa514c9b26953522f8e1c
+      internalID: -323100845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_232
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 1061
+        width: 200
+        height: 163
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff0d470fbd36e842b9fbd5432137174
+      internalID: -370526462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_233
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 1054
+        width: 187
+        height: 144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4549448f48bcf54b89e42335e4c9f01
+      internalID: -205491031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_234
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 1057
+        width: 180
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f62a372a8ca4f946b91fa7e224e23a9
+      internalID: -998505080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_235
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 1089
+        width: 164
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbcfa43f3c5c6b945bfd5d7a6935bcde
+      internalID: 1543422835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_236
+      rect:
+        serializedVersion: 2
+        x: 2325
+        y: 1091
+        width: 139
+        height: 142
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04333974d20287c459be162c1f61b520
+      internalID: 2065798941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_237
+      rect:
+        serializedVersion: 2
+        x: 2509
+        y: 1094
+        width: 131
+        height: 127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe45aacabd2cf24cada80402ca295ff
+      internalID: 1956532200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_238
+      rect:
+        serializedVersion: 2
+        x: 2672
+        y: 1093
+        width: 159
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b6903f6ff61ad941ac8cc202efab024
+      internalID: 797814967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_239
+      rect:
+        serializedVersion: 2
+        x: 2862
+        y: 1101
+        width: 151
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac0ad18e256156489d273820e7dcd20
+      internalID: -1336629825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_240
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 1191
+        width: 192
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079d222f9c0feb843a969d50afcfca44
+      internalID: -993187404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_241
+      rect:
+        serializedVersion: 2
+        x: 3338
+        y: 1187
+        width: 198
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ead9f45e55c524d85faaf3207157da
+      internalID: -1483565907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_242
+      rect:
+        serializedVersion: 2
+        x: 3566
+        y: 1187
+        width: 203
+        height: 132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78cc2effa88ab74e97f90dd3efe5f28
+      internalID: -567021207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_243
+      rect:
+        serializedVersion: 2
+        x: 3806
+        y: 1187
+        width: 204
+        height: 122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d226ead2d26ea9f4495b1161fbd281bb
+      internalID: -456353089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_244
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1035
+        width: 201
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d6ce9633516e842a95edececf88d60
+      internalID: 1472308458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_245
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 1033
+        width: 183
+        height: 132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d39bafd11d828b4488a31cdd1f0f41a
+      internalID: -141109783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_246
+      rect:
+        serializedVersion: 2
+        x: 3338
+        y: 1031
+        width: 189
+        height: 114
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4560c11309ae1fe429b1fa8e82633b9c
+      internalID: -1495235466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_247
+      rect:
+        serializedVersion: 2
+        x: 3572
+        y: 1031
+        width: 188
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f422b8677ae4d4fb3f51315034ae58
+      internalID: -920247617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_248
+      rect:
+        serializedVersion: 2
+        x: 3809
+        y: 1031
+        width: 190
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1d7202f68dbce4ab0df7c0439ae6d1
+      internalID: 1589505203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_249
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 774
+        width: 120
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aecb60c7b83c9134c8d72e73d770f881
+      internalID: -447060104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_250
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 779
+        width: 156
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec0b4ff5c1eafd48a69f8bdbad2cb64
+      internalID: -1033284030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_251
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 771
+        width: 139
+        height: 183
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2840aecc19e77444396ec012b4cda652
+      internalID: -528880729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_252
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 768
+        width: 125
+        height: 164
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dcf5b4c5c420c24198698e55f4aa0f6
+      internalID: 326655976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_253
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 773
+        width: 127
+        height: 168
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c58f768a4db694781f382fcfe9e4cd
+      internalID: 2054026363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_254
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 783
+        width: 158
+        height: 181
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd1929e782330b46b4da2dc5393272e
+      internalID: -1948315725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_255
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 784
+        width: 154
+        height: 182
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df3cd057f6b3d14999bf31093fdda68
+      internalID: -41177557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_256
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 792
+        width: 164
+        height: 175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce483d31e943027449592ad20ff63f74
+      internalID: -1187599258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_257
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 795
+        width: 199
+        height: 175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259b89273facdcc48bb44588fbcfeb06
+      internalID: 1768200998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_258
+      rect:
+        serializedVersion: 2
+        x: 2108
+        y: 796
+        width: 203
+        height: 154
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f8c951feab24648acb8f06c8dd3c9b
+      internalID: 1667601115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_259
+      rect:
+        serializedVersion: 2
+        x: 2339
+        y: 797
+        width: 218
+        height: 152
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b709e3502047b47b86b4fefa09981c
+      internalID: 264317564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_260
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 797
+        width: 217
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a8c8ca140519f4fbda5b7bb570b49d
+      internalID: -877570117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_261
+      rect:
+        serializedVersion: 2
+        x: 2829
+        y: 797
+        width: 224
+        height: 157
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbecebbd07a7bd248b636cddf155ea1c
+      internalID: 936483744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_262
+      rect:
+        serializedVersion: 2
+        x: 3106
+        y: 826
+        width: 155
+        height: 133
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3257ee8e2fa08844291b2f535520384e
+      internalID: 169067538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_263
+      rect:
+        serializedVersion: 2
+        x: 3313
+        y: 838
+        width: 226
+        height: 139
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ea1f21b41456340adf21675a4d4987
+      internalID: 62164170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_264
+      rect:
+        serializedVersion: 2
+        x: 3569
+        y: 842
+        width: 206
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6285fd565466c4b9ec96fc9f65615d
+      internalID: 1485211899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_265
+      rect:
+        serializedVersion: 2
+        x: 3835
+        y: 834
+        width: 196
+        height: 151
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c562749e4757b7a4592993220082ce3c
+      internalID: -706875895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_266
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 521
+        width: 126
+        height: 193
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8fd08bf00d54ec4f91db4092a4dad92
+      internalID: 760273123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_267
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 522
+        width: 133
+        height: 142
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd92d78523ba7d48b9d7abef6dab136
+      internalID: -367423780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_268
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 524
+        width: 128
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd81da429bd81f4faaaca73e97fc68d
+      internalID: -528041626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_269
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 530
+        width: 139
+        height: 144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e856cef9de3a8419f07de9017059bb
+      internalID: -140466179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_270
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 533
+        width: 130
+        height: 157
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8be7bfc3da5b1488e091c72c2a6182
+      internalID: 1761168449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_271
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 533
+        width: 157
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6368ac0fd1de48419b03280cf4e27a6
+      internalID: -538043884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_272
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 542
+        width: 147
+        height: 161
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c0ed7bb3aaae046986e725f41098d1
+      internalID: -753757984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_273
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 550
+        width: 155
+        height: 161
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21feaf257c9d3044b8edaaa7fa769575
+      internalID: -1500722187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_274
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 541
+        width: 150
+        height: 165
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd4cd4a7d310264ca1bf378342dacbd
+      internalID: -188262654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_275
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 567
+        width: 212
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7bd4de998105348bb0319d083f6b54
+      internalID: 586038713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_276
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 567
+        width: 227
+        height: 161
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed30f25361083945a286e9d60514a10
+      internalID: -1212862091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_277
+      rect:
+        serializedVersion: 2
+        x: 2583
+        y: 568
+        width: 219
+        height: 152
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb39c03c54be8846b5cef5402b97719
+      internalID: 2129439517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_278
+      rect:
+        serializedVersion: 2
+        x: 2831
+        y: 567
+        width: 226
+        height: 151
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c78cc75fe13a3564d80c979e227c41a9
+      internalID: -1362460711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_279
+      rect:
+        serializedVersion: 2
+        x: 3103
+        y: 662
+        width: 178
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167ed11e310a0254b9d47fe3441befd9
+      internalID: -1371389923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_280
+      rect:
+        serializedVersion: 2
+        x: 3313
+        y: 648
+        width: 216
+        height: 138
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e8ae0d806cf594eb29ea4b13668226
+      internalID: -1089331519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_281
+      rect:
+        serializedVersion: 2
+        x: 3565
+        y: 646
+        width: 208
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a26a8447dce6549baa4d795c718b82
+      internalID: -1559191827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_282
+      rect:
+        serializedVersion: 2
+        x: 3807
+        y: 645
+        width: 218
+        height: 142
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9443b1f98b4d6ff43bcfa92f91297a95
+      internalID: 1288983883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_283
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 267
+        width: 130
+        height: 183
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397ceef0141dcdc4ca79a7fd3a713c83
+      internalID: 1375458249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_284
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 268
+        width: 149
+        height: 194
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380c3d35cba60ae4fae103cb4330ce29
+      internalID: 334354436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_285
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 265
+        width: 123
+        height: 176
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f9a926150479f4ab4e7fabd1d9609a
+      internalID: -1270967241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_286
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 296
+        width: 138
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0026f811e218274ca1f7e40349e3935
+      internalID: 67172184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_287
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 295
+        width: 151
+        height: 178
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a872cdd75b5a2546b45cb93393def2f
+      internalID: 259769866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_288
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 293
+        width: 149
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699b5355d2c103640b55b373c1575942
+      internalID: 246448743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_289
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 294
+        width: 175
+        height: 168
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52b4d1539d393f46a7cf976f568140f
+      internalID: -1111469455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_290
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 331
+        width: 201
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9149e30dd1683e34186e11ad4124730b
+      internalID: 69432753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_291
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 328
+        width: 208
+        height: 144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeebd75f674b27648827615d2b4f2e60
+      internalID: 1752744698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_292
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 330
+        width: 236
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fb8cfbfeb0b764b854a6eb31a18769
+      internalID: 1844221718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_293
+      rect:
+        serializedVersion: 2
+        x: 2831
+        y: 332
+        width: 216
+        height: 146
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791f02adaa2c6984f8152ba8582f0ec1
+      internalID: 1566200607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_294
+      rect:
+        serializedVersion: 2
+        x: 3307
+        y: 437
+        width: 226
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05187314c089df4c87763bebf02b09b
+      internalID: -1704254918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_295
+      rect:
+        serializedVersion: 2
+        x: 3566
+        y: 436
+        width: 197
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f44c2445f53ed4ca990f75599553fc
+      internalID: 487506623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_296
+      rect:
+        serializedVersion: 2
+        x: 3817
+        y: 435
+        width: 199
+        height: 143
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27217076b45c23044aa5e717ab2b1e17
+      internalID: -1313513041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_297
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 265
+        width: 133
+        height: 158
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9289b3cdf07e009418128b7ea9c684aa
+      internalID: -417956051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_298
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 267
+        width: 121
+        height: 169
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b3b786e7284854685933c95c8b0fae
+      internalID: -702287387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_299
+      rect:
+        serializedVersion: 2
+        x: 3323
+        y: 239
+        width: 202
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a7f90d93449644c9cc5a2e611d1a4f
+      internalID: 1687995859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_300
+      rect:
+        serializedVersion: 2
+        x: 3557
+        y: 240
+        width: 216
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c9107d3d52b304b9ca946f2d470e5c
+      internalID: -278440469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_301
+      rect:
+        serializedVersion: 2
+        x: 3806
+        y: 235
+        width: 218
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40dcc3704ddfa64b9c25a3f29b5fa59
+      internalID: -500473319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_302
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 40
+        width: 127
+        height: 161
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aae753dfa595e248a1024de9859711c
+      internalID: 1771200335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_303
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 46
+        width: 137
+        height: 143
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d6d47253fca8b54999b7c751bbd7990
+      internalID: 219156791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_304
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 38
+        width: 134
+        height: 170
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafa22839d5b9f04284cc09bbba8bd50
+      internalID: 1641934219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_305
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 45
+        width: 129
+        height: 164
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc66c9adc6ddf394d9b9c0d502029415
+      internalID: 765710214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_306
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 39
+        width: 150
+        height: 169
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a7691746d4ad8409987d7386fe46ad
+      internalID: -1596891976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_307
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 48
+        width: 157
+        height: 178
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa724104fc104304f8758f1d3446c40b
+      internalID: -662024563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_308
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 47
+        width: 181
+        height: 133
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac54dea16821794593ec673684153ce
+      internalID: -1822648575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_309
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 45
+        width: 161
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52fa8a7675d58b449cad3f69608fec7
+      internalID: 1183626404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_310
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 34
+        width: 147
+        height: 168
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605c2aef6fa096d4d8bb1689a4d4550f
+      internalID: 1558803739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_311
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 51
+        width: 202
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11a83ddd5555ab419cdcfe663971627
+      internalID: -323818084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_312
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 53
+        width: 215
+        height: 152
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ea51afbffb02542b91c1e056a06f3e
+      internalID: 1044190263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_313
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 52
+        width: 201
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17539a140e985ac46b0b6d7ba7ab0be6
+      internalID: -20394951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_314
+      rect:
+        serializedVersion: 2
+        x: 2829
+        y: 55
+        width: 215
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b8f8796d252dd478a25b83bee98162
+      internalID: 1309414665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_315
+      rect:
+        serializedVersion: 2
+        x: 3081
+        y: 40
+        width: 198
+        height: 149
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d3b3f46be8ea641b529f7bfba7adbc
+      internalID: 1480349675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_316
+      rect:
+        serializedVersion: 2
+        x: 3306
+        y: 19
+        width: 250
+        height: 146
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a00f702d2dfdd140a84ed604fd9f5f2
+      internalID: -1321538565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_317
+      rect:
+        serializedVersion: 2
+        x: 3579
+        y: 42
+        width: 203
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9775a7c5ce72943a62568ae0bca14e
+      internalID: -311302003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Sprites 01_318
+      rect:
+        serializedVersion: 2
+        x: 3806
+        y: 22
+        width: 218
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc464dedef3680c40ba71da599fe1392
+      internalID: -1995728180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 910c7cc8783e1be40a6e25156e8c13dd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Food Sprites 01_0: -126760634
+      Food Sprites 01_1: 997645070
+      Food Sprites 01_10: -1246921653
+      Food Sprites 01_100: -659661876
+      Food Sprites 01_101: -612759925
+      Food Sprites 01_102: 1605970296
+      Food Sprites 01_103: -1206448671
+      Food Sprites 01_104: 1407112676
+      Food Sprites 01_105: -48982791
+      Food Sprites 01_106: -972715853
+      Food Sprites 01_107: 897765874
+      Food Sprites 01_108: 65213775
+      Food Sprites 01_109: -1487046049
+      Food Sprites 01_11: 1769176753
+      Food Sprites 01_110: -1923897009
+      Food Sprites 01_111: 2051322977
+      Food Sprites 01_112: -731497087
+      Food Sprites 01_113: 832119035
+      Food Sprites 01_114: 546513925
+      Food Sprites 01_115: 772191879
+      Food Sprites 01_116: -953807707
+      Food Sprites 01_117: -951841893
+      Food Sprites 01_118: 238467066
+      Food Sprites 01_119: -1493494240
+      Food Sprites 01_12: -1801990485
+      Food Sprites 01_120: 1369110304
+      Food Sprites 01_121: 204414109
+      Food Sprites 01_122: -517474888
+      Food Sprites 01_123: -1843126092
+      Food Sprites 01_124: -1848206337
+      Food Sprites 01_125: -1469142523
+      Food Sprites 01_126: 998051605
+      Food Sprites 01_127: -2083942399
+      Food Sprites 01_128: 1617011784
+      Food Sprites 01_129: 2084981505
+      Food Sprites 01_13: 1169557344
+      Food Sprites 01_130: -1061656727
+      Food Sprites 01_131: -1444953965
+      Food Sprites 01_132: -206118435
+      Food Sprites 01_133: 2065075081
+      Food Sprites 01_134: 1036331439
+      Food Sprites 01_135: -1979881526
+      Food Sprites 01_136: -236724050
+      Food Sprites 01_137: -1094342201
+      Food Sprites 01_138: -1255664519
+      Food Sprites 01_139: -7595416
+      Food Sprites 01_14: -1537604265
+      Food Sprites 01_140: 493501832
+      Food Sprites 01_141: 1297454862
+      Food Sprites 01_142: 1750104674
+      Food Sprites 01_143: -1078232719
+      Food Sprites 01_144: -1201536506
+      Food Sprites 01_145: 652610998
+      Food Sprites 01_146: 332610453
+      Food Sprites 01_147: -604337864
+      Food Sprites 01_148: -1498934707
+      Food Sprites 01_149: -795940855
+      Food Sprites 01_15: -111341009
+      Food Sprites 01_150: 1683004441
+      Food Sprites 01_151: -1450425043
+      Food Sprites 01_152: -620156421
+      Food Sprites 01_153: -537915179
+      Food Sprites 01_154: 324379164
+      Food Sprites 01_155: -1612384581
+      Food Sprites 01_156: -1239216321
+      Food Sprites 01_157: -1499848808
+      Food Sprites 01_158: -430529377
+      Food Sprites 01_159: -248314123
+      Food Sprites 01_16: 2127597500
+      Food Sprites 01_160: -1397120677
+      Food Sprites 01_161: 239947843
+      Food Sprites 01_162: 1643675946
+      Food Sprites 01_163: -1230429858
+      Food Sprites 01_164: -1753861046
+      Food Sprites 01_165: -937483253
+      Food Sprites 01_166: -1993407347
+      Food Sprites 01_167: 66475230
+      Food Sprites 01_168: -1656696337
+      Food Sprites 01_169: -1059017228
+      Food Sprites 01_17: -1769540093
+      Food Sprites 01_170: 1327289169
+      Food Sprites 01_171: -1240868243
+      Food Sprites 01_172: 1372968136
+      Food Sprites 01_173: 506216047
+      Food Sprites 01_174: -396094402
+      Food Sprites 01_175: 1830774475
+      Food Sprites 01_176: 1119446222
+      Food Sprites 01_177: 1449986615
+      Food Sprites 01_178: -406021829
+      Food Sprites 01_179: 1527835977
+      Food Sprites 01_18: 877977087
+      Food Sprites 01_180: 1848979138
+      Food Sprites 01_181: -1069701372
+      Food Sprites 01_182: -1362955507
+      Food Sprites 01_183: 2076637795
+      Food Sprites 01_184: -1648739003
+      Food Sprites 01_185: 1323217833
+      Food Sprites 01_186: -122515408
+      Food Sprites 01_187: 1875277501
+      Food Sprites 01_188: -1567509113
+      Food Sprites 01_189: -1758737466
+      Food Sprites 01_19: -577187752
+      Food Sprites 01_190: -168296743
+      Food Sprites 01_191: 1142101376
+      Food Sprites 01_192: -1430685302
+      Food Sprites 01_193: -192960241
+      Food Sprites 01_194: -1032665355
+      Food Sprites 01_195: 624232773
+      Food Sprites 01_196: 2002620338
+      Food Sprites 01_197: -2074200226
+      Food Sprites 01_198: -642036715
+      Food Sprites 01_199: -539027168
+      Food Sprites 01_2: -1071674139
+      Food Sprites 01_20: -967866118
+      Food Sprites 01_200: 640261479
+      Food Sprites 01_201: -77221386
+      Food Sprites 01_202: -1269478307
+      Food Sprites 01_203: 336471528
+      Food Sprites 01_204: 137298444
+      Food Sprites 01_205: -1015845577
+      Food Sprites 01_206: -1775870094
+      Food Sprites 01_207: 551997137
+      Food Sprites 01_208: -878221819
+      Food Sprites 01_209: 1906381818
+      Food Sprites 01_21: 1020255214
+      Food Sprites 01_210: 1912697268
+      Food Sprites 01_211: -1260800657
+      Food Sprites 01_212: -2078060622
+      Food Sprites 01_213: 1797997658
+      Food Sprites 01_214: -2018634904
+      Food Sprites 01_215: -1122031247
+      Food Sprites 01_216: -1250148528
+      Food Sprites 01_217: 1776266050
+      Food Sprites 01_218: -1504472727
+      Food Sprites 01_219: 1500513781
+      Food Sprites 01_22: 1994723133
+      Food Sprites 01_220: 427114810
+      Food Sprites 01_221: -301272552
+      Food Sprites 01_222: -502081878
+      Food Sprites 01_223: -2006862782
+      Food Sprites 01_224: -1388885896
+      Food Sprites 01_225: -112992387
+      Food Sprites 01_226: -1902268286
+      Food Sprites 01_227: 1048191466
+      Food Sprites 01_228: 1806239797
+      Food Sprites 01_229: -428040797
+      Food Sprites 01_23: 189904406
+      Food Sprites 01_230: -72943454
+      Food Sprites 01_231: -323100845
+      Food Sprites 01_232: -370526462
+      Food Sprites 01_233: -205491031
+      Food Sprites 01_234: -998505080
+      Food Sprites 01_235: 1543422835
+      Food Sprites 01_236: 2065798941
+      Food Sprites 01_237: 1956532200
+      Food Sprites 01_238: 797814967
+      Food Sprites 01_239: -1336629825
+      Food Sprites 01_24: -1858004781
+      Food Sprites 01_240: -993187404
+      Food Sprites 01_241: -1483565907
+      Food Sprites 01_242: -567021207
+      Food Sprites 01_243: -456353089
+      Food Sprites 01_244: 1472308458
+      Food Sprites 01_245: -141109783
+      Food Sprites 01_246: -1495235466
+      Food Sprites 01_247: -920247617
+      Food Sprites 01_248: 1589505203
+      Food Sprites 01_249: -447060104
+      Food Sprites 01_25: -424118886
+      Food Sprites 01_250: -1033284030
+      Food Sprites 01_251: -528880729
+      Food Sprites 01_252: 326655976
+      Food Sprites 01_253: 2054026363
+      Food Sprites 01_254: -1948315725
+      Food Sprites 01_255: -41177557
+      Food Sprites 01_256: -1187599258
+      Food Sprites 01_257: 1768200998
+      Food Sprites 01_258: 1667601115
+      Food Sprites 01_259: 264317564
+      Food Sprites 01_26: 685229846
+      Food Sprites 01_260: -877570117
+      Food Sprites 01_261: 936483744
+      Food Sprites 01_262: 169067538
+      Food Sprites 01_263: 62164170
+      Food Sprites 01_264: 1485211899
+      Food Sprites 01_265: -706875895
+      Food Sprites 01_266: 760273123
+      Food Sprites 01_267: -367423780
+      Food Sprites 01_268: -528041626
+      Food Sprites 01_269: -140466179
+      Food Sprites 01_27: -186837159
+      Food Sprites 01_270: 1761168449
+      Food Sprites 01_271: -538043884
+      Food Sprites 01_272: -753757984
+      Food Sprites 01_273: -1500722187
+      Food Sprites 01_274: -188262654
+      Food Sprites 01_275: 586038713
+      Food Sprites 01_276: -1212862091
+      Food Sprites 01_277: 2129439517
+      Food Sprites 01_278: -1362460711
+      Food Sprites 01_279: -1371389923
+      Food Sprites 01_28: -352037966
+      Food Sprites 01_280: -1089331519
+      Food Sprites 01_281: -1559191827
+      Food Sprites 01_282: 1288983883
+      Food Sprites 01_283: 1375458249
+      Food Sprites 01_284: 334354436
+      Food Sprites 01_285: -1270967241
+      Food Sprites 01_286: 67172184
+      Food Sprites 01_287: 259769866
+      Food Sprites 01_288: 246448743
+      Food Sprites 01_289: -1111469455
+      Food Sprites 01_29: 422540038
+      Food Sprites 01_290: 69432753
+      Food Sprites 01_291: 1752744698
+      Food Sprites 01_292: 1844221718
+      Food Sprites 01_293: 1566200607
+      Food Sprites 01_294: -1704254918
+      Food Sprites 01_295: 487506623
+      Food Sprites 01_296: -1313513041
+      Food Sprites 01_297: -417956051
+      Food Sprites 01_298: -702287387
+      Food Sprites 01_299: 1687995859
+      Food Sprites 01_3: -1187601798
+      Food Sprites 01_30: -213501815
+      Food Sprites 01_300: -278440469
+      Food Sprites 01_301: -500473319
+      Food Sprites 01_302: 1771200335
+      Food Sprites 01_303: 219156791
+      Food Sprites 01_304: 1641934219
+      Food Sprites 01_305: 765710214
+      Food Sprites 01_306: -1596891976
+      Food Sprites 01_307: -662024563
+      Food Sprites 01_308: -1822648575
+      Food Sprites 01_309: 1183626404
+      Food Sprites 01_31: 1959234643
+      Food Sprites 01_310: 1558803739
+      Food Sprites 01_311: -323818084
+      Food Sprites 01_312: 1044190263
+      Food Sprites 01_313: -20394951
+      Food Sprites 01_314: 1309414665
+      Food Sprites 01_315: 1480349675
+      Food Sprites 01_316: -1321538565
+      Food Sprites 01_317: -311302003
+      Food Sprites 01_318: -1995728180
+      Food Sprites 01_32: -75853380
+      Food Sprites 01_33: 640336326
+      Food Sprites 01_34: 1500793197
+      Food Sprites 01_35: 1525386211
+      Food Sprites 01_36: -1654796185
+      Food Sprites 01_37: -775702348
+      Food Sprites 01_38: -1735053037
+      Food Sprites 01_39: 1279675952
+      Food Sprites 01_4: 142247909
+      Food Sprites 01_40: -1894460344
+      Food Sprites 01_41: 2016318178
+      Food Sprites 01_42: -125542131
+      Food Sprites 01_43: 393801814
+      Food Sprites 01_44: -1031631943
+      Food Sprites 01_45: -168696483
+      Food Sprites 01_46: -588813448
+      Food Sprites 01_47: 535988668
+      Food Sprites 01_48: -740686920
+      Food Sprites 01_49: -594186462
+      Food Sprites 01_5: 1432903770
+      Food Sprites 01_50: -892515894
+      Food Sprites 01_51: 2128559242
+      Food Sprites 01_52: -1200574178
+      Food Sprites 01_53: -126443571
+      Food Sprites 01_54: -578309479
+      Food Sprites 01_55: -2083354625
+      Food Sprites 01_56: 998361848
+      Food Sprites 01_57: -1013454692
+      Food Sprites 01_58: 964904692
+      Food Sprites 01_59: 1479179988
+      Food Sprites 01_6: 2139350776
+      Food Sprites 01_60: 815423960
+      Food Sprites 01_61: -1447114685
+      Food Sprites 01_62: 1080497275
+      Food Sprites 01_63: 458218509
+      Food Sprites 01_64: -744198030
+      Food Sprites 01_65: 316047594
+      Food Sprites 01_66: -1103591143
+      Food Sprites 01_67: -624941271
+      Food Sprites 01_68: 1094205942
+      Food Sprites 01_69: 158787685
+      Food Sprites 01_7: -1187273150
+      Food Sprites 01_70: 139755659
+      Food Sprites 01_71: 1921582995
+      Food Sprites 01_72: -1885525023
+      Food Sprites 01_73: -150246664
+      Food Sprites 01_74: 1456930129
+      Food Sprites 01_75: 615163492
+      Food Sprites 01_76: -1620690318
+      Food Sprites 01_77: -553837622
+      Food Sprites 01_78: 1600586664
+      Food Sprites 01_79: -1259910374
+      Food Sprites 01_8: -973100489
+      Food Sprites 01_80: 319923475
+      Food Sprites 01_81: 2038420405
+      Food Sprites 01_82: 1331437264
+      Food Sprites 01_83: -31747425
+      Food Sprites 01_84: -1410467735
+      Food Sprites 01_85: 32463710
+      Food Sprites 01_86: 1694625785
+      Food Sprites 01_87: 1850068652
+      Food Sprites 01_88: 1174399419
+      Food Sprites 01_89: 1580299782
+      Food Sprites 01_9: 826543952
+      Food Sprites 01_90: -273689346
+      Food Sprites 01_91: 834193710
+      Food Sprites 01_92: 1318652858
+      Food Sprites 01_93: -2056714450
+      Food Sprites 01_94: 1664867285
+      Food Sprites 01_95: -2046793676
+      Food Sprites 01_96: -62832182
+      Food Sprites 01_97: -1469899519
+      Food Sprites 01_98: -1651632326
+      Food Sprites 01_99: -739079487
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

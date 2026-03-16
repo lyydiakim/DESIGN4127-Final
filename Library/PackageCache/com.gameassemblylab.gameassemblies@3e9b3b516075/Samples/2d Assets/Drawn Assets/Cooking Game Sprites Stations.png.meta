@@ -1,0 +1,1985 @@
+fileFormatVersion: 2
+guid: 23e286a47841d2543a37690ccadb367d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 3594
+        width: 398
+        height: 442
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a0c65429f04df4a9b03a9b972ecf57
+      internalID: -819202796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_1
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 3594
+        width: 412
+        height: 426
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3a6673e1c8b84459a438689f0f51c4
+      internalID: -2078474547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_3
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 3569
+        width: 343
+        height: 285
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff5a06ef40236648814300b406947ca
+      internalID: -7125304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_4
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 3739
+        width: 441
+        height: 263
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b311f60aeea36c4e8463ed507288d45
+      internalID: -1695721380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_5
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 3739
+        width: 405
+        height: 297
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69bba176542d7e47a7903bbea7ccf9c
+      internalID: -933075691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_6
+      rect:
+        serializedVersion: 2
+        x: 3143
+        y: 3771
+        width: 375
+        height: 257
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3c2553b6011e34f8d0e25c373e250a
+      internalID: 719057559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_7
+      rect:
+        serializedVersion: 2
+        x: 3622
+        y: 3771
+        width: 397
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1705f821710b3bd4f97b6e9d7b7c6bae
+      internalID: 1528298414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_37
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 3569
+        width: 311
+        height: 287
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399d2a1c5674295449a6016272068e4f
+      internalID: -1535210303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_38
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 3412
+        width: 469
+        height: 244
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6e75a93ac67c643886241efa9f062e
+      internalID: 1864192779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_39
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 3410
+        width: 424
+        height: 285
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e5599bb255d9d4e81f468f126bfe4d
+      internalID: 971411659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_40
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 3433
+        width: 412
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b68c4f5be8d2a4785e684fb97b462f
+      internalID: -1430073453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_41
+      rect:
+        serializedVersion: 2
+        x: 3615
+        y: 3433
+        width: 420
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a21130d39c849b42aa4160c8977d3cc
+      internalID: -1669132889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_42
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 3048
+        width: 391
+        height: 465
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30c29b8c7984fc48ab47c4e83e75a98
+      internalID: -278189235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_43
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 3046
+        width: 394
+        height: 422
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4a5c9221c89fc4dbfef293d9685849
+      internalID: 1726998736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_44
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 3209
+        width: 384
+        height: 277
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90065d87f655c440a940a2e385f3e09
+      internalID: -1762826118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_45
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 3211
+        width: 414
+        height: 250
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e311b826d274c4e8acb32b87246e18
+      internalID: 2092683786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_78
+      rect:
+        serializedVersion: 2
+        x: 2083
+        y: 2999
+        width: 382
+        height: 290
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3e2ecff77752f44abc005afdba1784
+      internalID: -1269012258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_79
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 2993
+        width: 417
+        height: 376
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838ddfa209fe7b844a249cc96c500fdc
+      internalID: 1232461146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_81
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2951
+        width: 405
+        height: 382
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e933e4703ae011438e9fe97f0a589db
+      internalID: 1637413826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_82
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 2950
+        width: 432
+        height: 332
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247ed62f72ea43944a0a961a54924fb8
+      internalID: -432980836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_86
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 2815
+        width: 389
+        height: 292
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd977023850cee43bbc6c2069f1ec0d
+      internalID: 1134258272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_87
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 2822
+        width: 447
+        height: 344
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4891b55ec573d3a4b80d0c119991df97
+      internalID: 577253758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_88
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 2550
+        width: 406
+        height: 340
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a091316dcff88e1439bab5ffd839ea75
+      internalID: -1342364804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_89
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 2550
+        width: 402
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a93e421d4622944cb9bf9d2a327a48b
+      internalID: 1657423755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_90
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 2644
+        width: 420
+        height: 340
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7a194f06d31c142adcd9ec7ae1e812
+      internalID: -1189453591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_91
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 2626
+        width: 411
+        height: 384
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce2ea5aebbf10643a128fe10396851d
+      internalID: 1459013954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_92
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 2409
+        width: 403
+        height: 344
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b8a7e8efb43414aafcde77901f5d15
+      internalID: -666540056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_93
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 2349
+        width: 432
+        height: 324
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb883b811395654eb3cf11267618a40
+      internalID: -620647644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_94
+      rect:
+        serializedVersion: 2
+        x: 3139
+        y: 2507
+        width: 385
+        height: 334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662c7ff954e53c14fbe055ef1d1df6e2
+      internalID: -927390527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_95
+      rect:
+        serializedVersion: 2
+        x: 3602
+        y: 2508
+        width: 421
+        height: 352
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed178c33723ee60489022fa9e76dfff0
+      internalID: -1626584689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_96
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 2235
+        width: 418
+        height: 298
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6c8946283b8a74a9ef6bc2651368a1
+      internalID: 2036336574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_97
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 2235
+        width: 430
+        height: 260
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c06063c8f92f334ca19838ee99dba72
+      internalID: -1072508879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_99
+      rect:
+        serializedVersion: 2
+        x: 2611
+        y: 2380
+        width: 350
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce37faeab83d4464bbb810b270053c45
+      internalID: -886553993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_100
+      rect:
+        serializedVersion: 2
+        x: 3059
+        y: 2079
+        width: 442
+        height: 341
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1de811c92ebbc743a29a9401ed96b8e
+      internalID: 1995463201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_101
+      rect:
+        serializedVersion: 2
+        x: 3580
+        y: 2074
+        width: 415
+        height: 369
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ffc7be3628ae34795bc53277d4be33
+      internalID: 204795764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_102
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1875
+        width: 409
+        height: 250
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31d47c94ccbc4f41aa5fe9294e002fc
+      internalID: -1472390513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_103
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1875
+        width: 381
+        height: 284
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e63dc151eaeb94a935ef0ea4b85163
+      internalID: -141081422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_104
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 2007
+        width: 392
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c94339336cd3464288668b4fa12fffe
+      internalID: -1948948885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_105
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 2006
+        width: 340
+        height: 275
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5760a1ed28174fe4eb4f96341b3ede07
+      internalID: 1597768548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_106
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 2103
+        width: 388
+        height: 402
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b1df727a5922b46aedc9ad816e0c84
+      internalID: 2067701033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_107
+      rect:
+        serializedVersion: 2
+        x: 2601
+        y: 2103
+        width: 386
+        height: 257
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8088c07ebf26da488d84b511589afc7
+      internalID: 2000711857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_108
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1389
+        width: 419
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c87616ca7b38b046aae5d59e5040f8d
+      internalID: -392365810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_109
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1389
+        width: 403
+        height: 357
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b06674b6943f74384f83b5a89945c2
+      internalID: 398974967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_110
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 1635
+        width: 390
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e6ffde159e44c4b9a5f72f5bffbc80
+      internalID: -1454979472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_111
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 1635
+        width: 396
+        height: 274
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab5de9c741a8da4786beb173a4b3f31
+      internalID: 900827697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_112
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 1663
+        width: 413
+        height: 312
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6107964620ad97408e53bcb996b37ac
+      internalID: 2052261117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_113
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 1669
+        width: 385
+        height: 317
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403c42460e834a54599e2dedcbcd2a11
+      internalID: -301764319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_114
+      rect:
+        serializedVersion: 2
+        x: 3057
+        y: 1635
+        width: 443
+        height: 294
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40365c31f2dd59449a5bf71cb141e27e
+      internalID: 892847845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_115
+      rect:
+        serializedVersion: 2
+        x: 3570
+        y: 1644
+        width: 431
+        height: 303
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9fac634d8fbcd4fbdf9acfc3da14f9
+      internalID: -1236905046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_116
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1272
+        width: 407
+        height: 303
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1805819029530469285260699923e3
+      internalID: 2082366024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_117
+      rect:
+        serializedVersion: 2
+        x: 2579
+        y: 1211
+        width: 419
+        height: 364
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4330d73cfbf85a54aa6365e398e030fa
+      internalID: -1989259528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_120
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 1271
+        width: 387
+        height: 290
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162682a5787109445b415d118fc9a92c
+      internalID: -202031341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_121
+      rect:
+        serializedVersion: 2
+        x: 2085
+        y: 1213
+        width: 406
+        height: 311
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee01ae97da1f49c4bbd0884b37e0eeeb
+      internalID: 1614535431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_123
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 939
+        width: 400
+        height: 376
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684fbd09a2e085a49b64358d3296018d
+      internalID: 1360378090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_124
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 940
+        width: 433
+        height: 392
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44280a1e19d75484990bc8ac094296ec
+      internalID: -830282040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_125
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 942
+        width: 367
+        height: 262
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d16d277d8c59d74ab441bde7f0ca5e0
+      internalID: 319064506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_126
+      rect:
+        serializedVersion: 2
+        x: 3052
+        y: 1203
+        width: 429
+        height: 363
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf92fea49d65d143a097d546f47bdf6
+      internalID: 1604538654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_127
+      rect:
+        serializedVersion: 2
+        x: 3589
+        y: 1203
+        width: 409
+        height: 371
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74cb985e522296742b3876a596f992d0
+      internalID: 1886002157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_128
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 940
+        width: 406
+        height: 249
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82953ed230986b4bbe2df604c52698e
+      internalID: 1135482448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_129
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 711
+        width: 407
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0642afb2a5dcf994690c62a81aaae1c6
+      internalID: -1704065995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_130
+      rect:
+        serializedVersion: 2
+        x: 2584
+        y: 711
+        width: 407
+        height: 312
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0361ba0d29112418cef52c535c8d78
+      internalID: 1059836546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_131
+      rect:
+        serializedVersion: 2
+        x: 3052
+        y: 679
+        width: 430
+        height: 344
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a718bad128fab94da54a5424a2e3be3
+      internalID: 91514098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_133
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 459
+        width: 438
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815a4c48987c76440a3d909eb10e5fa5
+      internalID: 1728680610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_134
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 466
+        width: 444
+        height: 370
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d097a0016704f145ac857aef5890ebc
+      internalID: -1888389333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_135
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 627
+        width: 399
+        height: 216
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd9add1ab72e9e4bb302ef3b5eadaa7
+      internalID: 2122538923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_136
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 627
+        width: 387
+        height: 251
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcaa5eb4f2a35ac4da6a484bb2d263ff
+      internalID: 1917005558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_137
+      rect:
+        serializedVersion: 2
+        x: 3551
+        y: 683
+        width: 473
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698558caaf54b804985091eac6053a18
+      internalID: -1489680363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_139
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 193
+        width: 459
+        height: 306
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a9aa92b1b083e4085f1450b05382c6
+      internalID: 1410126025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_140
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 210
+        width: 483
+        height: 359
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c423ad796f7b924c8e74a96562e0900
+      internalID: 956517271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_141
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 286
+        width: 427
+        height: 370
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59d23f0f011e5c41964be4ffe4e8fed
+      internalID: -2109435609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_142
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 283
+        width: 461
+        height: 396
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777c79247e5de184db62c31f5855424f
+      internalID: -2010662968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_143
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 181
+        width: 457
+        height: 361
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a633c40501eacd141a047f0e0d7f473f
+      internalID: -153762497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_144
+      rect:
+        serializedVersion: 2
+        x: 3612
+        y: 178
+        width: 388
+        height: 352
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6ee3f5f61acf74c8295ffb0c18ae27
+      internalID: 1202066523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_145
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 56
+        width: 436
+        height: 353
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883e404ba0eae0a4e9766f60528246cd
+      internalID: -1999454287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_146
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 57
+        width: 445
+        height: 324
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48b855f141c632458da77cf23d592b2
+      internalID: 859167496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_147
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 272
+        width: 398
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fffc576f2504ef346a28c1a230ce81f5
+      internalID: -209753460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_148
+      rect:
+        serializedVersion: 2
+        x: 2482
+        y: 279
+        width: 7
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc955b6062998874d9b981d206ec9718
+      internalID: 828407724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooking Game Sprites Stations_149
+      rect:
+        serializedVersion: 2
+        x: 2567
+        y: 272
+        width: 454
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c50d385a078e6e4da3d64f69131fb73
+      internalID: 1262816799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f9d12276e7c7d2546bd7e032427542ff
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Cooking Game Sprites Stations_0: -819202796
+      Cooking Game Sprites Stations_1: -2078474547
+      Cooking Game Sprites Stations_10: -605235272
+      Cooking Game Sprites Stations_100: 1995463201
+      Cooking Game Sprites Stations_101: 204795764
+      Cooking Game Sprites Stations_102: -1472390513
+      Cooking Game Sprites Stations_103: -141081422
+      Cooking Game Sprites Stations_104: -1948948885
+      Cooking Game Sprites Stations_105: 1597768548
+      Cooking Game Sprites Stations_106: 2067701033
+      Cooking Game Sprites Stations_107: 2000711857
+      Cooking Game Sprites Stations_108: -392365810
+      Cooking Game Sprites Stations_109: 398974967
+      Cooking Game Sprites Stations_11: -440434363
+      Cooking Game Sprites Stations_110: -1454979472
+      Cooking Game Sprites Stations_111: 900827697
+      Cooking Game Sprites Stations_112: 2052261117
+      Cooking Game Sprites Stations_113: -301764319
+      Cooking Game Sprites Stations_114: 892847845
+      Cooking Game Sprites Stations_115: -1236905046
+      Cooking Game Sprites Stations_116: 2082366024
+      Cooking Game Sprites Stations_117: -1989259528
+      Cooking Game Sprites Stations_118: 1021738479
+      Cooking Game Sprites Stations_119: 1579499269
+      Cooking Game Sprites Stations_12: 1761170219
+      Cooking Game Sprites Stations_120: -202031341
+      Cooking Game Sprites Stations_121: 1614535431
+      Cooking Game Sprites Stations_122: 381452659
+      Cooking Game Sprites Stations_123: 1360378090
+      Cooking Game Sprites Stations_124: -830282040
+      Cooking Game Sprites Stations_125: 319064506
+      Cooking Game Sprites Stations_126: 1604538654
+      Cooking Game Sprites Stations_127: 1886002157
+      Cooking Game Sprites Stations_128: 1135482448
+      Cooking Game Sprites Stations_129: -1704065995
+      Cooking Game Sprites Stations_13: 1598864405
+      Cooking Game Sprites Stations_130: 1059836546
+      Cooking Game Sprites Stations_131: 91514098
+      Cooking Game Sprites Stations_132: -1606215892
+      Cooking Game Sprites Stations_133: 1728680610
+      Cooking Game Sprites Stations_134: -1888389333
+      Cooking Game Sprites Stations_135: 2122538923
+      Cooking Game Sprites Stations_136: 1917005558
+      Cooking Game Sprites Stations_137: -1489680363
+      Cooking Game Sprites Stations_138: 1408654562
+      Cooking Game Sprites Stations_139: 1410126025
+      Cooking Game Sprites Stations_14: -298315303
+      Cooking Game Sprites Stations_140: 956517271
+      Cooking Game Sprites Stations_141: -2109435609
+      Cooking Game Sprites Stations_142: -2010662968
+      Cooking Game Sprites Stations_143: -153762497
+      Cooking Game Sprites Stations_144: 1202066523
+      Cooking Game Sprites Stations_145: -1999454287
+      Cooking Game Sprites Stations_146: 859167496
+      Cooking Game Sprites Stations_147: -209753460
+      Cooking Game Sprites Stations_148: 828407724
+      Cooking Game Sprites Stations_149: 1262816799
+      Cooking Game Sprites Stations_15: -480672630
+      Cooking Game Sprites Stations_150: 432326953
+      Cooking Game Sprites Stations_151: -175587892
+      Cooking Game Sprites Stations_16: 514950949
+      Cooking Game Sprites Stations_17: 840208245
+      Cooking Game Sprites Stations_18: -1956739385
+      Cooking Game Sprites Stations_19: -109547458
+      Cooking Game Sprites Stations_2: -98283872
+      Cooking Game Sprites Stations_20: -1612368629
+      Cooking Game Sprites Stations_21: 80058481
+      Cooking Game Sprites Stations_22: -1226665017
+      Cooking Game Sprites Stations_23: -2117640932
+      Cooking Game Sprites Stations_24: -511816771
+      Cooking Game Sprites Stations_25: 2143040809
+      Cooking Game Sprites Stations_26: 1157895429
+      Cooking Game Sprites Stations_27: -104478748
+      Cooking Game Sprites Stations_28: -596080423
+      Cooking Game Sprites Stations_29: -1923208853
+      Cooking Game Sprites Stations_3: -7125304
+      Cooking Game Sprites Stations_30: -1105782531
+      Cooking Game Sprites Stations_31: -384145117
+      Cooking Game Sprites Stations_32: -1833510347
+      Cooking Game Sprites Stations_33: 908609471
+      Cooking Game Sprites Stations_34: 2034531408
+      Cooking Game Sprites Stations_35: -1668761958
+      Cooking Game Sprites Stations_36: -471186278
+      Cooking Game Sprites Stations_37: -1535210303
+      Cooking Game Sprites Stations_38: 1864192779
+      Cooking Game Sprites Stations_39: 971411659
+      Cooking Game Sprites Stations_4: -1695721380
+      Cooking Game Sprites Stations_40: -1430073453
+      Cooking Game Sprites Stations_41: -1669132889
+      Cooking Game Sprites Stations_42: -278189235
+      Cooking Game Sprites Stations_43: 1726998736
+      Cooking Game Sprites Stations_44: -1762826118
+      Cooking Game Sprites Stations_45: 2092683786
+      Cooking Game Sprites Stations_46: 422726856
+      Cooking Game Sprites Stations_47: 2089754156
+      Cooking Game Sprites Stations_48: -1316354903
+      Cooking Game Sprites Stations_49: 1396350150
+      Cooking Game Sprites Stations_5: -933075691
+      Cooking Game Sprites Stations_50: 254899118
+      Cooking Game Sprites Stations_51: -147770148
+      Cooking Game Sprites Stations_52: 453599540
+      Cooking Game Sprites Stations_53: -2109864344
+      Cooking Game Sprites Stations_54: 1017219965
+      Cooking Game Sprites Stations_55: 740419480
+      Cooking Game Sprites Stations_56: 954191664
+      Cooking Game Sprites Stations_57: 1103481855
+      Cooking Game Sprites Stations_58: 2049990335
+      Cooking Game Sprites Stations_59: -210889379
+      Cooking Game Sprites Stations_6: 719057559
+      Cooking Game Sprites Stations_60: 676494007
+      Cooking Game Sprites Stations_61: -2069647632
+      Cooking Game Sprites Stations_62: -313289800
+      Cooking Game Sprites Stations_63: -700515030
+      Cooking Game Sprites Stations_64: -310579105
+      Cooking Game Sprites Stations_65: -1974823781
+      Cooking Game Sprites Stations_66: -1649335288
+      Cooking Game Sprites Stations_67: 1948484943
+      Cooking Game Sprites Stations_68: 1016616397
+      Cooking Game Sprites Stations_69: 360940541
+      Cooking Game Sprites Stations_7: 1528298414
+      Cooking Game Sprites Stations_70: 1309532183
+      Cooking Game Sprites Stations_71: -1593068605
+      Cooking Game Sprites Stations_72: -1445571474
+      Cooking Game Sprites Stations_73: -1925365017
+      Cooking Game Sprites Stations_74: 643575034
+      Cooking Game Sprites Stations_75: -1543605072
+      Cooking Game Sprites Stations_76: -531226299
+      Cooking Game Sprites Stations_77: 270615035
+      Cooking Game Sprites Stations_78: -1269012258
+      Cooking Game Sprites Stations_79: 1232461146
+      Cooking Game Sprites Stations_8: -1707500066
+      Cooking Game Sprites Stations_80: -290339824
+      Cooking Game Sprites Stations_81: 1637413826
+      Cooking Game Sprites Stations_82: -432980836
+      Cooking Game Sprites Stations_83: -1195816736
+      Cooking Game Sprites Stations_84: -2028731498
+      Cooking Game Sprites Stations_85: 885919836
+      Cooking Game Sprites Stations_86: 1134258272
+      Cooking Game Sprites Stations_87: 577253758
+      Cooking Game Sprites Stations_88: -1342364804
+      Cooking Game Sprites Stations_89: 1657423755
+      Cooking Game Sprites Stations_9: -1422151888
+      Cooking Game Sprites Stations_90: -1189453591
+      Cooking Game Sprites Stations_91: 1459013954
+      Cooking Game Sprites Stations_92: -666540056
+      Cooking Game Sprites Stations_93: -620647644
+      Cooking Game Sprites Stations_94: -927390527
+      Cooking Game Sprites Stations_95: -1626584689
+      Cooking Game Sprites Stations_96: 2036336574
+      Cooking Game Sprites Stations_97: -1072508879
+      Cooking Game Sprites Stations_98: 1369371204
+      Cooking Game Sprites Stations_99: -886553993
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

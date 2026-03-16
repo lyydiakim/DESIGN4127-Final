@@ -1,0 +1,20 @@
+{
+    "name": "GameAssemblyLab.GameAssemblies.Editor",
+    "rootNamespace": "GameAssemblyLab.GameAssemblies.Editor",
+    "references": [
+        "GameAssemblyLab.GameAssemblies",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

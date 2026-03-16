@@ -1,0 +1,23 @@
+{
+    "name": "GameAssemblyLab.TestPackage.Editor.Tests",
+    "rootNamespace": "GameAssemblyLab.TestPackage.Editor.Tests",
+    "references": [
+        "GameAssemblyLab.TestPackage",
+        "GameAssemblyLab.TestPackage.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

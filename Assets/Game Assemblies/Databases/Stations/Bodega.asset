@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c3dcfb3376eb4d02834bd63a7b90587, type: 3}
+  m_Name: Bodega
+  m_EditorClassIdentifier: GameAssemblyLab.GameAssemblies::StationDataSO
+  stationName: Bodega
+  stationGraphic: {fileID: 0}
+  stationSpriteTint: {r: 1, g: 0.5898211, b: 0.2783019, a: 1}
+  stationScale: 0.5
+  deadSprite: {fileID: 0}
+  stationPrefab: {fileID: 4915604869722631473, guid: bc48d7feceda74979adab14f971de319, type: 3}
+  offsetY: 0.5
+  uiScale: 0.5
+  manualSliderPosition: 0
+  sliderOffsetY: -0.46
+  consumeResource: 1
+  produceResource: 1
+  consumes:
+  - {fileID: 11400000, guid: a4618650674e74bd78312716a37b0e72, type: 2}
+  produces:
+  - {fileID: 11400000, guid: 28cb697cecb0e4e4eb7a7ec3c00615ce, type: 2}
+  whatToProduce: 0
+  produceLootTable: {fileID: 0}
+  spawnResourcePrefab: 1
+  useInputArea: 1
+  useOutputArea: 1
+  spawnRadius: 1
+  isSingleUse: 0
+  destroyAfterSingleUse: 0
+  capitalInput: 0
+  capitalOutput: 0
+  capitalInputAmount: 0
+  capitalOutputAmount: 0
+  completesGoals_consumption: 0
+  completesGoals_production: 0
+  canBeWorked: 1
+  workDuration: 5
+  productionInterval: 5
+  typeOfProduction: 2
+  typeOfConsumption: 2

@@ -1,0 +1,1228 @@
+fileFormatVersion: 2
+guid: 49577a8f92a058c468c23d3032455102
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Color Sprites Test 04_0
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 3562
+        width: 171
+        height: 241
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1cd070e489142147a909df026bfbfda
+      internalID: -103307138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_1
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 3561
+        width: 154
+        height: 246
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be05cdcd99ac5b498fe8d27d61aabb6
+      internalID: 1217056667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_2
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 3561
+        width: 149
+        height: 244
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd92f02a8be0b347b0ca122d54ea598
+      internalID: -681875918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_3
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 3664
+        width: 209
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fadebc05ed333684aa0142615454d473
+      internalID: 77188306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_4
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 3661
+        width: 211
+        height: 170
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1482586ea3b4f5d409965b2b4da0e1c0
+      internalID: -2110591605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_5
+      rect:
+        serializedVersion: 2
+        x: 2117
+        y: 3664
+        width: 205
+        height: 175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db600c8ece602f4484300fa1c6e27a4
+      internalID: -2067893408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_6
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 3296
+        width: 169
+        height: 237
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9fe319a406b6ee458db975337266fa1
+      internalID: 750971104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_7
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 3296
+        width: 146
+        height: 240
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f43aac06a5ba7749adcb817087bb368
+      internalID: -1115428905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_8
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 3296
+        width: 172
+        height: 237
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4d50b56340ac649a2097e7d4f05937
+      internalID: -993639337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_9
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 3138
+        width: 398
+        height: 442
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062f14ad4fb5d064192573549b1ccb77
+      internalID: 2119086248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_10
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 3138
+        width: 412
+        height: 426
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2bd510a8c2dde0489fda0ecb7aad1a3
+      internalID: 2075370679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_11
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 3009
+        width: 186
+        height: 266
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51122ec4dbd7a949b2d407695a370f4
+      internalID: 246466578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_12
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 3009
+        width: 158
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030ca807b43815a42ac235ff06c013c8
+      internalID: 1130311385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_13
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 3009
+        width: 164
+        height: 274
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf2c6f0a1a53d44f84172ee449baaa0
+      internalID: 258033454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_14
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 2592
+        width: 391
+        height: 465
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc4a163d8b8b4448ada3b9763ebe471
+      internalID: 58079104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_15
+      rect:
+        serializedVersion: 2
+        x: 2164
+        y: 2590
+        width: 394
+        height: 422
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0864f5b403ebb6949a86c44e4614b4ea
+      internalID: -1417274015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_16
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 2798
+        width: 153
+        height: 162
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092f0c1c9774ee54990e90796b65930f
+      internalID: 1650857258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_17
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 2599
+        width: 125
+        height: 191
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83da3f9a7b616d54ab698382068fda6d
+      internalID: 904871973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_18
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 2590
+        width: 194
+        height: 139
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96eae616b72a22e4bbfed7715bf01559
+      internalID: -42871108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_19
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 2590
+        width: 137
+        height: 160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d04e827862f5449ac0e9d278734fae
+      internalID: 1253720262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_20
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 2598
+        width: 167
+        height: 144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356aa7eb1b00fe84481732f96a803ca6
+      internalID: 982697956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_21
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1796
+        width: 607
+        height: 689
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cfc9164360e4084ea571fcc342a1dd7
+      internalID: -241428493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_22
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 1791
+        width: 559
+        height: 679
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ac39091655f414098ecf68e1cf214c
+      internalID: -34043178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_23
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 1798
+        width: 589
+        height: 649
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6212dc15b7686db4f9b39672709ea8da
+      internalID: 1786484273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_24
+      rect:
+        serializedVersion: 2
+        x: 2204
+        y: 1794
+        width: 635
+        height: 605
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916c80786e0045f4ca571559b3b93b67
+      internalID: -275164076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_25
+      rect:
+        serializedVersion: 2
+        x: 2933
+        y: 1917
+        width: 312
+        height: 251
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9c689dd2c30124baa77488e8b25e13
+      internalID: -2089166409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_26
+      rect:
+        serializedVersion: 2
+        x: 3266
+        y: 1919
+        width: 306
+        height: 245
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d64065d8e630644920396ef6679bbf
+      internalID: -1162577260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_27
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 1910
+        width: 294
+        height: 269
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ff054cfebe0fb4f9922c75d347f6d3
+      internalID: 4749849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_29
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1036
+        width: 602
+        height: 638
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5eae89e1d54334a81c3bc5e8b45547
+      internalID: -1612426504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_30
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1030
+        width: 665
+        height: 635
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985e4c2b480a5e942bf20040752f1c83
+      internalID: -928768492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_31
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 1014
+        width: 609
+        height: 641
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa8bdf294e10a54e82696db37339a26
+      internalID: 1581630576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_32
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 1024
+        width: 550
+        height: 614
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e631fe7f66d43a8468f6fbfa19fb2059
+      internalID: -822996305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_33
+      rect:
+        serializedVersion: 2
+        x: 2930
+        y: 1583
+        width: 294
+        height: 229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08d8df08f7c6744186c5d42f3a960a9
+      internalID: -691102028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_34
+      rect:
+        serializedVersion: 2
+        x: 3244
+        y: 1592
+        width: 290
+        height: 255
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c95d4ad65a6084398f8b24a4f050db
+      internalID: -1479518337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_36
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 1552
+        width: 333
+        height: 286
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106f45cdcd05f164ebf3e938c57db7c1
+      internalID: 1821072923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_42
+      rect:
+        serializedVersion: 2
+        x: 2936
+        y: 1230
+        width: 300
+        height: 291
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a878cfd13cc0f439ef52c0922ff5bc
+      internalID: 541604244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_43
+      rect:
+        serializedVersion: 2
+        x: 3012
+        y: 1229
+        width: 54
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ee9703cef6ad3498e2932525e16312
+      internalID: 2095156754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_44
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 1015
+        width: 5
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea4b4e994f6d154b8d92a0191f6643c
+      internalID: 782369208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_45
+      rect:
+        serializedVersion: 2
+        x: 2967
+        y: 939
+        width: 281
+        height: 253
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98860f2d0647ab444993135eb1f44635
+      internalID: 2115103706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_46
+      rect:
+        serializedVersion: 2
+        x: 3251
+        y: 942
+        width: 316
+        height: 270
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c344edef83a5d94d8d9454e1e7b870f
+      internalID: 44176205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_47
+      rect:
+        serializedVersion: 2
+        x: 3567
+        y: 938
+        width: 320
+        height: 291
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88818d417f1b82d47afbca6dc95557fd
+      internalID: -842452296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_48
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 936
+        width: 42
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063db321cf642ef40be854b4f1ec4f86
+      internalID: -233887437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_49
+      rect:
+        serializedVersion: 2
+        x: 2959
+        y: 581
+        width: 276
+        height: 316
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b68b140a49a958439ac1d26bed8526a
+      internalID: -723978400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_50
+      rect:
+        serializedVersion: 2
+        x: 3254
+        y: 607
+        width: 293
+        height: 248
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5cd9077de56091468cbd68b0cd2a680
+      internalID: -804286822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_51
+      rect:
+        serializedVersion: 2
+        x: 3551
+        y: 602
+        width: 323
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092b3253dbdba36438bacf6088d0a53e
+      internalID: 396053002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_52
+      rect:
+        serializedVersion: 2
+        x: 2951
+        y: 282
+        width: 296
+        height: 252
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d555f7262ded1243a42b613c3f60218
+      internalID: 1533867134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_53
+      rect:
+        serializedVersion: 2
+        x: 3256
+        y: 268
+        width: 302
+        height: 252
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b739b3ac2e87cc43822189f3d666462
+      internalID: 1054178522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color Sprites Test 04_54
+      rect:
+        serializedVersion: 2
+        x: 3575
+        y: 266
+        width: 304
+        height: 275
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289e78627ee07094e9aad9654fb374f6
+      internalID: -625551633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6544abf12c59a6c4c9741dffd656bfd3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Color Sprites Test 04_0: -103307138
+      Color Sprites Test 04_1: 1217056667
+      Color Sprites Test 04_10: 2075370679
+      Color Sprites Test 04_11: 246466578
+      Color Sprites Test 04_12: 1130311385
+      Color Sprites Test 04_13: 258033454
+      Color Sprites Test 04_14: 58079104
+      Color Sprites Test 04_15: -1417274015
+      Color Sprites Test 04_16: 1650857258
+      Color Sprites Test 04_17: 904871973
+      Color Sprites Test 04_18: -42871108
+      Color Sprites Test 04_19: 1253720262
+      Color Sprites Test 04_2: -681875918
+      Color Sprites Test 04_20: 982697956
+      Color Sprites Test 04_21: -241428493
+      Color Sprites Test 04_22: -34043178
+      Color Sprites Test 04_23: 1786484273
+      Color Sprites Test 04_24: -275164076
+      Color Sprites Test 04_25: -2089166409
+      Color Sprites Test 04_26: -1162577260
+      Color Sprites Test 04_27: 4749849
+      Color Sprites Test 04_28: 1976934522
+      Color Sprites Test 04_29: -1612426504
+      Color Sprites Test 04_3: 77188306
+      Color Sprites Test 04_30: -928768492
+      Color Sprites Test 04_31: 1581630576
+      Color Sprites Test 04_32: -822996305
+      Color Sprites Test 04_33: -691102028
+      Color Sprites Test 04_34: -1479518337
+      Color Sprites Test 04_35: -1325595588
+      Color Sprites Test 04_36: 1821072923
+      Color Sprites Test 04_37: -1497516054
+      Color Sprites Test 04_38: -923012564
+      Color Sprites Test 04_39: 29105321
+      Color Sprites Test 04_4: -2110591605
+      Color Sprites Test 04_40: 466836219
+      Color Sprites Test 04_41: 936792929
+      Color Sprites Test 04_42: 541604244
+      Color Sprites Test 04_43: 2095156754
+      Color Sprites Test 04_44: 782369208
+      Color Sprites Test 04_45: 2115103706
+      Color Sprites Test 04_46: 44176205
+      Color Sprites Test 04_47: -842452296
+      Color Sprites Test 04_48: -233887437
+      Color Sprites Test 04_49: -723978400
+      Color Sprites Test 04_5: -2067893408
+      Color Sprites Test 04_50: -804286822
+      Color Sprites Test 04_51: 396053002
+      Color Sprites Test 04_52: 1533867134
+      Color Sprites Test 04_53: 1054178522
+      Color Sprites Test 04_54: -625551633
+      Color Sprites Test 04_6: 750971104
+      Color Sprites Test 04_7: -1115428905
+      Color Sprites Test 04_8: -993639337
+      Color Sprites Test 04_9: 2119086248
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
