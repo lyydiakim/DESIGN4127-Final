@@ -1753,10 +1753,12 @@ m_ResolvedPackages:
     - 1.9.8
     - 1.9.9
     - 1.9.10
+    - 1.9.11
     compatible:
     - 1.9.9
     - 1.9.10
-    recommended: 1.9.10
+    - 1.9.11
+    recommended: 1.9.11
     deprecated:
     - 1.8.0-pre.1
   dependencies:
@@ -6582,9 +6584,11 @@ m_ResolvedPackages:
     - 3.0.3
     - 3.1.0
     - 3.2.0
+    - 3.2.1
     compatible:
     - 3.2.0
-    recommended: 3.2.0
+    - 3.2.1
+    recommended: 3.2.1
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
