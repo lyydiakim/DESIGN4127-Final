@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 // Requires a Collider2D set to Is Trigger on this GameObject.
 // Any player that walks into the trigger can activate this station
@@ -25,8 +26,41 @@ public class ResourceStation : MonoBehaviour
     private readonly Dictionary<playerController, UnityAction> _listeners =
         new Dictionary<playerController, UnityAction>();
 
+    /// <summary>
+    /// Big Grocery / Art Store / Deli / Factory / Farmers Market / Pet Shelter (and similar) may use a child trigger + minigame interaction.
+    /// The parent still receives 2D trigger callbacks when the Rigidbody2D is on the parent, so a stray
+    /// <see cref="ResourceStation"/> on the root would fight that flow. Defer entirely if present.
+    /// </summary>
+    private GroceryStationInteraction _deferToGrocery;
+    private ArtStoreStationInteraction _deferToArtStore;
+    private HomeStationInteraction _deferToHome;
+    private ParkStationInteraction _deferToPark;
+    private DeliStationInteraction _deferToDeli;
+    private FactoryStationInteraction _deferToFactory;
+    private FarmersMarketStationInteraction _deferToFarmersMarket;
+    private PetShelterStationInteraction _deferToPetShelter;
+
+    private void Awake()
+    {
+        _deferToGrocery = GetComponentInChildren<GroceryStationInteraction>(true);
+        _deferToArtStore = GetComponentInChildren<ArtStoreStationInteraction>(true);
+        _deferToHome = GetComponentInChildren<HomeStationInteraction>(true);
+        _deferToPark = GetComponentInChildren<ParkStationInteraction>(true);
+        _deferToDeli = GetComponentInChildren<DeliStationInteraction>(true);
+        _deferToFactory = GetComponentInChildren<FactoryStationInteraction>(true);
+        _deferToFarmersMarket = GetComponentInChildren<FarmersMarketStationInteraction>(true);
+        _deferToPetShelter = GetComponentInChildren<PetShelterStationInteraction>(true);
+    }
+
+    private bool DeferToMinigameStation =>
+        _deferToGrocery != null || _deferToArtStore != null || _deferToHome != null || _deferToPark != null
+        || _deferToDeli != null || _deferToFactory != null || _deferToFarmersMarket != null
+        || _deferToPetShelter != null;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (DeferToMinigameStation) return;
+
         playerController pc = other.GetComponentInParent<playerController>();
         if (pc == null || _listeners.ContainsKey(pc)) return;
 
@@ -37,13 +71,16 @@ public class ResourceStation : MonoBehaviour
         _listeners[pc] = action;
         pc.onPlayerButton_A.AddListener(action);
 
-        // Show station info on this player's board.
+        // Show station info on this player's board (trade key / face button from bindings when available).
         PlayerTransactionFeedback.Instance?.ShowStationPrompt(
-            pc.playerID, DisplayName, costs, rewards);
+            PlayerTransactionFeedback.BoardIndexForPlayer(pc), DisplayName, costs, rewards,
+            PlayerResourceBindingPrompts.ResolvePlayerInput(pc));
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (DeferToMinigameStation) return;
+
         playerController pc = other.GetComponentInParent<playerController>();
         if (pc == null || !_listeners.TryGetValue(pc, out var action)) return;
 
@@ -51,12 +88,14 @@ public class ResourceStation : MonoBehaviour
         _listeners.Remove(pc);
 
         // Clear station info from this player's board.
-        PlayerTransactionFeedback.Instance?.HideStationPrompt(pc.playerID);
+        PlayerTransactionFeedback.Instance?.HideStationPrompt(PlayerTransactionFeedback.BoardIndexForPlayer(pc));
     }
 
     private void OnPlayerInteract(playerController pc)
     {
         Debug.Log($"{gameObject.name}: OnPlayerInteract called by player {pc?.playerID}");
+
+        int ui = PlayerTransactionFeedback.BoardIndexForPlayer(pc);
 
         if (bank.TrySpendAll(costs))
         {
@@ -64,14 +103,14 @@ public class ResourceStation : MonoBehaviour
                 bank.Add(reward.resource, reward.amount);
 
             if (pc != null)
-                PlayerTransactionFeedback.Instance?.ShowTransaction(pc.playerID, costs, rewards);
+                PlayerTransactionFeedback.Instance?.ShowTransaction(ui, costs, rewards);
 
             ActivateStation();
         }
         else
         {
             if (pc != null)
-                PlayerTransactionFeedback.Instance?.ShowInsufficientFeedback(pc.playerID, costs, bank);
+                PlayerTransactionFeedback.Instance?.ShowInsufficientFeedback(ui, costs, bank);
         }
     }
 

@@ -1,18 +1,33 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// Pauses the game until any key / face button. Ensures the start overlay is the topmost UI sibling
+/// so it covers <c>playerBoards</c> and other canvas content used as an instructional splash.
+/// </summary>
+[DefaultExecutionOrder(500)]
 public class StartScreenManager : MonoBehaviour
 {
     public GameObject startScreenOverlay;
 
     private bool gameStarted = false;
 
-    void Start()
+    private IEnumerator Start()
     {
-        if (startScreenOverlay != null)
-            startScreenOverlay.SetActive(true);
-
+        // This component must be on an active GameObject. If startScreenOverlay is inactive in the
+        // hierarchy, Unity will not run Start() here.
         Time.timeScale = 0f;
+
+        if (startScreenOverlay != null)
+        {
+            startScreenOverlay.SetActive(true);
+            // Sibling order = draw order (later = in front). Scene order may place playerBoards after
+            // the start screen; wait one frame then move overlay to the top.
+            yield return null;
+            if (startScreenOverlay != null)
+                startScreenOverlay.transform.SetAsLastSibling();
+        }
     }
 
     void Update()

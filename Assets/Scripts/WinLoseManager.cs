@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Handles win/lose screens.
@@ -13,22 +14,45 @@ public class WinLoseManager : MonoBehaviour
     [SerializeField] private Sprite winSprite;
     [SerializeField] private Sprite loseSprite;
 
+    [Header("Presentation")]
+    [Tooltip("Higher than ResourceManager_Canvas (0) so the result card draws on top of all UI.")]
+    [SerializeField] private int endScreenCanvasSortOrder = 10000;
+
     private bool _gameOver = false;
-    private SpriteRenderer _endRenderer;
+    private Canvas _endCanvas;
+    private Image _endImage;
 
     private void Awake()
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
 
-        // Create a hidden SpriteRenderer that covers the screen at runtime.
-        var go = new GameObject("EndScreen");
-        go.transform.SetParent(transform);
-        go.transform.localPosition = Vector3.zero;
-        _endRenderer = go.AddComponent<SpriteRenderer>();
-        _endRenderer.sortingLayerName = "Top";
-        _endRenderer.sortingOrder = 99;
-        go.SetActive(false);
+        // Screen Space Overlay so the card is composited above other canvases (not behind world/UI).
+        var canvasGo = new GameObject("EndScreenCanvas", typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
+        canvasGo.transform.SetParent(transform, false);
+
+        _endCanvas = canvasGo.GetComponent<Canvas>();
+        _endCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        _endCanvas.sortingOrder = endScreenCanvasSortOrder;
+
+        var scaler = canvasGo.GetComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = new Vector2(1920, 1080);
+        scaler.matchWidthOrHeight = 0.5f;
+
+        var imgGo = new GameObject("EndScreenImage", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+        imgGo.transform.SetParent(canvasGo.transform, false);
+        var rt = imgGo.GetComponent<RectTransform>();
+        rt.anchorMin = Vector2.zero;
+        rt.anchorMax = Vector2.one;
+        rt.offsetMin = Vector2.zero;
+        rt.offsetMax = Vector2.zero;
+
+        _endImage = imgGo.GetComponent<Image>();
+        _endImage.raycastTarget = true;
+        _endImage.preserveAspect = true;
+
+        canvasGo.SetActive(false);
     }
 
     /// <summary>
@@ -53,15 +77,17 @@ public class WinLoseManager : MonoBehaviour
 
     private void ShowEndScreen(Sprite sprite)
     {
+        if (sprite == null)
+        {
+            Debug.LogWarning("[WinLoseManager] No sprite assigned for this outcome.", this);
+            return;
+        }
+
         _gameOver = true;
         Time.timeScale = 0f;
-        _endRenderer.sprite = sprite;
-        _endRenderer.gameObject.SetActive(true);
 
-        _endRenderer.transform.localScale = new Vector3(0.05f, 0.05f, 1f);
-
-        Camera cam = Camera.main;
-        if (cam != null)
-            _endRenderer.transform.position = cam.transform.position + Vector3.forward;
+        _endImage.sprite = sprite;
+        _endCanvas.gameObject.SetActive(true);
+        _endCanvas.transform.SetAsLastSibling();
     }
 }

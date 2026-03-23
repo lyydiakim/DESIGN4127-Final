@@ -317,6 +317,8 @@ GameObject:
   - component: {fileID: 6771115080081083907}
   - component: {fileID: 5914181659260560423}
   - component: {fileID: 785299533683359882}
+  - component: {fileID: 7921847654321098765}
+  - component: {fileID: 8812233445566778999}
   - component: {fileID: 3064519723028659992}
   - component: {fileID: 4576693489857627985}
   m_Layer: 7
@@ -454,7 +456,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -505,6 +507,74 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 11, y: 13.1}
   m_EdgeRadius: 0
+--- !u!61 &7921847654321098765
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345778720375392362}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 11, y: 13.1}
+    newSize: {x: 0.56, y: 0.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 11, y: 13.1}
+  m_EdgeRadius: 0
+--- !u!114 &8812233445566778999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345778720375392362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a1f2e83d5b4a6ea8b9c0d1e2f3a4b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GroceryStationInteraction
+  bank: {fileID: 0}
+  menuArtSprite: {fileID: 21300000, guid: e5ac66b867adc4ae6ace4e88c8598545, type: 3}
+  menuArt: {fileID: 0}
+  moneyResource: {fileID: 11400000, guid: a4618650674e74bd78312716a37b0e72, type: 2}
+  energyResource: {fileID: 11400000, guid: 28cb697cecb0e4e4eb7a7ec3c00615ce, type: 2}
+  comboCoinCost: 10
+  comboEnergyReward: 9
+  mealCoinCost: 8
+  mealEnergyReward: 7
+  stationTitle: Big Grocery
 --- !u!114 &3064519723028659992
 MonoBehaviour:
   m_ObjectHideFlags: 0
