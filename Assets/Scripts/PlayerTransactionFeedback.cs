@@ -610,6 +610,26 @@ public class PlayerTransactionFeedback : MonoBehaviour
     }
 
     /// <summary>
+    /// Clears only the board line TMP (does not remove grocery menu overlays). Use when dismissing
+    /// temporary copy such as event-card votes so open station overlays stay intact.
+    /// </summary>
+    public void ClearBoardTextLine(int playerIndex)
+    {
+        if (playerIndex < 0 || playerIndex >= playerBoardTexts.Length) return;
+        if (playerBoardTexts[playerIndex] == null) return;
+
+        if (_boardRoutines[playerIndex] != null)
+        {
+            StopCoroutine(_boardRoutines[playerIndex]);
+            _boardRoutines[playerIndex] = null;
+        }
+
+        var txt = playerBoardTexts[playerIndex];
+        txt.alpha = 0f;
+        txt.text  = string.Empty;
+    }
+
+    /// <summary>
     /// Call when a player exits a station trigger zone.
     /// Clears the station prompt from the player's board.
     /// </summary>

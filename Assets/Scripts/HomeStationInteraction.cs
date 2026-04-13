@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// Home / apartment minigame: Fire 1 opens the menu overlay. While open: Fire 1 = power nap (−network, +energy),
+/// Home / apt minigame: Fire 1 opens the menu overlay. While open: Fire 1 = power nap (−network, +energy),
 /// Fire 2 = pay rent (−money); if rent is paid, <see cref="WinLoseManager.OnRentPaid"/> runs (win overlay).
 /// Fire 4 (Y) closes the menu. Same UI path as <see cref="GroceryStationInteraction"/>.
 /// </summary>
@@ -32,7 +32,7 @@ public class HomeStationInteraction : MonoBehaviour
     [SerializeField] int napEnergyReward = 50;
 
     [Header("Pay rent (Fire 2 when menu is open)")]
-    [SerializeField] int rentMoneyCost = 500;
+    [SerializeField] int rentMoneyCost = 2000;
 
     [SerializeField] string stationTitle = "Home";
 

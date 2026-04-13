@@ -9,11 +9,11 @@ using UnityEngine.InputSystem;
 /// Call StartTimer() (e.g. from StartScreenManager) to begin the first round.
 /// Cards play in order (1 → 2 → 3). After the last card, one more timer interval runs
 /// (final round, no card) before lose. Each card pauses the game until
-/// <b>any one player</b> picks an option for the <b>whole group</b> (shared <see cref="ResourceBank"/>):
+/// <b>every joined player</b> has voted (B / A / Y) and <b>all votes match</b>; then one shared cost applies to the group
+/// (<see cref="ResourceBank"/>):
 ///   <b>B</b> (Fire 2) → −Money · <b>A</b> (Fire 1) → −Energy · <b>Y</b> (Fire 4) → −Network
 /// Uses the Input System (not <c>onPlayerButton_Y</c>, which is never invoked by playerController for absorb).
-/// Subscribes to both <see cref="InputAction.started"/> and <see cref="InputAction.performed"/> so gamepads
-/// (Joystick / face buttons) and keyboards register while <c>Time.timeScale == 0</c>.
+/// Uses <see cref="InputAction.performed"/> so inputs register while <c>Time.timeScale == 0</c>.
 /// </summary>
 public class EventCardManager : MonoBehaviour
 {
@@ -77,7 +77,16 @@ public class EventCardManager : MonoBehaviour
     [SerializeField] private int    _currentIndex  = 0;
     [SerializeField] private bool   _inFinalTimerRound = false;
 
-    private bool _choiceLocked;
+    private enum EventVoteChoice
+    {
+        Unset = 0,
+        Money,
+        Energy,
+        Network
+    }
+
+    private readonly List<playerController> _votingPlayers = new List<playerController>();
+    private readonly Dictionary<playerController, EventVoteChoice> _playerVotes = new Dictionary<playerController, EventVoteChoice>();
     private readonly Dictionary<playerController, EventCardInputHooks> _inputHooks = new();
 
     private sealed class EventCardInputHooks
@@ -151,7 +160,16 @@ public class EventCardManager : MonoBehaviour
     {
         if (_cardActive || eventCards == null || eventCards.Length == 0) return;
         _cardActive   = true;
-        _choiceLocked = false;
+        _votingPlayers.Clear();
+        _playerVotes.Clear();
+        if (playersInfo != null && playersInfo.allControllers != null)
+        {
+            foreach (var pc in playersInfo.allControllers)
+            {
+                if (pc != null)
+                    _votingPlayers.Add(pc);
+            }
+        }
 
         var card = eventCards[_currentIndex];
         if (card.overlay != null)
@@ -163,11 +181,13 @@ public class EventCardManager : MonoBehaviour
         if (card.choicePromptText != null)
         {
             card.choicePromptText.gameObject.SetActive(true);
-            card.choicePromptText.text = BuildGroupChoicePromptRichText(card);
+            UpdateChoicePromptText(card);
         }
 
         Time.timeScale = 0f;
+        ClearVoteBoardSlots();
         SubscribeToPlayers();
+        RefreshVoteBoardUI();
 
         Debug.Log(
             $"[EventCardManager] Card {_currentIndex + 1}/{eventCards.Length}: {StripRichText(BuildGroupChoicePromptRichText(card))}");
@@ -178,7 +198,8 @@ public class EventCardManager : MonoBehaviour
         if (eventCards == null || eventCards.Length == 0) return;
 
         _cardActive   = false;
-        _choiceLocked = false;
+        _votingPlayers.Clear();
+        _playerVotes.Clear();
 
         var card = eventCards[_currentIndex];
         if (card.overlay != null)
@@ -213,34 +234,63 @@ public class EventCardManager : MonoBehaviour
                 $"[EventCardManager] Group choice resolved. Round {RoundsCompleted} complete. Next card in {eventIntervalSeconds}s.");
     }
 
-    // ── Choice callbacks (first press wins for the whole group) ──────────────
-    private void OnChoiceMoney()
+    private void RecordVote(playerController pc, EventVoteChoice choice)
     {
-        if (!_cardActive || _choiceLocked) return;
-        _choiceLocked = true;
-        UnsubscribeFromPlayers();
-        if (bank != null && moneyResource != null)
-            bank.Add(moneyResource, -eventCards[_currentIndex].moneyCost);
-        CloseCardAndAdvanceRound();
+        if (!_cardActive || pc == null || choice == EventVoteChoice.Unset) return;
+        if (!_votingPlayers.Contains(pc)) return;
+
+        _playerVotes[pc] = choice;
+
+        if (eventCards != null && eventCards.Length > 0 && _currentIndex >= 0 && _currentIndex < eventCards.Length)
+            UpdateChoicePromptText(eventCards[_currentIndex]);
+
+        RefreshVoteBoardUI();
+        TryResolveUnanimous();
     }
 
-    private void OnChoiceEnergy()
+    private void TryResolveUnanimous()
     {
-        if (!_cardActive || _choiceLocked) return;
-        _choiceLocked = true;
-        UnsubscribeFromPlayers();
-        if (bank != null && energyResource != null)
-            bank.Add(energyResource, -eventCards[_currentIndex].energyCost);
-        CloseCardAndAdvanceRound();
-    }
+        if (!_cardActive || eventCards == null || eventCards.Length == 0) return;
 
-    private void OnChoiceNetwork()
-    {
-        if (!_cardActive || _choiceLocked) return;
-        _choiceLocked = true;
+        int n = _votingPlayers.Count;
+        if (n == 0)
+        {
+            UnsubscribeFromPlayers();
+            CloseCardAndAdvanceRound();
+            return;
+        }
+
+        foreach (var pc in _votingPlayers)
+        {
+            if (!_playerVotes.TryGetValue(pc, out var v) || v == EventVoteChoice.Unset)
+                return;
+        }
+
+        EventVoteChoice first = _playerVotes[_votingPlayers[0]];
+        for (int i = 1; i < n; i++)
+        {
+            if (_playerVotes[_votingPlayers[i]] != first)
+                return;
+        }
+
         UnsubscribeFromPlayers();
-        if (bank != null && networkResource != null)
-            bank.Add(networkResource, -eventCards[_currentIndex].networkCost);
+
+        switch (first)
+        {
+            case EventVoteChoice.Money:
+                if (bank != null && moneyResource != null)
+                    bank.Add(moneyResource, -eventCards[_currentIndex].moneyCost);
+                break;
+            case EventVoteChoice.Energy:
+                if (bank != null && energyResource != null)
+                    bank.Add(energyResource, -eventCards[_currentIndex].energyCost);
+                break;
+            case EventVoteChoice.Network:
+                if (bank != null && networkResource != null)
+                    bank.Add(networkResource, -eventCards[_currentIndex].networkCost);
+                break;
+        }
+
         CloseCardAndAdvanceRound();
     }
 
@@ -266,16 +316,24 @@ public class EventCardManager : MonoBehaviour
             if (f1 == null || f2 == null || f4 == null) continue;
 
             var hook = new EventCardInputHooks();
-            hook.Fire2 = _ => OnChoiceMoney();
-            hook.Fire1 = _ => OnChoiceEnergy();
-            hook.Fire4 = _ => OnChoiceNetwork();
+            hook.Fire2 = ctx =>
+            {
+                if (ctx.performed)
+                    RecordVote(pc, EventVoteChoice.Money);
+            };
+            hook.Fire1 = ctx =>
+            {
+                if (ctx.performed)
+                    RecordVote(pc, EventVoteChoice.Energy);
+            };
+            hook.Fire4 = ctx =>
+            {
+                if (ctx.performed)
+                    RecordVote(pc, EventVoteChoice.Network);
+            };
 
-            // started + performed: controllers reliably fire started; some setups duplicate with performed — _choiceLocked dedupes.
-            f2.started += hook.Fire2;
             f2.performed += hook.Fire2;
-            f1.started += hook.Fire1;
             f1.performed += hook.Fire1;
-            f4.started += hook.Fire4;
             f4.performed += hook.Fire4;
 
             _inputHooks[pc] = hook;
@@ -318,10 +376,28 @@ public class EventCardManager : MonoBehaviour
     }
 
     // ── Prompt copy ───────────────────────────────────────────────────────────
-    static string BuildGroupChoicePromptRichText(EventCard card)
+    void UpdateChoicePromptText(EventCard card)
+    {
+        if (card.choicePromptText == null) return;
+        card.choicePromptText.text = BuildGroupChoicePromptRichText(card);
+    }
+
+    string BuildGroupChoicePromptRichText(EventCard card)
     {
         string title = string.IsNullOrWhiteSpace(card.cardTitle) ? "Group choice" : card.cardTitle;
-        return $"<b>{title}</b>\n<size=90%>Any player chooses for the group:</size>\n" +
+        int total = _votingPlayers.Count;
+        int voted = 0;
+        foreach (var pc in _votingPlayers)
+        {
+            if (_playerVotes.TryGetValue(pc, out var v) && v != EventVoteChoice.Unset)
+                voted++;
+        }
+
+        string voteLine = total > 0
+            ? $"<size=85%>Each player votes with <b>[B]</b> / <b>[A]</b> / <b>[Y]</b>. All must pick the same option. (Locked in: {voted}/{total})</size>\n"
+            : "<size=85%>Each player votes with <b>[B]</b> / <b>[A]</b> / <b>[Y]</b>. All must pick the same option.</size>\n";
+
+        return $"<b>{title}</b>\n" + voteLine +
                $"<b>[B]</b>  -{card.moneyCost} Money\n" +
                $"<b>[A]</b>  -{card.energyCost} Energy\n" +
                $"<b>[Y]</b>  -{card.networkCost} Network";
@@ -331,5 +407,72 @@ public class EventCardManager : MonoBehaviour
     {
         if (string.IsNullOrEmpty(rich)) return rich;
         return System.Text.RegularExpressions.Regex.Replace(rich, "<.*?>", string.Empty);
+    }
+
+    void ClearVoteBoardSlots()
+    {
+        var ptf = PlayerTransactionFeedback.Instance;
+        if (ptf == null) return;
+        for (int i = 0; i < 4; i++)
+            ptf.ClearBoardTextLine(i);
+    }
+
+    void RefreshVoteBoardUI()
+    {
+        var ptf = PlayerTransactionFeedback.Instance;
+        if (ptf == null || !_cardActive || eventCards == null || eventCards.Length == 0) return;
+        if (_currentIndex < 0 || _currentIndex >= eventCards.Length) return;
+
+        EventCard card = eventCards[_currentIndex];
+        string title = string.IsNullOrWhiteSpace(card.cardTitle) ? "Group choice" : card.cardTitle;
+
+        foreach (var pc in _votingPlayers)
+        {
+            if (pc == null) continue;
+            int bi = PlayerTransactionFeedback.BoardIndexForPlayer(pc);
+            _playerVotes.TryGetValue(pc, out var choice);
+            string body = BuildPerPlayerVoteBoardRichText(pc, card, choice);
+            ptf.SetPlayerBoardMessage(bi, $"<b>{title}</b>\n{body}");
+        }
+    }
+
+    string BuildPerPlayerVoteBoardRichText(playerController pc, EventCard card, EventVoteChoice choice)
+    {
+        if (choice == EventVoteChoice.Unset)
+            return BuildWaitingVoteRichText();
+
+        var pi = ResolvePlayerInput(pc);
+        string schemeGroup = PlayerResourceBindingPrompts.ResolvePromptGroup(pi);
+
+        string buttonLabel = "<b>[?]</b>";
+        string costLine;
+        switch (choice)
+        {
+            case EventVoteChoice.Money:
+                costLine = $"{card.moneyCost} Money";
+                if (pi != null && pi.actions != null)
+                    buttonLabel = PlayerResourceBindingPrompts.BoldBracketLabel(pi, ActionFire2, schemeGroup);
+                break;
+            case EventVoteChoice.Energy:
+                costLine = $"{card.energyCost} Energy";
+                if (pi != null && pi.actions != null)
+                    buttonLabel = PlayerResourceBindingPrompts.BoldBracketLabel(pi, ActionFire1, schemeGroup);
+                break;
+            case EventVoteChoice.Network:
+                costLine = $"{card.networkCost} Network";
+                if (pi != null && pi.actions != null)
+                    buttonLabel = PlayerResourceBindingPrompts.BoldBracketLabel(pi, ActionFire4, schemeGroup);
+                break;
+            default:
+                costLine = "?";
+                break;
+        }
+
+        return $"<size=92%><b>Locked in:</b> −{costLine} {buttonLabel}</size>";
+    }
+
+    static string BuildWaitingVoteRichText()
+    {
+        return "<size=92%>Waiting on player choice</size>";
     }
 }
