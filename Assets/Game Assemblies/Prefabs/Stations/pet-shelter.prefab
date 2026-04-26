@@ -981,7 +981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PetShelterStationInteraction
   bank: {fileID: 0}
-  menuArtSprite: {fileID: 21300000, guid: e07a47c007d9b4d7e9d2bee0dfbb70e6, type: 3}
+  menuArtSprite: {fileID: 21300000, guid: e70cb147f9d2e483fb3c8bd2b5de6670, type: 3}
   menuArt: {fileID: 0}
   energyResource: {fileID: 11400000, guid: 28cb697cecb0e4e4eb7a7ec3c00615ce, type: 2}
   networkResource: {fileID: 11400000, guid: 59e3a4b76d9974c2296fba8f152f52bb, type: 2}

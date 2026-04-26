@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// Pet shelter minigame: Fire 1 opens the overlay. While open, Fire 1 / Fire 2 = volunteer shifts (energy to network),
+/// Pet shelter minigame: the overlay opens when the player enters the station. While open, Fire 1 / Fire 2 = volunteer shifts (energy to network),
 /// Fire 4 (Y) closes.
 /// </summary>
 [RequireComponent(typeof(Collider2D))]
@@ -105,7 +105,9 @@ public class PetShelterStationInteraction : MonoBehaviour
         }
 
         int ui = PlayerTransactionFeedback.BoardIndexForPlayer(pc);
-        ptf.SetPlayerBoardMessage(ui, BoardLineClosedPrompt(pc));
+        _menuOpen[pc] = true;
+        ptf.ShowGroceryMenuOverlay(ui, menuArt, menuArtSprite);
+        ptf.SetPlayerBoardMessage(ui, BoardLineMenuOpen());
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -216,6 +218,7 @@ public class PetShelterStationInteraction : MonoBehaviour
             if (r.resource != null)
                 bank.Add(r.resource, r.amount);
 
+        PlayerGameStats.RecordTransaction(pc, stationTitle, costs, rewards);
         ptf.ShowTransaction(ui, costs, rewards);
         CloseMenuAndShowClosedPrompt(pc);
     }
@@ -237,12 +240,12 @@ public class PetShelterStationInteraction : MonoBehaviour
         {
             string g = PlayerResourceBindingPrompts.ResolvePromptGroup(pi);
             string open = PlayerResourceBindingPrompts.BoldBracketLabel(pi, PlayerResourceBindingPrompts.ActionFire1, g);
-            return $"<b>{stationTitle}</b>\n{open} Volunteer";
+            return $"<b>{stationTitle}</b>\n{open} Show menu";
         }
 
         if (PlayerResourceBindingPrompts.IsKeyboardP2Player(pc))
-            return $"<b>{stationTitle}</b>\n<b>[E]</b> or <b>[Insert]</b> Volunteer";
-        return $"<b>{stationTitle}</b>\n[A] / [E] Volunteer";
+            return $"<b>{stationTitle}</b>\n<b>[E]</b> or <b>[Insert]</b> Show menu";
+        return $"<b>{stationTitle}</b>\n[A] / [E] Show menu";
     }
 
     private string BoardLineMenuOpen()

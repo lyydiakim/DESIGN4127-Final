@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// Art Store minigame: Fire 1 opens the menu (sprite overlay). While open, Fire 1 = part-time shift,
+/// Art Store minigame: the menu opens when the player enters the station. While open, Fire 1 = part-time shift,
 /// Fire 2 = full-time shift, Fire 4 (Y) = close without working. Uses the same board + overlay path as
 /// <see cref="GroceryStationInteraction"/> (<see cref="PlayerTransactionFeedback.ShowGroceryMenuOverlay"/>).
 /// </summary>
@@ -111,7 +111,9 @@ public class ArtStoreStationInteraction : MonoBehaviour
         }
 
         int ui = PlayerTransactionFeedback.BoardIndexForPlayer(pc);
-        ptf.SetPlayerBoardMessage(ui, BoardLineClosedPrompt(pc));
+        _menuOpen[pc] = true;
+        ptf.ShowGroceryMenuOverlay(ui, menuArt, menuArtSprite);
+        ptf.SetPlayerBoardMessage(ui, BoardLineMenuOpen());
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -154,7 +156,7 @@ public class ArtStoreStationInteraction : MonoBehaviour
             a.performed -= cb;
     }
 
-    /// <summary>Fire 1: open menu when closed; part-time shift when open.</summary>
+    /// <summary>Fire 1: show menu again when closed; part-time shift when open.</summary>
     private void OnPressFire1(playerController pc)
     {
         if (pc == null) return;
@@ -236,6 +238,7 @@ public class ArtStoreStationInteraction : MonoBehaviour
             if (r.resource != null)
                 bank.Add(r.resource, r.amount);
 
+        PlayerGameStats.RecordTransaction(pc, stationTitle, costs, rewards);
         ptf.ShowTransaction(ui, costs, rewards);
         CloseMenuAndShowClosedPrompt(pc);
     }
@@ -257,12 +260,12 @@ public class ArtStoreStationInteraction : MonoBehaviour
         {
             string g = PlayerResourceBindingPrompts.ResolvePromptGroup(pi);
             string open = PlayerResourceBindingPrompts.BoldBracketLabel(pi, PlayerResourceBindingPrompts.ActionFire1, g);
-            return $"<b>{stationTitle}</b>\n{open} Open shifts";
+            return $"<b>{stationTitle}</b>\n{open} Show menu";
         }
 
         if (PlayerResourceBindingPrompts.IsKeyboardP2Player(pc))
-            return $"<b>{stationTitle}</b>\n<b>[E]</b> or <b>[Insert]</b> Open shifts";
-        return $"<b>{stationTitle}</b>\n[A] / [E] Open shifts";
+            return $"<b>{stationTitle}</b>\n<b>[E]</b> or <b>[Insert]</b> Show menu";
+        return $"<b>{stationTitle}</b>\n[A] / [E] Show menu";
     }
 
     private string BoardLineMenuOpen()

@@ -2080,7 +2080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParkStationInteraction
   bank: {fileID: 0}
-  menuArtSprite: {fileID: 21300000, guid: 4de58d9b8aeb8440a8d11eb9604918b8, type: 3}
+  menuArtSprite: {fileID: 21300000, guid: 5f2fc98d5994e4e28bf72fe49da87f2b, type: 3}
   menuArt: {fileID: 0}
   energyResource: {fileID: 11400000, guid: 28cb697cecb0e4e4eb7a7ec3c00615ce, type: 2}
   networkResource: {fileID: 11400000, guid: 59e3a4b76d9974c2296fba8f152f52bb, type: 2}

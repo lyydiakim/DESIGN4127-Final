@@ -85,7 +85,10 @@ public class PlayerTransactionFeedback : MonoBehaviour
     [SerializeField] private Color rewardColor = new Color(0.35f, 1f, 0.35f, 1f);
 
     [Header("Debug")]
+    [Tooltip("Shows all four player panel roots in Play Mode for layout. Does not enable station popups; those wait until StartScreenManager calls OnGameStarted.")]
     [SerializeField] private bool showAllPanels = false;
+    [Tooltip("If enabled, treats gameplay as started immediately (station HUD works before intro ends). For local testing only; leave off in shipped scenes.")]
+    [SerializeField] private bool debugBypassIntroGate = false;
 
     [Header("TextMeshPro")]
     [Tooltip("Used when board TMPs have no font and for flying transaction popups. If empty, LiberationSans is loaded from Resources.")]
@@ -96,6 +99,7 @@ public class PlayerTransactionFeedback : MonoBehaviour
     /// <summary>Flying TxPopup instance per player — must be destroyed when the coroutine is stopped (spam trades).</summary>
     private readonly GameObject[] _activePopupObjects = new GameObject[4];
     private Coroutine[]  _boardRoutines = new Coroutine[4];
+    /// <summary>False until <see cref="OnGameStarted"/>; suppresses station/board/popup UI during start + instruction screens.</summary>
     private bool         _gameStarted   = false;
     private readonly GameObject[] _groceryMenuOverlays = new GameObject[4];
 
@@ -123,10 +127,11 @@ public class PlayerTransactionFeedback : MonoBehaviour
 
     private void Start()
     {
-        // showAllPanels is a debug shortcut — skip the start-screen gate.
+        if (debugBypassIntroGate)
+            _gameStarted = true;
+
         if (showAllPanels)
         {
-            _gameStarted = true;
             for (int i = 0; i < playerPanels.Length; i++)
                 if (playerPanels[i] != null)
                     playerPanels[i].gameObject.SetActive(true);
@@ -201,6 +206,7 @@ public class PlayerTransactionFeedback : MonoBehaviour
                                 List<ResourceCost> costs,
                                 List<ResourceCost> rewards)
     {
+        if (!_gameStarted) return;
         if (playerIndex < 0 || playerIndex >= playerPanels.Length) return;
         EnsurePlayerBoardVisible(playerIndex);
         if (playerPanels[playerIndex] == null) return;
@@ -232,6 +238,7 @@ public class PlayerTransactionFeedback : MonoBehaviour
                                          List<ResourceCost> costs,
                                          ResourceBank bank)
     {
+        if (!_gameStarted) return;
         if (playerIndex < 0 || playerIndex >= playerPanels.Length) return;
         EnsurePlayerBoardVisible(playerIndex);
         if (playerIndex >= playerBoardTexts.Length || playerBoardTexts[playerIndex] == null) return;
@@ -394,6 +401,7 @@ public class PlayerTransactionFeedback : MonoBehaviour
                                   List<ResourceCost> rewards,
                                   PlayerInput playerInput = null)
     {
+        if (!_gameStarted) return;
         if (playerIndex < 0 || playerIndex >= playerBoardTexts.Length) return;
         EnsurePlayerBoardVisible(playerIndex);
         if (playerBoardTexts[playerIndex] == null) return;
@@ -443,6 +451,7 @@ public class PlayerTransactionFeedback : MonoBehaviour
     /// </summary>
     public void SetPlayerBoardMessage(int playerIndex, string richText)
     {
+        if (!_gameStarted) return;
         if (playerIndex < 0 || playerIndex >= playerBoardTexts.Length) return;
         EnsurePlayerBoardVisible(playerIndex);
         if (playerBoardTexts[playerIndex] == null)
@@ -476,6 +485,7 @@ public class PlayerTransactionFeedback : MonoBehaviour
     /// </summary>
     public void ShowGroceryMenuOverlay(int playerIndex, Texture2D art, Sprite artSprite = null)
     {
+        if (!_gameStarted) return;
         if (playerIndex < 0 || playerIndex >= playerPanels.Length) return;
         EnsurePlayerBoardVisible(playerIndex);
         if (playerPanels[playerIndex] == null || _rootCanvas == null) return;

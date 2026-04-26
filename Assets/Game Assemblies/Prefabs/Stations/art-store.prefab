@@ -2243,7 +2243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtStoreStationInteraction
   bank: {fileID: 0}
-  menuArtSprite: {fileID: 21300000, guid: da4e03e992ae94d07a5ddd77121b30af, type: 3}
+  menuArtSprite: {fileID: 21300000, guid: e9e15838a1e654ef98e0051d3b52b41d, type: 3}
   menuArt: {fileID: 0}
   moneyResource: {fileID: 11400000, guid: a4618650674e74bd78312716a37b0e72, type: 2}
   energyResource: {fileID: 11400000, guid: 28cb697cecb0e4e4eb7a7ec3c00615ce, type: 2}

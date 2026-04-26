@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FactoryStationInteraction
   bank: {fileID: 0}
-  menuArtSprite: {fileID: 21300000, guid: 12d043084d3df40b19a8782d2e33d97f, type: 3}
+  menuArtSprite: {fileID: 21300000, guid: 341323e40947d4fd0aeb621fd96a5566, type: 3}
   menuArt: {fileID: 0}
   energyResource: {fileID: 11400000, guid: 28cb697cecb0e4e4eb7a7ec3c00615ce, type: 2}
   moneyResource: {fileID: 11400000, guid: a4618650674e74bd78312716a37b0e72, type: 2}

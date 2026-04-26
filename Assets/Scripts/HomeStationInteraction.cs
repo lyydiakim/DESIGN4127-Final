@@ -5,15 +5,16 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// Home / apt minigame: Fire 1 opens the menu overlay. While open: Fire 1 = power nap (−network, +energy),
-/// Fire 2 = pay rent (−money); if rent is paid, <see cref="WinLoseManager.OnRentPaid"/> runs (win overlay).
-/// Fire 4 (Y) closes the menu. Same UI path as <see cref="GroceryStationInteraction"/>.
+/// Home / apt minigame: the menu opens when the player enters the station. While open: Fire 1 = power nap (−network, +energy),
+/// Fire 2 = pay rent (−money); Fire 3 = abate rent (−network, rent due −100); Fire 4 (Y) closes the menu.
+/// If rent is paid, <see cref="WinLoseManager.OnRentPaid"/> runs (win overlay). Same UI path as <see cref="GroceryStationInteraction"/>.
 /// </summary>
 [RequireComponent(typeof(Collider2D))]
 public class HomeStationInteraction : MonoBehaviour
 {
     const string ActionFire1 = "Player/Fire 1";
     const string ActionFire2 = "Player/Fire 2";
+    const string ActionFire3 = "Player/Fire 3";
     const string ActionFire4 = "Player/Fire 4";
 
     [SerializeField] ResourceBank bank;
@@ -33,22 +34,33 @@ public class HomeStationInteraction : MonoBehaviour
 
     [Header("Pay rent (Fire 2 when menu is open)")]
     [SerializeField] int rentMoneyCost = 2000;
+    [Header("Abated rent (Fire 3 / X when menu is open)")]
+    [SerializeField] int abatementNetworkCost = 1;
+    [SerializeField] int abatementMoneyReduction = 100;
 
     [SerializeField] string stationTitle = "Home";
+    private int _currentRentDue;
 
     private sealed class HomeHooks
     {
         public Action<InputAction.CallbackContext> Fire1;
         public Action<InputAction.CallbackContext> Fire2;
+        public Action<InputAction.CallbackContext> Fire3;
         public Action<InputAction.CallbackContext> Fire4;
         public UnityAction FallbackA;
         public UnityAction FallbackB;
+        public UnityAction FallbackX;
         public UnityAction FallbackY;
         public bool UsedInputActions;
     }
 
     private readonly Dictionary<playerController, HomeHooks> _hooks = new();
     private readonly Dictionary<playerController, bool> _menuOpen = new();
+
+    private void Awake()
+    {
+        _currentRentDue = rentMoneyCost;
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -71,15 +83,18 @@ public class HomeStationInteraction : MonoBehaviour
         {
             InputAction f1 = pi.actions.FindAction(ActionFire1, throwIfNotFound: false);
             InputAction f2 = pi.actions.FindAction(ActionFire2, throwIfNotFound: false);
+            InputAction f3 = pi.actions.FindAction(ActionFire3, throwIfNotFound: false);
             InputAction f4 = pi.actions.FindAction(ActionFire4, throwIfNotFound: false);
 
-            if (f1 != null && f2 != null && f4 != null)
+            if (f1 != null && f2 != null && f3 != null && f4 != null)
             {
                 hook.Fire1 = _ => OnPressFire1(pc);
                 hook.Fire2 = _ => OnPressFire2(pc);
+                hook.Fire3 = _ => OnPressFire3(pc);
                 hook.Fire4 = _ => OnPressFire4(pc);
                 f1.performed += hook.Fire1;
                 f2.performed += hook.Fire2;
+                f3.started += hook.Fire3;
                 f4.performed += hook.Fire4;
                 hook.UsedInputActions = true;
             }
@@ -89,9 +104,11 @@ public class HomeStationInteraction : MonoBehaviour
         {
             hook.FallbackA = () => OnPressFire1(pc);
             hook.FallbackB = () => OnPressFire2(pc);
+            hook.FallbackX = () => OnPressFire3(pc);
             hook.FallbackY = () => OnPressFire4(pc);
             pc.onPlayerButton_A.AddListener(hook.FallbackA);
             pc.onPlayerButton_B.AddListener(hook.FallbackB);
+            pc.onPlayerButton_X.AddListener(hook.FallbackX);
             pc.onPlayerButton_Y.AddListener(hook.FallbackY);
         }
 
@@ -107,7 +124,9 @@ public class HomeStationInteraction : MonoBehaviour
         }
 
         int ui = PlayerTransactionFeedback.BoardIndexForPlayer(pc);
-        ptf.SetPlayerBoardMessage(ui, BoardLineClosedPrompt(pc));
+        _menuOpen[pc] = true;
+        ptf.ShowGroceryMenuOverlay(ui, menuArt, menuArtSprite);
+        ptf.SetPlayerBoardMessage(ui, BoardLineMenuOpen());
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -122,12 +141,14 @@ public class HomeStationInteraction : MonoBehaviour
             {
                 UnsubPerformed(pi.actions, ActionFire1, hook.Fire1);
                 UnsubPerformed(pi.actions, ActionFire2, hook.Fire2);
+                UnsubStarted(pi.actions, ActionFire3, hook.Fire3);
                 UnsubPerformed(pi.actions, ActionFire4, hook.Fire4);
             }
             else
             {
                 if (hook.FallbackA != null) pc.onPlayerButton_A.RemoveListener(hook.FallbackA);
                 if (hook.FallbackB != null) pc.onPlayerButton_B.RemoveListener(hook.FallbackB);
+                if (hook.FallbackX != null) pc.onPlayerButton_X.RemoveListener(hook.FallbackX);
                 if (hook.FallbackY != null) pc.onPlayerButton_Y.RemoveListener(hook.FallbackY);
             }
 
@@ -148,6 +169,14 @@ public class HomeStationInteraction : MonoBehaviour
         var a = asset.FindAction(actionPath, throwIfNotFound: false);
         if (a != null)
             a.performed -= cb;
+    }
+
+    private static void UnsubStarted(InputActionAsset asset, string actionPath, Action<InputAction.CallbackContext> cb)
+    {
+        if (cb == null) return;
+        var a = asset.FindAction(actionPath, throwIfNotFound: false);
+        if (a != null)
+            a.started -= cb;
     }
 
     private void OnPressFire1(playerController pc)
@@ -177,6 +206,12 @@ public class HomeStationInteraction : MonoBehaviour
     {
         if (pc == null || !MenuIsOpen(pc)) return;
         CloseMenuAndShowClosedPrompt(pc);
+    }
+
+    private void OnPressFire3(playerController pc)
+    {
+        if (pc == null || !MenuIsOpen(pc)) return;
+        TryAbateRent(pc);
     }
 
     private bool MenuIsOpen(playerController pc)
@@ -218,6 +253,7 @@ public class HomeStationInteraction : MonoBehaviour
             if (r.resource != null)
                 bank.Add(r.resource, r.amount);
 
+        PlayerGameStats.RecordTransaction(pc, stationTitle, costs, rewards);
         ptf.ShowTransaction(ui, costs, rewards);
         CloseMenuAndShowClosedPrompt(pc);
     }
@@ -232,7 +268,7 @@ public class HomeStationInteraction : MonoBehaviour
 
         var costs = new List<ResourceCost>
         {
-            new ResourceCost { resource = moneyResource, amount = rentMoneyCost }
+            new ResourceCost { resource = moneyResource, amount = Mathf.Max(0, _currentRentDue) }
         };
         var noRewards = new List<ResourceCost>();
 
@@ -249,6 +285,7 @@ public class HomeStationInteraction : MonoBehaviour
         if (!bank.TrySpendAll(costs))
             return;
 
+        PlayerGameStats.RecordTransaction(pc, stationTitle, costs, noRewards, isRentPayment: true);
         ptf.ShowTransaction(ui, costs, noRewards);
 
         _menuOpen[pc] = false;
@@ -256,6 +293,59 @@ public class HomeStationInteraction : MonoBehaviour
         ptf.SetPlayerBoardMessage(ui, "");
 
         WinLoseManager.Instance?.OnRentPaid();
+    }
+
+    private void TryAbateRent(playerController pc)
+    {
+        if (networkResource == null)
+        {
+            Debug.LogError($"{name}: Assign Network Resource on HomeStationInteraction.", this);
+            return;
+        }
+
+        int ui = PlayerTransactionFeedback.BoardIndexForPlayer(pc);
+        var ptf = PlayerTransactionFeedback.Instance;
+        if (ptf == null || bank == null) return;
+
+        if (_currentRentDue <= 0)
+        {
+            ptf.SetPlayerBoardMessage(ui, $"<b>{stationTitle}</b>\nRent already fully abated.\nCurrent rent due: 0");
+            return;
+        }
+
+        var costs = new List<ResourceCost>
+        {
+            new ResourceCost { resource = networkResource, amount = abatementNetworkCost }
+        };
+        var noRewards = new List<ResourceCost>();
+
+        if (!bank.CanAfford(costs))
+        {
+            ptf.ShowInsufficientFeedback(ui, costs, bank);
+            return;
+        }
+
+        if (!bank.TrySpendAll(costs))
+            return;
+
+        int appliedReduction = Mathf.Min(abatementMoneyReduction, _currentRentDue);
+        _currentRentDue = Mathf.Max(0, _currentRentDue - appliedReduction);
+        PlayerGameStats.RecordTransaction(
+            pc, stationTitle, costs, noRewards,
+            isRentPayment: false,
+            rentContributionValue: appliedReduction);
+        ptf.ShowTransaction(ui, costs, noRewards);
+
+        if (_currentRentDue <= 0)
+        {
+            _menuOpen[pc] = false;
+            ptf.HideGroceryMenuOverlay(ui);
+            ptf.SetPlayerBoardMessage(ui, "");
+            WinLoseManager.Instance?.OnRentPaid();
+            return;
+        }
+
+        ptf.SetPlayerBoardMessage(ui, BoardLineMenuOpen());
     }
 
     private void CloseMenuAndShowClosedPrompt(playerController pc)
@@ -275,16 +365,16 @@ public class HomeStationInteraction : MonoBehaviour
         {
             string g = PlayerResourceBindingPrompts.ResolvePromptGroup(pi);
             string open = PlayerResourceBindingPrompts.BoldBracketLabel(pi, PlayerResourceBindingPrompts.ActionFire1, g);
-            return $"<b>{stationTitle}</b>\n{open} Open menu";
+            return $"<b>{stationTitle}</b>\n{open} Show menu";
         }
 
         if (PlayerResourceBindingPrompts.IsKeyboardP2Player(pc))
-            return $"<b>{stationTitle}</b>\n<b>[E]</b> or <b>[Insert]</b> Open menu";
-        return $"<b>{stationTitle}</b>\n[A] / [E] Open menu";
+            return $"<b>{stationTitle}</b>\n<b>[E]</b> or <b>[Insert]</b> Show menu";
+        return $"<b>{stationTitle}</b>\n[A] / [E] Show menu";
     }
 
     private string BoardLineMenuOpen()
     {
-        return $"<b>{stationTitle}</b>\nSelect an option";
+        return $"<b>{stationTitle}</b>\nSelect from menu";
     }
 }

@@ -62,6 +62,8 @@ public class EventCardManager : MonoBehaviour
     [Header("Timer Display (optional)")]
     [Tooltip("Assign a TMP Text element to show the countdown on screen.")]
     [SerializeField] private TMP_Text timerText;
+    [Tooltip("Optional fallback TMP font for timer text if its font reference is missing.")]
+    [SerializeField] private TMP_FontAsset fallbackTimerFont;
 
     /// <summary>Fired each time a round ends (i.e. a card is dismissed).</summary>
     public static event Action OnRoundEnd;
@@ -105,6 +107,8 @@ public class EventCardManager : MonoBehaviour
 
     private void Start()
     {
+        EnsureTimerFontAssigned();
+
         if (eventCards == null) return;
         foreach (var card in eventCards)
         {
@@ -113,6 +117,22 @@ public class EventCardManager : MonoBehaviour
             if (card.choicePromptText != null)
                 card.choicePromptText.gameObject.SetActive(false);
         }
+    }
+
+    private void EnsureTimerFontAssigned()
+    {
+        if (timerText == null || timerText.font != null) return;
+
+        TMP_FontAsset resolved = fallbackTimerFont;
+        if (resolved == null)
+            resolved = TMP_Settings.defaultFontAsset;
+        if (resolved == null)
+            resolved = Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationSans SDF");
+        if (resolved == null) return;
+
+        timerText.font = resolved;
+        if (resolved.material != null)
+            timerText.fontSharedMaterial = resolved.material;
     }
 
     private void Update()

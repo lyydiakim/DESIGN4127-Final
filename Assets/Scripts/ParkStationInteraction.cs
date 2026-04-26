@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// Park minigame: Fire 1 opens the overlay. While open, Fire 1 or Fire 2 spends energy for network
+/// Park minigame: the overlay opens when the player enters the station. While open, Fire 1 or Fire 2 spends energy for network
 /// (same trade on both). Fire 4 (Y) closes. Uses <see cref="PlayerTransactionFeedback.ShowGroceryMenuOverlay"/>.
 /// </summary>
 [RequireComponent(typeof(Collider2D))]
@@ -101,7 +101,9 @@ public class ParkStationInteraction : MonoBehaviour
         }
 
         int ui = PlayerTransactionFeedback.BoardIndexForPlayer(pc);
-        ptf.SetPlayerBoardMessage(ui, BoardLineClosedPrompt(pc));
+        _menuOpen[pc] = true;
+        ptf.ShowGroceryMenuOverlay(ui, menuArt, menuArtSprite);
+        ptf.SetPlayerBoardMessage(ui, BoardLineMenuOpen());
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -212,6 +214,7 @@ public class ParkStationInteraction : MonoBehaviour
             if (r.resource != null)
                 bank.Add(r.resource, r.amount);
 
+        PlayerGameStats.RecordTransaction(pc, stationTitle, costs, rewards);
         ptf.ShowTransaction(ui, costs, rewards);
         CloseMenuAndShowClosedPrompt(pc);
     }
@@ -233,12 +236,12 @@ public class ParkStationInteraction : MonoBehaviour
         {
             string g = PlayerResourceBindingPrompts.ResolvePromptGroup(pi);
             string open = PlayerResourceBindingPrompts.BoldBracketLabel(pi, PlayerResourceBindingPrompts.ActionFire1, g);
-            return $"<b>{stationTitle}</b>\n{open} Open menu";
+            return $"<b>{stationTitle}</b>\n{open} Show menu";
         }
 
         if (PlayerResourceBindingPrompts.IsKeyboardP2Player(pc))
-            return $"<b>{stationTitle}</b>\n<b>[E]</b> or <b>[Insert]</b> Open menu";
-        return $"<b>{stationTitle}</b>\n[A] / [E] Open menu";
+            return $"<b>{stationTitle}</b>\n<b>[E]</b> or <b>[Insert]</b> Show menu";
+        return $"<b>{stationTitle}</b>\n[A] / [E] Show menu";
     }
 
     private string BoardLineMenuOpen()

@@ -103,6 +103,7 @@ public class ResourceStation : MonoBehaviour
                 bank.Add(reward.resource, reward.amount);
 
             if (pc != null)
+                PlayerGameStats.RecordTransaction(pc, DisplayName, costs, rewards);
                 PlayerTransactionFeedback.Instance?.ShowTransaction(ui, costs, rewards);
 
             ActivateStation();

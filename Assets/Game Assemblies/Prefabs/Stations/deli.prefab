@@ -1044,7 +1044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeliStationInteraction
   bank: {fileID: 0}
-  menuArtSprite: {fileID: 21300000, guid: 6bf997312c6a5446588aa3db6a11b547, type: 3}
+  menuArtSprite: {fileID: 21300000, guid: 0180158a348844706b4b497dc9daed09, type: 3}
   menuArt: {fileID: 0}
   moneyResource: {fileID: 11400000, guid: a4618650674e74bd78312716a37b0e72, type: 2}
   energyResource: {fileID: 11400000, guid: 28cb697cecb0e4e4eb7a7ec3c00615ce, type: 2}

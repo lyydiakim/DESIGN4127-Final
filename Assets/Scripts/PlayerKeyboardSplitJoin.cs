@@ -92,6 +92,22 @@ public sealed class PlayerKeyboardSplitJoin : MonoBehaviour
         if (player == null || player.playerIndex != 1) return;
         var kb = Keyboard.current;
         if (kb == null) return;
+        // Only force KeyboardP2 when this player is actually keyboard-controlled.
+        // If player index 1 joined on a gamepad, switching to KeyboardP2 removes gamepad bindings.
+        {
+            var devices = player.devices;
+            bool hasGamepad = false;
+            for (int i = 0; i < devices.Count; i++)
+            {
+                if (devices[i] is Gamepad)
+                {
+                    hasGamepad = true;
+                    break;
+                }
+            }
+
+            if (hasGamepad) return;
+        }
         player.SwitchCurrentControlScheme(SchemeKeyboardP2, kb);
     }
 }

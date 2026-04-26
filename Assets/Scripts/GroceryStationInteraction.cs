@@ -5,8 +5,8 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// Big Grocery: Fire 1 opens/closes menu; Fire 2 combo; Fire 3 meal. Board copy uses
-/// <see cref="PlayerResourceBindingPrompts"/> so gamepads show face-button labels and keyboards show key names.
+/// Big Grocery: the menu opens when the player enters the station trigger; Fire 1 closes the menu when open;
+/// Fire 2 combo; Fire 3 meal. Board copy uses <see cref="PlayerResourceBindingPrompts"/>.
 /// Place on the same GameObject as the station trigger collider.
 /// Uses Input System actions (Player/Fire 1–3) so it works even when playerController never invokes onPlayerButton_X.
 /// </summary>
@@ -111,7 +111,9 @@ public class GroceryStationInteraction : MonoBehaviour
         }
 
         int ui = PlayerTransactionFeedback.BoardIndexForPlayer(pc);
-        ptf.SetPlayerBoardMessage(ui, BoardLineOrderPrompt(pc));
+        _menuOpen[pc] = true;
+        ptf.ShowGroceryMenuOverlay(ui, menuArt, menuArtSprite);
+        ptf.SetPlayerBoardMessage(ui, BoardLineMenuOpen());
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -231,6 +233,7 @@ public class GroceryStationInteraction : MonoBehaviour
             if (r.resource != null)
                 bank.Add(r.resource, r.amount);
 
+        PlayerGameStats.RecordTransaction(pc, stationTitle, costs, rewards);
         ptf.ShowTransaction(ui, costs, rewards);
         CloseGroceryMenuAndShowOrderPrompt(pc);
     }
@@ -253,12 +256,12 @@ public class GroceryStationInteraction : MonoBehaviour
         {
             string g = PlayerResourceBindingPrompts.ResolvePromptGroup(pi);
             string open = PlayerResourceBindingPrompts.BoldBracketLabel(pi, PlayerResourceBindingPrompts.ActionFire1, g);
-            return $"<b>{stationTitle}</b>\n{open} Order food";
+            return $"<b>{stationTitle}</b>\n{open} Show menu";
         }
 
         if (PlayerResourceBindingPrompts.IsKeyboardP2Player(pc))
-            return $"<b>{stationTitle}</b>\n<b>[E]</b> or <b>[Insert]</b> Order food";
-        return $"<b>{stationTitle}</b>\n[A] / [E] Order food";
+            return $"<b>{stationTitle}</b>\n<b>[E]</b> or <b>[Insert]</b> Show menu";
+        return $"<b>{stationTitle}</b>\n[A] / [E] Show menu";
     }
 
     private string BoardLineMenuOpen()

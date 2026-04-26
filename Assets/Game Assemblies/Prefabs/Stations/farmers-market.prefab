@@ -777,7 +777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmersMarketStationInteraction
   bank: {fileID: 0}
-  menuArtSprite: {fileID: 21300000, guid: e56710bd3772a41c789d100831e3aed2, type: 3}
+  menuArtSprite: {fileID: 21300000, guid: 81af8556019dd44f28747557fef92b34, type: 3}
   menuArt: {fileID: 0}
   energyResource: {fileID: 11400000, guid: 28cb697cecb0e4e4eb7a7ec3c00615ce, type: 2}
   networkResource: {fileID: 11400000, guid: 59e3a4b76d9974c2296fba8f152f52bb, type: 2}
