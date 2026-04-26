@@ -151,6 +151,8 @@ GameObject:
   - component: {fileID: 2837374567193793473}
   - component: {fileID: 2472388205221193531}
   - component: {fileID: 855185347071884907}
+  - component: {fileID: 7606274083359611782}
+  - component: {fileID: 6611223344556677889}
   m_Layer: 0
   m_Name: Player_Custom
   m_TagString: Player
@@ -191,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: edb7065959558ff47b3df694ecd5393b, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: ae9992421f4f64a069f5ad78e406ac04, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -548,6 +550,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tags: 02000000
+--- !u!114 &7606274083359611782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3308519254579872422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c4a2b1d3e5476f9a0b1c2d3e4f5067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBottomAreaClamp
+--- !u!114 &6611223344556677889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3308519254579872422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4e91a2b8f34d6e9e0a1b2c3d4e5f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerWalkSpriteAnimation
+  player: {fileID: 5031758489567587670}
+  spriteRenderer: {fileID: 8930264680089808671}
+  walkFramesByCharacter:
+  - walkLeftA: {fileID: 0}
+    walkLeftB: {fileID: 0}
+    walkRightA: {fileID: 0}
+    walkRightB: {fileID: 0}
+  - walkLeftA: {fileID: 0}
+    walkLeftB: {fileID: 0}
+    walkRightA: {fileID: 0}
+    walkRightB: {fileID: 0}
+  - walkLeftA: {fileID: 0}
+    walkLeftB: {fileID: 0}
+    walkRightA: {fileID: 0}
+    walkRightB: {fileID: 0}
+  - walkLeftA: {fileID: 0}
+    walkLeftB: {fileID: 0}
+    walkRightA: {fileID: 0}
+    walkRightB: {fileID: 0}
+  minWalkSpeedX: 0.05
+  secondsPerFrame: 0.18
 --- !u!1 &4308293142968107062
 GameObject:
   m_ObjectHideFlags: 0

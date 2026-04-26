@@ -1994,6 +1994,8 @@ GameObject:
   - component: {fileID: 7366251084750431247}
   - component: {fileID: 6906194675252202317}
   - component: {fileID: 5144742025363643810}
+  - component: {fileID: 7711223344556677990}
+  - component: {fileID: 8822334455667788001}
   - component: {fileID: 5817758520448974261}
   - component: {fileID: 1805091330097354830}
   m_Layer: 7
@@ -2182,6 +2184,77 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 11.36, y: 11.36}
   m_EdgeRadius: 0
+--- !u!61 &7711223344556677990
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7265719917724122827}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 11.36, y: 11.36}
+    newSize: {x: 0.56, y: 0.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 11.36, y: 11.36}
+  m_EdgeRadius: 0
+--- !u!114 &8822334455667788001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7265719917724122827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d3c486159d74a9d9e52ffd042942d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArtStoreStationInteraction
+  bank: {fileID: 0}
+  menuArtSprite: {fileID: 21300000, guid: e9e15838a1e654ef98e0051d3b52b41d, type: 3}
+  menuArt: {fileID: 0}
+  moneyResource: {fileID: 11400000, guid: a4618650674e74bd78312716a37b0e72, type: 2}
+  energyResource: {fileID: 11400000, guid: 28cb697cecb0e4e4eb7a7ec3c00615ce, type: 2}
+  networkResource: {fileID: 11400000, guid: 59e3a4b76d9974c2296fba8f152f52bb, type: 2}
+  partTimeEnergyCost: 15
+  partTimeCoinReward: 20
+  partTimeNetworkReward: 1
+  fullTimeEnergyCost: 20
+  fullTimeCoinReward: 25
+  fullTimeNetworkReward: 1
+  stationTitle: Art Store
 --- !u!114 &5817758520448974261
 MonoBehaviour:
   m_ObjectHideFlags: 0
