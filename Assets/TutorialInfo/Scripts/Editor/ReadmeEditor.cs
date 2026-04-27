@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -58,11 +58,11 @@ public class ReadmeEditor : Editor
             var readme = SelectReadme();
             SessionState.SetBool(s_ShowedReadmeSessionStateName, true);
 
-            if (readme && !readme.loadedLayout)
-            {
-                LoadLayout();
+            // Avoid calling Unity's internal WindowLayout APIs at startup.
+            // In some editor states this throws NullReferenceException from
+            // UnityEditor.WindowLayout (maximize/layout handlers).
+            if (readme != null)
                 readme.loadedLayout = true;
-            }
         }
     }
 

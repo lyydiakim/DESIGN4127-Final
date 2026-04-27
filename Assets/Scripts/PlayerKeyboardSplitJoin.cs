@@ -16,6 +16,7 @@ using UnityEngine.InputSystem;
 [DefaultExecutionOrder(-100)]
 public sealed class PlayerKeyboardSplitJoin : MonoBehaviour
 {
+    const string SchemeKeyboard = "Keyboard";
     const string SchemeKeyboardP2 = "KeyboardP2";
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -55,12 +56,33 @@ public sealed class PlayerKeyboardSplitJoin : MonoBehaviour
         var kb = Keyboard.current;
         if (kb == null) return;
 
-        if (PlayerWithIndexExists(1)) return;
-
         if (pim.maxPlayerCount >= 0 && PlayerInput.all.Count >= pim.maxPlayerCount) return;
 
-        // Player 0 must join first (e.g. press a key on the unpaired keyboard / gamepad join flow).
-        if (PlayerInput.all.Count < 1) return;
+        // Ensure keyboard player 0 can join even when join behavior is manual.
+        if (PlayerInput.all.Count < 1)
+        {
+            bool joinP1 =
+                kb.wKey.wasPressedThisFrame ||
+                kb.aKey.wasPressedThisFrame ||
+                kb.sKey.wasPressedThisFrame ||
+                kb.dKey.wasPressedThisFrame ||
+                kb.upArrowKey.wasPressedThisFrame ||
+                kb.downArrowKey.wasPressedThisFrame ||
+                kb.leftArrowKey.wasPressedThisFrame ||
+                kb.rightArrowKey.wasPressedThisFrame ||
+                kb.eKey.wasPressedThisFrame ||
+                kb.xKey.wasPressedThisFrame ||
+                kb.f2Key.wasPressedThisFrame;
+
+            if (!joinP1) return;
+
+            var joinedP1 = pim.JoinPlayer(playerIndex: 0, controlScheme: SchemeKeyboard, pairWithDevice: kb);
+            if (joinedP1 == null)
+                Debug.LogWarning("PlayerKeyboardSplitJoin: Could not join player 0 with Keyboard.", this);
+            return;
+        }
+
+        if (PlayerWithIndexExists(1)) return;
 
         var joinP2 =
             kb.upArrowKey.wasPressedThisFrame ||

@@ -78,4 +78,24 @@ public class PlayerInstructionDisplay : MonoBehaviour
         if (index >= 0 && index < playerInstructionSprites.Length && playerInstructionSprites[index] != null)
             playerInstructionSprites[index].SetActive(false);
     }
+
+    private void Update()
+    {
+        // Keep instruction popups hidden until the intro flow has fully ended.
+        if (!StartScreenManager.IsGameplayStarted)
+        {
+            for (int i = 0; i < playerInstructionSprites.Length; i++)
+            {
+                var go = playerInstructionSprites[i];
+                if (go != null && go.activeSelf)
+                    go.SetActive(false);
+            }
+
+            _gameStarted = false;
+            return;
+        }
+
+        if (!_gameStarted)
+            OnGameStarted();
+    }
 }

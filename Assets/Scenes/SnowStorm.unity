@@ -2625,7 +2625,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47ce3fcd99ea74ba0a9889fa254d113b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5476949f6fa1c44f380157bd2e3ca888, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2801,10 +2801,10 @@ MonoBehaviour:
     cardTitle: 
     choicePromptText: {fileID: 0}
   - overlay: {fileID: 1760285260}
-    moneyCost: 20
-    energyCost: 35
-    networkCost: 3
-    cardTitle: 
+    moneyCost: 18
+    energyCost: 25
+    networkCost: 1
+    cardTitle: Child care
     choicePromptText: {fileID: 0}
   bank: {fileID: 621925436}
   moneyResource: {fileID: 11400000, guid: a4618650674e74bd78312716a37b0e72, type: 2}

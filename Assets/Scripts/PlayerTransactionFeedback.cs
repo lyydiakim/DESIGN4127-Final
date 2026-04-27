@@ -103,6 +103,11 @@ public class PlayerTransactionFeedback : MonoBehaviour
     private bool         _gameStarted   = false;
     private readonly GameObject[] _groceryMenuOverlays = new GameObject[4];
 
+    private static bool IntroUiShouldBlockStationOverlays()
+    {
+        return !StartScreenManager.IsGameplayStarted;
+    }
+
     // -------------------------------------------------------------------------
     private void Awake()
     {
@@ -401,7 +406,7 @@ public class PlayerTransactionFeedback : MonoBehaviour
                                   List<ResourceCost> rewards,
                                   PlayerInput playerInput = null)
     {
-        if (!_gameStarted) return;
+        if (!_gameStarted || IntroUiShouldBlockStationOverlays()) return;
         if (playerIndex < 0 || playerIndex >= playerBoardTexts.Length) return;
         EnsurePlayerBoardVisible(playerIndex);
         if (playerBoardTexts[playerIndex] == null) return;
@@ -451,7 +456,7 @@ public class PlayerTransactionFeedback : MonoBehaviour
     /// </summary>
     public void SetPlayerBoardMessage(int playerIndex, string richText)
     {
-        if (!_gameStarted) return;
+        if (!_gameStarted || IntroUiShouldBlockStationOverlays()) return;
         if (playerIndex < 0 || playerIndex >= playerBoardTexts.Length) return;
         EnsurePlayerBoardVisible(playerIndex);
         if (playerBoardTexts[playerIndex] == null)
@@ -478,6 +483,40 @@ public class PlayerTransactionFeedback : MonoBehaviour
     }
 
     /// <summary>
+    /// Intro-safe variant used before gameplay starts (e.g. apartment upgrade voting).
+    /// Unlike <see cref="SetPlayerBoardMessage"/>, this works while _gameStarted is false.
+    /// </summary>
+    public void SetPlayerBoardMessageIntro(int playerIndex, string richText)
+    {
+        if (playerIndex < 0 || playerIndex >= playerBoardTexts.Length) return;
+        EnsurePlayerBoardVisible(playerIndex);
+        if (playerBoardTexts[playerIndex] == null) return;
+
+        if (_boardRoutines[playerIndex] != null)
+        {
+            StopCoroutine(_boardRoutines[playerIndex]);
+            _boardRoutines[playerIndex] = null;
+        }
+
+        var txt = playerBoardTexts[playerIndex];
+        EnsureFontOnTmp(txt, playerIndex);
+        txt.text = richText;
+        txt.alpha = 1f;
+        var c = txt.color;
+        txt.color = new Color(c.r, c.g, c.b, 1f);
+        txt.ForceMeshUpdate();
+    }
+
+    /// <summary>
+    /// Clears intro voting copy from all player boards.
+    /// </summary>
+    public void ClearAllPlayerBoardMessagesIntro()
+    {
+        for (int i = 0; i < playerBoardTexts.Length; i++)
+            ClearBoardTextLine(i);
+    }
+
+    /// <summary>
     /// Big Grocery menu image only: drawn on the root canvas, centered under this player's resource panel,
     /// at native pixel size, or set <see cref="groceryMenuWidthPx"/> for a fixed width. Choice text belongs on
     /// the board via <see cref="SetPlayerBoardMessage"/> — not inside this overlay.
@@ -485,7 +524,7 @@ public class PlayerTransactionFeedback : MonoBehaviour
     /// </summary>
     public void ShowGroceryMenuOverlay(int playerIndex, Texture2D art, Sprite artSprite = null)
     {
-        if (!_gameStarted) return;
+        if (!_gameStarted || IntroUiShouldBlockStationOverlays()) return;
         if (playerIndex < 0 || playerIndex >= playerPanels.Length) return;
         EnsurePlayerBoardVisible(playerIndex);
         if (playerPanels[playerIndex] == null || _rootCanvas == null) return;
@@ -659,6 +698,15 @@ public class PlayerTransactionFeedback : MonoBehaviour
         var txt   = playerBoardTexts[playerIndex];
         txt.alpha = 0f;
         txt.text  = string.Empty;
+    }
+
+    public void HideAllStationPromptsAndMenus()
+    {
+        for (int i = 0; i < _groceryMenuOverlays.Length; i++)
+            HideGroceryMenuOverlay(i);
+
+        for (int i = 0; i < playerBoardTexts.Length; i++)
+            ClearBoardTextLine(i);
     }
 
     /// <summary>

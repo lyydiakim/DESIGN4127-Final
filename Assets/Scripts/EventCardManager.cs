@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 /// <summary>
 /// Shows event cards every <see cref="eventIntervalSeconds"/> of game time.
@@ -25,6 +26,10 @@ public class EventCardManager : MonoBehaviour
     const string ActionFire1 = "Player/Fire 1";
     const string ActionFire2 = "Player/Fire 2";
     const string ActionFire4 = "Player/Fire 4";
+    const float RentBarRuntimeNudgeRightPx = 0f;
+    const float RentBarRightTrimPx = 30f;
+    const float RentBarExtraWidthReductionPx = 120f;
+    const float RentLabelGapPx = 8f;
 
     [Serializable]
     public class EventCard
@@ -65,6 +70,19 @@ public class EventCardManager : MonoBehaviour
     [Tooltip("Optional fallback TMP font for timer text if its font reference is missing.")]
     [SerializeField] private TMP_FontAsset fallbackTimerFont;
 
+    [Header("Rent Progress HUD (optional)")]
+    [Tooltip("If enabled, creates a rent progress bar below the timer when fields are unassigned.")]
+    [SerializeField] private bool autoCreateRentProgressHud = true;
+    [SerializeField] private TMP_Text rentProgressText;
+    [SerializeField] private Image rentProgressFillImage;
+    [SerializeField] private RectTransform rentProgressRoot;
+    [SerializeField] private RectTransform rentProgressBackgroundRect;
+    private Canvas rentProgressOverlayCanvas;
+    [SerializeField] private Color rentProgressFillColor = new Color(0.31f, 0.76f, 0.34f, 1f);
+    [SerializeField] private Color rentProgressBackgroundColor = new Color(0.85f, 0.85f, 0.85f, 1f);
+    [Tooltip("Fine-tune HUD position if your canvas anchors offset it from the timer.")]
+    [SerializeField] private Vector2 rentProgressOffset = new Vector2(0f, -66f);
+
     /// <summary>Fired each time a round ends (i.e. a card is dismissed).</summary>
     public static event Action OnRoundEnd;
 
@@ -90,6 +108,7 @@ public class EventCardManager : MonoBehaviour
     private readonly List<playerController> _votingPlayers = new List<playerController>();
     private readonly Dictionary<playerController, EventVoteChoice> _playerVotes = new Dictionary<playerController, EventVoteChoice>();
     private readonly Dictionary<playerController, EventCardInputHooks> _inputHooks = new();
+    private GUIStyle _rentHudGuiStyle;
 
     private sealed class EventCardInputHooks
     {
@@ -108,6 +127,11 @@ public class EventCardManager : MonoBehaviour
     private void Start()
     {
         EnsureTimerFontAssigned();
+        ForceRebuildRentProgressHud();
+        EnsureRentProgressHud();
+        PositionRentProgressHud();
+        RefreshTimerText(eventIntervalSeconds);
+        RefreshRentProgressHud();
 
         if (eventCards == null) return;
         foreach (var card in eventCards)
@@ -117,6 +141,16 @@ public class EventCardManager : MonoBehaviour
             if (card.choicePromptText != null)
                 card.choicePromptText.gameObject.SetActive(false);
         }
+    }
+
+    private void OnEnable()
+    {
+        HomeStationInteraction.OnRentProgressChanged += OnRentProgressChanged;
+    }
+
+    private void OnDisable()
+    {
+        HomeStationInteraction.OnRentProgressChanged -= OnRentProgressChanged;
     }
 
     private void EnsureTimerFontAssigned()
@@ -137,19 +171,23 @@ public class EventCardManager : MonoBehaviour
 
     private void Update()
     {
+        if (rentProgressRoot == null || rentProgressFillImage == null || rentProgressText == null)
+            EnsureRentProgressHud();
+
+        PositionRentProgressHud();
+        RefreshRentProgressHud();
+
         if (!_timerRunning || _cardActive) return;
 
         _elapsed += Time.deltaTime;
 
         float remaining = Mathf.Max(0f, eventIntervalSeconds - _elapsed);
-        int minutes = Mathf.FloorToInt(remaining / 60f);
-        int seconds = Mathf.FloorToInt(remaining % 60f);
-        if (timerText != null)
-            timerText.text = $"{minutes}:{seconds:00}";
+        RefreshTimerText(remaining);
 
         if (_elapsed >= eventIntervalSeconds)
         {
             _elapsed = 0f;
+            RefreshTimerText(0f);
             if (_inFinalTimerRound)
             {
                 _inFinalTimerRound = false;
@@ -163,6 +201,86 @@ public class EventCardManager : MonoBehaviour
         }
     }
 
+    private void OnGUI()
+    {
+        if (!StartScreenManager.IsGameplayStarted)
+            return;
+        if (timerText == null)
+            return;
+
+        bool hasTimerRect = TryGetTimerScreenRect(out Rect timerRect);
+        if (!hasTimerRect)
+            return;
+
+        HomeStationInteraction.TryGetRentProgress(out int paid, out int total);
+        int clampedTotal = Mathf.Max(0, total);
+        int clampedPaid = Mathf.Clamp(Mathf.Max(0, paid), 0, clampedTotal > 0 ? clampedTotal : int.MaxValue);
+        int remaining = Mathf.Max(0, clampedTotal - clampedPaid);
+        float paidPct = clampedTotal > 0 ? (float)clampedPaid / clampedTotal : 0f;
+
+        float barWidth = Mathf.Clamp(timerRect.width * 0.6f, 220f, 320f);
+        float barHeight = 34f;
+        float barX = timerRect.xMin + 140f;
+        float barY = timerRect.yMax + 10f;
+        barX = Mathf.Max(20f, barX);
+        if (barX + barWidth > Screen.width - 20f)
+            barX = Screen.width - 20f - barWidth;
+        var bgRect = new Rect(barX, barY, barWidth, barHeight);
+        var fillRect = new Rect(barX, barY, barWidth * paidPct, barHeight);
+        var labelRect = new Rect(barX, barY + barHeight + RentLabelGapPx, 280f, 36f);
+
+        Color prev = GUI.color;
+        GUI.color = rentProgressBackgroundColor;
+        GUI.DrawTexture(bgRect, Texture2D.whiteTexture);
+        GUI.color = rentProgressFillColor;
+        GUI.DrawTexture(fillRect, Texture2D.whiteTexture);
+        GUI.color = Color.black;
+        DrawGuiRectBorder(bgRect, 2f);
+
+        if (_rentHudGuiStyle == null)
+        {
+            _rentHudGuiStyle = new GUIStyle(GUI.skin.label)
+            {
+                fontSize = 24,
+                normal = { textColor = Color.black }
+            };
+        }
+
+        GUI.Label(labelRect, $"${remaining} left", _rentHudGuiStyle);
+        GUI.color = prev;
+    }
+
+    private bool TryGetTimerScreenRect(out Rect rect)
+    {
+        rect = default;
+        if (timerText == null) return false;
+
+        var rt = timerText.rectTransform;
+        var corners = new Vector3[4];
+        rt.GetWorldCorners(corners);
+        Camera cam = null;
+        var c = timerText.canvas;
+        if (c != null && c.renderMode != RenderMode.ScreenSpaceOverlay)
+            cam = c.worldCamera;
+
+        Vector2 bl = RectTransformUtility.WorldToScreenPoint(cam, corners[0]);
+        Vector2 tr = RectTransformUtility.WorldToScreenPoint(cam, corners[2]);
+        float x = bl.x;
+        float y = Screen.height - tr.y;
+        float w = Mathf.Abs(tr.x - bl.x);
+        float h = Mathf.Abs(tr.y - bl.y);
+        rect = new Rect(x, y, w, h);
+        return w > 1f && h > 1f;
+    }
+
+    private static void DrawGuiRectBorder(Rect rect, float thickness)
+    {
+        GUI.DrawTexture(new Rect(rect.xMin, rect.yMin, rect.width, thickness), Texture2D.whiteTexture);
+        GUI.DrawTexture(new Rect(rect.xMin, rect.yMax - thickness, rect.width, thickness), Texture2D.whiteTexture);
+        GUI.DrawTexture(new Rect(rect.xMin, rect.yMin, thickness, rect.height), Texture2D.whiteTexture);
+        GUI.DrawTexture(new Rect(rect.xMax - thickness, rect.yMin, thickness, rect.height), Texture2D.whiteTexture);
+    }
+
     // ── Public API ────────────────────────────────────────────────────────────
 
     /// <summary>
@@ -172,6 +290,10 @@ public class EventCardManager : MonoBehaviour
     {
         _elapsed      = 0f;
         _timerRunning = true;
+        ApartmentUpgradeSelection.ApplyStartOfGameBonus(bank, moneyResource, energyResource);
+        ApartmentUpgradeSelection.ApplyRoundBonus(bank, energyResource, networkResource);
+        RefreshTimerText(eventIntervalSeconds);
+        RefreshRentProgressHud();
         Debug.Log($"[EventCardManager] Timer started. First card in {eventIntervalSeconds}s.");
     }
 
@@ -239,6 +361,8 @@ public class EventCardManager : MonoBehaviour
             // All event cards resolved once: next interval is round 4 (timer only, no card), then lose.
             _inFinalTimerRound = true;
             _elapsed = 0f;
+            ApartmentUpgradeSelection.ApplyRoundBonus(bank, energyResource, networkResource);
+            RefreshTimerText(eventIntervalSeconds);
             Debug.Log(
                 $"[EventCardManager] All {eventCards.Length} event card(s) resolved. Final round: {eventIntervalSeconds}s (no card), then lose if rent unpaid.");
             return;
@@ -246,6 +370,8 @@ public class EventCardManager : MonoBehaviour
 
         _currentIndex = (_currentIndex + 1) % eventCards.Length;
         _elapsed = 0f;
+        ApartmentUpgradeSelection.ApplyRoundBonus(bank, energyResource, networkResource);
+        RefreshTimerText(eventIntervalSeconds);
 
         if (!finalRoundAfterAllCards && RoundsCompleted >= roundLimit)
             WinLoseManager.Instance?.TriggerLose();
@@ -427,6 +553,295 @@ public class EventCardManager : MonoBehaviour
     {
         if (string.IsNullOrEmpty(rich)) return rich;
         return System.Text.RegularExpressions.Regex.Replace(rich, "<.*?>", string.Empty);
+    }
+
+    private void RefreshTimerText(float remainingSeconds)
+    {
+        if (timerText == null) return;
+
+        int totalSeconds = Mathf.CeilToInt(Mathf.Max(0f, remainingSeconds));
+        int minutes = totalSeconds / 60;
+        int seconds = totalSeconds % 60;
+        timerText.text = $"{minutes}:{seconds:00}";
+    }
+
+    private void EnsureRentProgressHud()
+    {
+        if (rentProgressText != null && rentProgressFillImage != null)
+        {
+            if (rentProgressBackgroundRect == null && rentProgressFillImage != null)
+                rentProgressBackgroundRect = rentProgressFillImage.rectTransform.parent as RectTransform;
+            if (rentProgressRoot == null && rentProgressBackgroundRect != null)
+                rentProgressRoot = rentProgressBackgroundRect.parent as RectTransform;
+            if (rentProgressRoot == null && rentProgressFillImage != null)
+                rentProgressRoot = rentProgressFillImage.transform.parent?.parent as RectTransform;
+            if (rentProgressRoot == null)
+            {
+                // Incomplete inspector references; rebuild HUD so it can be positioned reliably.
+                rentProgressText = null;
+                rentProgressFillImage = null;
+                rentProgressBackgroundRect = null;
+            }
+        }
+
+        if (rentProgressText != null && rentProgressFillImage != null && rentProgressRoot != null)
+        {
+            LayoutRentProgressTextOutsideBar();
+            return;
+        }
+        if (!autoCreateRentProgressHud)
+            Debug.LogWarning("EventCardManager: rent progress HUD refs missing; forcing runtime rebuild.");
+
+        RectTransform parentRt = null;
+        Vector2 rootAnchoredPosition = new Vector2(0f, -120f);
+        Vector2 rootSize = new Vector2(420f, 72f);
+        Vector2 rootAnchorMin = new Vector2(0.5f, 0.5f);
+        Vector2 rootAnchorMax = new Vector2(0.5f, 0.5f);
+        Vector2 rootPivot = new Vector2(0.5f, 0.5f);
+
+        EnsureRentProgressOverlayCanvas();
+        if (rentProgressOverlayCanvas != null)
+            parentRt = rentProgressOverlayCanvas.GetComponent<RectTransform>();
+
+        if (parentRt == null)
+        {
+            Canvas anyCanvas = FindFirstObjectByType<Canvas>();
+            if (anyCanvas == null)
+            {
+                var canvasGo = new GameObject("RentProgressCanvas", typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
+                anyCanvas = canvasGo.GetComponent<Canvas>();
+                anyCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+                var scaler = canvasGo.GetComponent<CanvasScaler>();
+                scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+                scaler.referenceResolution = new Vector2(1920, 1080);
+                scaler.matchWidthOrHeight = 0.5f;
+            }
+
+            parentRt = anyCanvas.GetComponent<RectTransform>();
+            rootAnchoredPosition = new Vector2(0f, -120f);
+        }
+
+        var rootGo = new GameObject("RentProgressHUD", typeof(RectTransform));
+        rootGo.transform.SetParent(parentRt, false);
+        var rootRt = rootGo.GetComponent<RectTransform>();
+        rentProgressRoot = rootRt;
+        rootRt.anchorMin = rootAnchorMin;
+        rootRt.anchorMax = rootAnchorMax;
+        rootRt.pivot = rootPivot;
+        rootRt.sizeDelta = rootSize;
+        rootRt.anchoredPosition = rootAnchoredPosition;
+
+        var backgroundGo = new GameObject("BarBackground", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+        backgroundGo.transform.SetParent(rootGo.transform, false);
+        var backgroundRt = backgroundGo.GetComponent<RectTransform>();
+        rentProgressBackgroundRect = backgroundRt;
+        backgroundRt.anchorMin = new Vector2(0f, 0.5f);
+        backgroundRt.anchorMax = new Vector2(0f, 0.5f);
+        backgroundRt.pivot = new Vector2(0f, 0.5f);
+        backgroundRt.anchoredPosition = Vector2.zero;
+        backgroundRt.sizeDelta = new Vector2(
+            Mathf.Max(200f, rootRt.sizeDelta.x - 80f - RentBarRightTrimPx - RentBarExtraWidthReductionPx),
+            60f);
+        var backgroundImage = backgroundGo.GetComponent<Image>();
+        backgroundImage.color = rentProgressBackgroundColor;
+        backgroundImage.maskable = false;
+        var bgOutline = backgroundGo.AddComponent<Outline>();
+        bgOutline.effectColor = Color.black;
+        bgOutline.effectDistance = new Vector2(2f, -2f);
+        bgOutline.useGraphicAlpha = true;
+
+        var fillGo = new GameObject("BarFill", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+        fillGo.transform.SetParent(backgroundGo.transform, false);
+        var fillRt = fillGo.GetComponent<RectTransform>();
+        fillRt.anchorMin = new Vector2(0f, 0f);
+        fillRt.anchorMax = new Vector2(0f, 1f);
+        fillRt.pivot = new Vector2(0f, 0.5f);
+        // With vertical stretch anchors, y sizeDelta must stay 0 to exactly match parent height.
+        fillRt.sizeDelta = Vector2.zero;
+        fillRt.anchoredPosition = Vector2.zero;
+        rentProgressFillImage = fillGo.GetComponent<Image>();
+        rentProgressFillImage.color = rentProgressFillColor;
+        rentProgressFillImage.maskable = false;
+        var fillOutline = fillGo.AddComponent<Outline>();
+        fillOutline.effectColor = Color.black;
+        fillOutline.effectDistance = new Vector2(2f, -2f);
+        fillOutline.useGraphicAlpha = true;
+
+        var textGo = new GameObject("RentLabel", typeof(RectTransform), typeof(CanvasRenderer), typeof(TextMeshProUGUI));
+        textGo.transform.SetParent(rootGo.transform, false);
+        var textRt = textGo.GetComponent<RectTransform>();
+        textRt.anchorMin = new Vector2(0f, 0.5f);
+        textRt.anchorMax = new Vector2(0f, 0.5f);
+        textRt.pivot = new Vector2(0f, 0.5f);
+        textRt.sizeDelta = new Vector2(190f, 60f);
+        rentProgressText = textGo.GetComponent<TextMeshProUGUI>();
+        rentProgressText.alignment = TextAlignmentOptions.MidlineLeft;
+        rentProgressText.fontSize = 28f;
+        rentProgressText.color = new Color(0.05f, 0.05f, 0.05f, 1f);
+        rentProgressText.textWrappingMode = TextWrappingModes.NoWrap;
+        rentProgressText.maskable = false;
+        if (timerText != null && timerText.font != null)
+        {
+            rentProgressText.font = timerText.font;
+        }
+        else if (fallbackTimerFont != null)
+            rentProgressText.font = fallbackTimerFont;
+        else if (TMP_Settings.defaultFontAsset != null)
+            rentProgressText.font = TMP_Settings.defaultFontAsset;
+        else
+            rentProgressText.font = Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationSans SDF");
+        LayoutRentProgressTextOutsideBar();
+    }
+
+    private void ForceRebuildRentProgressHud()
+    {
+        if (rentProgressRoot != null)
+            Destroy(rentProgressRoot.gameObject);
+        rentProgressRoot = null;
+        rentProgressBackgroundRect = null;
+        rentProgressFillImage = null;
+        rentProgressText = null;
+    }
+
+    private void PositionRentProgressHud()
+    {
+        if (rentProgressRoot == null) return;
+        rentProgressRoot.gameObject.SetActive(true);
+        if (rentProgressBackgroundRect != null)
+            rentProgressBackgroundRect.gameObject.SetActive(true);
+        if (rentProgressFillImage != null)
+            rentProgressFillImage.gameObject.SetActive(true);
+        if (rentProgressText != null)
+            rentProgressText.gameObject.SetActive(true);
+
+        if (timerText != null)
+        {
+            RectTransform timerRt = timerText.rectTransform;
+            EnsureRentProgressOverlayCanvas();
+            RectTransform parentRt = rentProgressOverlayCanvas != null
+                ? rentProgressOverlayCanvas.GetComponent<RectTransform>()
+                : null;
+            if (parentRt == null)
+                return;
+
+            if (rentProgressRoot.parent != parentRt)
+                rentProgressRoot.SetParent(parentRt, worldPositionStays: false);
+
+            Camera timerCam = null;
+            var timerCanvas = timerText.canvas;
+            if (timerCanvas != null && timerCanvas.renderMode != RenderMode.ScreenSpaceOverlay)
+                timerCam = timerCanvas.worldCamera;
+
+            var corners = new Vector3[4];
+            timerRt.GetWorldCorners(corners); // 0=BL,1=TL,2=TR,3=BR
+            Vector3 timerBottomCenterWorld = (corners[0] + corners[3]) * 0.5f;
+            Vector2 timerBottomScreen = RectTransformUtility.WorldToScreenPoint(timerCam, timerBottomCenterWorld);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(parentRt, timerBottomScreen, null, out Vector2 timerBottomLocal);
+
+            rentProgressRoot.anchorMin = new Vector2(0.5f, 0.5f);
+            rentProgressRoot.anchorMax = new Vector2(0.5f, 0.5f);
+            rentProgressRoot.pivot = new Vector2(0.5f, 0.5f);
+            rentProgressRoot.sizeDelta = new Vector2(Mathf.Max(420f, timerRt.rect.width * 0.95f), 72f);
+            rentProgressRoot.anchoredPosition = new Vector2(timerBottomLocal.x, timerBottomLocal.y + rentProgressOffset.y);
+            rentProgressRoot.localScale = Vector3.one;
+            rentProgressRoot.SetAsLastSibling();
+            ResizeRentProgressBarWidth();
+            return;
+        }
+
+        rentProgressRoot.anchorMin = new Vector2(0.5f, 1f);
+        rentProgressRoot.anchorMax = new Vector2(0.5f, 1f);
+        rentProgressRoot.pivot = new Vector2(0.5f, 0.5f);
+        rentProgressRoot.anchoredPosition = new Vector2(rentProgressOffset.x, -120f);
+        ResizeRentProgressBarWidth();
+    }
+
+    private void EnsureRentProgressOverlayCanvas()
+    {
+        if (rentProgressOverlayCanvas != null) return;
+
+        var existing = GameObject.Find("RentProgressOverlayCanvas");
+        if (existing != null)
+            rentProgressOverlayCanvas = existing.GetComponent<Canvas>();
+
+        if (rentProgressOverlayCanvas == null)
+        {
+            var go = new GameObject("RentProgressOverlayCanvas", typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
+            rentProgressOverlayCanvas = go.GetComponent<Canvas>();
+            rentProgressOverlayCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            rentProgressOverlayCanvas.sortingOrder = 30000;
+            var scaler = go.GetComponent<CanvasScaler>();
+            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            scaler.referenceResolution = new Vector2(1920, 1080);
+            scaler.matchWidthOrHeight = 0.5f;
+        }
+    }
+
+    private void ResizeRentProgressBarWidth()
+    {
+        if (rentProgressRoot == null || rentProgressBackgroundRect == null) return;
+        float effectiveBarOffset = 0f;
+        rentProgressBackgroundRect.anchoredPosition = new Vector2(0f, rentProgressBackgroundRect.anchoredPosition.y);
+        rentProgressBackgroundRect.sizeDelta = new Vector2(
+            Mathf.Max(200f, rentProgressRoot.sizeDelta.x - effectiveBarOffset - 80f - RentBarRightTrimPx - RentBarExtraWidthReductionPx),
+            rentProgressBackgroundRect.sizeDelta.y);
+        LayoutRentProgressTextOutsideBar();
+    }
+
+    private void LayoutRentProgressTextOutsideBar()
+    {
+        if (rentProgressText == null || rentProgressRoot == null || rentProgressBackgroundRect == null) return;
+        RectTransform textRt = rentProgressText.rectTransform;
+        if (textRt.parent != rentProgressBackgroundRect)
+            textRt.SetParent(rentProgressBackgroundRect, false);
+
+        // Keep the label locked to the bar's left edge and directly below it.
+        textRt.anchorMin = new Vector2(0f, 0f);
+        textRt.anchorMax = new Vector2(0f, 0f);
+        textRt.pivot = new Vector2(0f, 1f);
+        textRt.sizeDelta = new Vector2(220f, 42f);
+        textRt.anchoredPosition = new Vector2(0f, -RentLabelGapPx);
+    }
+
+    private void OnRentProgressChanged(int paid, int total)
+    {
+        RefreshRentProgressHud(paid, total);
+    }
+
+    private void RefreshRentProgressHud()
+    {
+        if (!HomeStationInteraction.TryGetRentProgress(out int paid, out int total))
+        {
+            RefreshRentProgressHud(0, 0);
+            return;
+        }
+
+        RefreshRentProgressHud(paid, total);
+    }
+
+    private void RefreshRentProgressHud(int paid, int total)
+    {
+        if (rentProgressText == null && rentProgressFillImage == null)
+            return;
+
+        int clampedTotal = Mathf.Max(0, total);
+        int clampedPaid = Mathf.Max(0, paid);
+        if (clampedTotal > 0)
+            clampedPaid = Mathf.Clamp(clampedPaid, 0, clampedTotal);
+
+        int remaining = Mathf.Max(0, clampedTotal - clampedPaid);
+        float paidPct = clampedTotal > 0 ? (float)clampedPaid / clampedTotal : 0f;
+
+        if (rentProgressText != null)
+            rentProgressText.text = $"${remaining} left";
+
+        if (rentProgressFillImage != null)
+        {
+            var fillRt = rentProgressFillImage.rectTransform;
+            RectTransform parentRt = fillRt.parent as RectTransform;
+            if (parentRt != null)
+                fillRt.sizeDelta = new Vector2(parentRt.rect.width * paidPct, 0f);
+        }
     }
 
     void ClearVoteBoardSlots()

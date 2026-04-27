@@ -46,6 +46,8 @@ public class ParkStationInteraction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!StartScreenManager.IsGameplayStarted) return;
+
         var pc = other.GetComponentInParent<playerController>();
         if (pc == null || _hooks.ContainsKey(pc)) return;
         if (bank == null)

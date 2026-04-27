@@ -59,6 +59,7 @@ public class ResourceStation : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!StartScreenManager.IsGameplayStarted) return;
         if (DeferToMinigameStation) return;
 
         playerController pc = other.GetComponentInParent<playerController>();

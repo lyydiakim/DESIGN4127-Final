@@ -12,6 +12,31 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Collider2D))]
 public class HomeStationInteraction : MonoBehaviour
 {
+    private static HomeStationInteraction _instance;
+    private static int _lastKnownInitialRentDue;
+    private static int _lastKnownCurrentRentDue;
+    public static HomeStationInteraction Instance
+    {
+        get
+        {
+            if (_instance == null)
+                _instance = UnityEngine.Object.FindFirstObjectByType<HomeStationInteraction>(FindObjectsInactive.Include);
+            return _instance;
+        }
+    }
+    public static event Action<int, int> OnRentProgressChanged;
+
+    public int InitialRentDue => Mathf.Max(0, _initialRentDue);
+    public int CurrentRentDue => Mathf.Max(0, _currentRentDue);
+    public int TotalRentPaid => Mathf.Max(0, InitialRentDue - CurrentRentDue);
+    public static bool TryGetRentProgress(out int paid, out int total)
+    {
+        total = Mathf.Max(0, _lastKnownInitialRentDue);
+        int current = Mathf.Max(0, _lastKnownCurrentRentDue);
+        paid = Mathf.Max(0, total - current);
+        return total > 0;
+    }
+
     const string ActionFire1 = "Player/Fire 1";
     const string ActionFire2 = "Player/Fire 2";
     const string ActionFire3 = "Player/Fire 3";
@@ -40,6 +65,7 @@ public class HomeStationInteraction : MonoBehaviour
 
     [SerializeField] string stationTitle = "Home";
     private int _currentRentDue;
+    private int _initialRentDue;
 
     private sealed class HomeHooks
     {
@@ -59,11 +85,59 @@ public class HomeStationInteraction : MonoBehaviour
 
     private void Awake()
     {
-        _currentRentDue = rentMoneyCost;
+        if (_instance == null)
+            _instance = this;
+        _initialRentDue = Mathf.Max(0, rentMoneyCost + ApartmentUpgradeSelection.GetRentIncrease());
+        _currentRentDue = _initialRentDue;
+        _lastKnownInitialRentDue = InitialRentDue;
+        _lastKnownCurrentRentDue = CurrentRentDue;
+        NotifyRentProgressChanged();
+    }
+
+    public void ApplyApartmentUpgradeRentModifier()
+    {
+        _initialRentDue = Mathf.Max(0, rentMoneyCost + ApartmentUpgradeSelection.GetRentIncrease());
+        _currentRentDue = _initialRentDue;
+        NotifyRentProgressChanged();
+    }
+
+    private void Update()
+    {
+        // Ensure keyboard playtests can trigger rent abatement with the X key even if
+        // the Input Actions asset doesn't bind it to "Player/Fire 3" for keyboard schemes.
+        var kb = Keyboard.current;
+        if (kb == null || !kb.xKey.wasPressedThisFrame) return;
+
+        foreach (var kv in _menuOpen)
+        {
+            var pc = kv.Key;
+            if (pc == null) continue;
+            if (!kv.Value) continue; // menu must be open
+            if (!_hooks.ContainsKey(pc)) continue; // must still be in station trigger
+
+            var pi = PlayerResourceBindingPrompts.ResolvePlayerInput(pc);
+            if (pi == null) continue;
+            string scheme = pi.currentControlScheme;
+            if (!string.Equals(scheme, PlayerResourceBindingPrompts.GroupKeyboard, StringComparison.Ordinal) &&
+                !string.Equals(scheme, PlayerResourceBindingPrompts.GroupKeyboardP2, StringComparison.Ordinal))
+                continue;
+
+            OnPressFire3(pc);
+            break;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (_instance == this)
+            _instance = null;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!StartScreenManager.IsGameplayStarted)
+            return;
+
         var pc = other.GetComponentInParent<playerController>();
         if (pc == null || _hooks.ContainsKey(pc)) return;
         if (bank == null)
@@ -285,6 +359,9 @@ public class HomeStationInteraction : MonoBehaviour
         if (!bank.TrySpendAll(costs))
             return;
 
+        _currentRentDue = 0;
+        NotifyRentProgressChanged();
+
         PlayerGameStats.RecordTransaction(pc, stationTitle, costs, noRewards, isRentPayment: true);
         ptf.ShowTransaction(ui, costs, noRewards);
 
@@ -330,6 +407,7 @@ public class HomeStationInteraction : MonoBehaviour
 
         int appliedReduction = Mathf.Min(abatementMoneyReduction, _currentRentDue);
         _currentRentDue = Mathf.Max(0, _currentRentDue - appliedReduction);
+        NotifyRentProgressChanged();
         PlayerGameStats.RecordTransaction(
             pc, stationTitle, costs, noRewards,
             isRentPayment: false,
@@ -376,5 +454,12 @@ public class HomeStationInteraction : MonoBehaviour
     private string BoardLineMenuOpen()
     {
         return $"<b>{stationTitle}</b>\nSelect from menu";
+    }
+
+    private void NotifyRentProgressChanged()
+    {
+        _lastKnownInitialRentDue = InitialRentDue;
+        _lastKnownCurrentRentDue = CurrentRentDue;
+        OnRentProgressChanged?.Invoke(TotalRentPaid, InitialRentDue);
     }
 }

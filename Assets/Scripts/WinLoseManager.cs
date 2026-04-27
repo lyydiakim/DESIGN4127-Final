@@ -21,6 +21,8 @@ public class WinLoseManager : MonoBehaviour
     [Header("Presentation")]
     [Tooltip("Higher than ResourceManager_Canvas (0) so the result card draws on top of all UI.")]
     [SerializeField] private int endScreenCanvasSortOrder = 10000;
+    [Tooltip("Optional fallback TMP font for runtime-generated end-screen text.")]
+    [SerializeField] private TMP_FontAsset fallbackFont;
 
     private bool _gameOver = false;
     private Canvas _endCanvas;
@@ -62,6 +64,7 @@ public class WinLoseManager : MonoBehaviour
         _resultText = CreateResultText(canvasGo.transform);
         for (int i = 0; i < 4; i++)
             _playerColumnTexts[i] = CreatePlayerColumnText(canvasGo.transform, i);
+        EnsureEndTextFonts();
 
         canvasGo.SetActive(false);
     }
@@ -138,7 +141,7 @@ public class WinLoseManager : MonoBehaviour
                $"Grocery worked: {r.WorkedGroceryCount}x";
     }
 
-    private static TextMeshProUGUI CreateResultText(Transform parent)
+    private TextMeshProUGUI CreateResultText(Transform parent)
     {
         var go = new GameObject("EndResultText", typeof(RectTransform), typeof(CanvasRenderer), typeof(TextMeshProUGUI));
         go.transform.SetParent(parent, false);
@@ -159,7 +162,7 @@ public class WinLoseManager : MonoBehaviour
         return tmp;
     }
 
-    private static TextMeshProUGUI CreatePlayerColumnText(Transform parent, int playerIndex)
+    private TextMeshProUGUI CreatePlayerColumnText(Transform parent, int playerIndex)
     {
         var go = new GameObject($"EndPlayer{playerIndex + 1}Column", typeof(RectTransform), typeof(CanvasRenderer), typeof(TextMeshProUGUI));
         go.transform.SetParent(parent, false);
@@ -185,19 +188,39 @@ public class WinLoseManager : MonoBehaviour
         return tmp;
     }
 
-    private static void ConfigureText(TextMeshProUGUI tmp, float fontSize, TextAlignmentOptions align)
+    private void ConfigureText(TextMeshProUGUI tmp, float fontSize, TextAlignmentOptions align)
     {
+        ApplyFallbackFontIfMissing(tmp);
         tmp.alignment = align;
-        tmp.enableWordWrapping = true;
+        tmp.textWrappingMode = TextWrappingModes.Normal;
         tmp.fontSize = fontSize;
         tmp.raycastTarget = false;
         tmp.color = new Color(0.08f, 0.08f, 0.08f, 1f);
-        if (TMP_Settings.defaultFontAsset != null)
-        {
-            tmp.font = TMP_Settings.defaultFontAsset;
-            if (TMP_Settings.defaultFontAsset.material != null)
-                tmp.fontSharedMaterial = TMP_Settings.defaultFontAsset.material;
-        }
+    }
+
+    private void EnsureEndTextFonts()
+    {
+        ApplyFallbackFontIfMissing(_resultText);
+        for (int i = 0; i < _playerColumnTexts.Length; i++)
+            ApplyFallbackFontIfMissing(_playerColumnTexts[i]);
+    }
+
+    private void ApplyFallbackFontIfMissing(TMP_Text text)
+    {
+        if (text == null || text.font != null) return;
+
+        TMP_FontAsset resolved = fallbackFont;
+        if (resolved == null)
+            resolved = TMP_Settings.defaultFontAsset;
+        if (resolved == null)
+            resolved = Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationSans SDF");
+        if (resolved == null)
+            resolved = Resources.Load<TMP_FontAsset>("LiberationSans SDF");
+        if (resolved == null) return;
+
+        text.font = resolved;
+        if (resolved.material != null)
+            text.fontSharedMaterial = resolved.material;
     }
 
     private void Update()
