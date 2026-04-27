@@ -215,7 +215,7 @@ public class PlayerTransactionFeedback : MonoBehaviour
                                 List<ResourceCost> costs,
                                 List<ResourceCost> rewards)
     {
-        if (!_gameStarted) return;
+        if (!_gameStarted || IntroUiShouldBlockStationOverlays()) return;
         if (playerIndex < 0 || playerIndex >= playerPanels.Length) return;
         EnsurePlayerBoardVisible(playerIndex);
         if (playerPanels[playerIndex] == null) return;
@@ -247,7 +247,7 @@ public class PlayerTransactionFeedback : MonoBehaviour
                                          List<ResourceCost> costs,
                                          ResourceBank bank)
     {
-        if (!_gameStarted) return;
+        if (!_gameStarted || IntroUiShouldBlockStationOverlays()) return;
         if (playerIndex < 0 || playerIndex >= playerPanels.Length) return;
         EnsurePlayerBoardVisible(playerIndex);
         if (playerIndex >= playerBoardTexts.Length || playerBoardTexts[playerIndex] == null) return;
