@@ -12,6 +12,7 @@ using UnityEngine.SceneManagement;
 public class WinLoseManager : MonoBehaviour
 {
     public static WinLoseManager Instance { get; private set; }
+    public bool IsEndScreenShowing => _gameOver && _endCanvas != null && _endCanvas.gameObject.activeInHierarchy;
 
     [Header("Game End Sprites")]
     [SerializeField] private Sprite winSprite;
@@ -21,6 +22,7 @@ public class WinLoseManager : MonoBehaviour
     [Header("Presentation")]
     [Tooltip("Higher than ResourceManager_Canvas (0) so the result card draws on top of all UI.")]
     [SerializeField] private int endScreenCanvasSortOrder = 10000;
+    private const int MinEndScreenSortOrder = 40000;
     [Tooltip("Optional fallback TMP font for runtime-generated end-screen text.")]
     [SerializeField] private TMP_FontAsset fallbackFont;
 
@@ -42,7 +44,8 @@ public class WinLoseManager : MonoBehaviour
 
         _endCanvas = canvasGo.GetComponent<Canvas>();
         _endCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        _endCanvas.sortingOrder = endScreenCanvasSortOrder;
+        _endCanvas.overrideSorting = true;
+        _endCanvas.sortingOrder = Mathf.Max(endScreenCanvasSortOrder, MinEndScreenSortOrder);
 
         var scaler = canvasGo.GetComponent<CanvasScaler>();
         scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
@@ -104,6 +107,8 @@ public class WinLoseManager : MonoBehaviour
 
         _endImage.sprite = sprite;
         RenderEndSummary();
+        _endCanvas.overrideSorting = true;
+        _endCanvas.sortingOrder = Mathf.Max(endScreenCanvasSortOrder, MinEndScreenSortOrder);
         _endCanvas.gameObject.SetActive(true);
         _endCanvas.transform.SetAsLastSibling();
     }

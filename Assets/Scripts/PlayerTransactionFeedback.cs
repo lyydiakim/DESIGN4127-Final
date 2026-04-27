@@ -105,7 +105,11 @@ public class PlayerTransactionFeedback : MonoBehaviour
 
     private static bool IntroUiShouldBlockStationOverlays()
     {
-        return !StartScreenManager.IsGameplayStarted;
+        if (!StartScreenManager.IsGameplayStarted)
+            return true;
+
+        var ecm = EventCardManager.Instance;
+        return ecm != null && ecm.IsEventCardShowing;
     }
 
     // -------------------------------------------------------------------------

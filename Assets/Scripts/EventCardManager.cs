@@ -19,6 +19,7 @@ using UnityEngine.UI;
 public class EventCardManager : MonoBehaviour
 {
     public static EventCardManager Instance { get; private set; }
+    public TMP_Text TimerText => timerText;
 
     /// <summary>True while an event card is on screen (game paused for the choice).</summary>
     public bool IsEventCardShowing => _cardActive;
@@ -59,6 +60,8 @@ public class EventCardManager : MonoBehaviour
     [Header("Timing")]
     [Tooltip("Seconds between event cards. Default 120 = 2 minutes.")]
     public float eventIntervalSeconds = 120f;
+    [Tooltip("Seconds players have to reach event-card consensus.")]
+    [SerializeField] private float eventCardDecisionSeconds = 60f;
     [Tooltip("If true (default): after every event card has been resolved once, one more interval runs without a card, then lose. If false: lose when RoundsCompleted reaches Round Limit (legacy).")]
     [SerializeField] private bool finalRoundAfterAllCards = true;
     [Tooltip("Used only when Final Round After All Cards is off. Game ends (lose) after this many card dismissals.")]
@@ -109,6 +112,10 @@ public class EventCardManager : MonoBehaviour
     private readonly Dictionary<playerController, EventVoteChoice> _playerVotes = new Dictionary<playerController, EventVoteChoice>();
     private readonly Dictionary<playerController, EventCardInputHooks> _inputHooks = new();
     private GUIStyle _rentHudGuiStyle;
+    private RectTransform _eventCardTimerRoot;
+    private TMP_Text _eventCardTimerText;
+    private float _eventCardDecisionRemaining;
+    private bool _eventCardDecisionRunning;
 
     private sealed class EventCardInputHooks
     {
@@ -177,6 +184,12 @@ public class EventCardManager : MonoBehaviour
         PositionRentProgressHud();
         RefreshRentProgressHud();
 
+        if (_cardActive)
+        {
+            UpdateEventCardDecisionTimer();
+            return;
+        }
+
         if (!_timerRunning || _cardActive) return;
 
         _elapsed += Time.deltaTime;
@@ -205,6 +218,8 @@ public class EventCardManager : MonoBehaviour
     {
         if (!StartScreenManager.IsGameplayStarted)
             return;
+        if (WinLoseManager.Instance != null && WinLoseManager.Instance.IsEndScreenShowing)
+            return;
         if (timerText == null)
             return;
 
@@ -218,8 +233,8 @@ public class EventCardManager : MonoBehaviour
         int remaining = Mathf.Max(0, clampedTotal - clampedPaid);
         float paidPct = clampedTotal > 0 ? (float)clampedPaid / clampedTotal : 0f;
 
-        float barWidth = Mathf.Clamp(timerRect.width * 0.6f, 220f, 320f);
-        float barHeight = 34f;
+        float barWidth = Mathf.Clamp(timerRect.width * 0.8f, 300f, 460f);
+        float barHeight = 44f;
         float barX = timerRect.xMin + 140f;
         float barY = timerRect.yMax + 10f;
         barX = Mathf.Max(20f, barX);
@@ -245,6 +260,8 @@ public class EventCardManager : MonoBehaviour
                 normal = { textColor = Color.black }
             };
         }
+        if (timerText != null && timerText.font != null && timerText.font.sourceFontFile != null)
+            _rentHudGuiStyle.font = timerText.font.sourceFontFile;
 
         GUI.Label(labelRect, $"${remaining} left", _rentHudGuiStyle);
         GUI.color = prev;
@@ -302,6 +319,7 @@ public class EventCardManager : MonoBehaviour
     {
         if (_cardActive || eventCards == null || eventCards.Length == 0) return;
         _cardActive   = true;
+        PlayerTransactionFeedback.Instance?.HideAllStationPromptsAndMenus();
         _votingPlayers.Clear();
         _playerVotes.Clear();
         if (playersInfo != null && playersInfo.allControllers != null)
@@ -318,6 +336,11 @@ public class EventCardManager : MonoBehaviour
         {
             card.overlay.SetActive(true);
             card.overlay.transform.SetAsLastSibling();
+            EnsureEventOverlayTopmost(card.overlay);
+            EnsureEventCardDecisionTimerUi(card.overlay.transform);
+            if (_eventCardTimerText != null)
+                _eventCardTimerText.color = _currentIndex == 2 ? Color.black : Color.white;
+            StartEventCardDecisionTimer();
         }
 
         if (card.choicePromptText != null)
@@ -335,10 +358,136 @@ public class EventCardManager : MonoBehaviour
             $"[EventCardManager] Card {_currentIndex + 1}/{eventCards.Length}: {StripRichText(BuildGroupChoicePromptRichText(card))}");
     }
 
+    private static void EnsureEventOverlayTopmost(GameObject overlayGo)
+    {
+        if (overlayGo == null) return;
+
+        var overlayCanvas = overlayGo.GetComponent<Canvas>();
+        if (overlayCanvas == null)
+            overlayCanvas = overlayGo.AddComponent<Canvas>();
+        overlayCanvas.overrideSorting = true;
+        overlayCanvas.sortingOrder = 32750;
+
+        if (overlayGo.GetComponent<GraphicRaycaster>() == null)
+            overlayGo.AddComponent<GraphicRaycaster>();
+    }
+
+    private void EnsureEventCardDecisionTimerUi(Transform overlayRoot)
+    {
+        if (overlayRoot == null) return;
+
+        if (_eventCardTimerRoot != null && _eventCardTimerRoot.parent != overlayRoot)
+        {
+            Destroy(_eventCardTimerRoot.gameObject);
+            _eventCardTimerRoot = null;
+            _eventCardTimerText = null;
+        }
+
+        if (_eventCardTimerRoot != null && _eventCardTimerText != null)
+            return;
+
+        var timerRootGo = new GameObject("EventCardDecisionTimerBox", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+        timerRootGo.transform.SetParent(overlayRoot, false);
+        _eventCardTimerRoot = timerRootGo.GetComponent<RectTransform>();
+        _eventCardTimerRoot.anchorMin = new Vector2(0.5f, 0.5f);
+        _eventCardTimerRoot.anchorMax = new Vector2(0.5f, 0.5f);
+        _eventCardTimerRoot.pivot = new Vector2(0.5f, 0.5f);
+        _eventCardTimerRoot.anchoredPosition = Vector2.zero;
+        _eventCardTimerRoot.sizeDelta = new Vector2(100f, 70f);
+
+        var bg = timerRootGo.GetComponent<Image>();
+        bg.color = new Color(1f, 1f, 1f, 0f);
+        bg.raycastTarget = false;
+
+        var textGo = new GameObject("EventCardDecisionTimerText", typeof(RectTransform), typeof(CanvasRenderer), typeof(TextMeshProUGUI));
+        textGo.transform.SetParent(timerRootGo.transform, false);
+        var textRt = textGo.GetComponent<RectTransform>();
+        textRt.anchorMin = Vector2.zero;
+        textRt.anchorMax = Vector2.one;
+        textRt.offsetMin = new Vector2(5f, 5f);
+        textRt.offsetMax = new Vector2(-5f, -5f);
+
+        _eventCardTimerText = textGo.GetComponent<TextMeshProUGUI>();
+        _eventCardTimerText.alignment = TextAlignmentOptions.Center;
+        _eventCardTimerText.fontSize = 12f;
+        _eventCardTimerText.textWrappingMode = TextWrappingModes.NoWrap;
+        _eventCardTimerText.color = Color.white;
+        if (timerText != null && timerText.font != null)
+            _eventCardTimerText.font = timerText.font;
+        else if (fallbackTimerFont != null)
+            _eventCardTimerText.font = fallbackTimerFont;
+        else if (TMP_Settings.defaultFontAsset != null)
+            _eventCardTimerText.font = TMP_Settings.defaultFontAsset;
+        ResizeEventCardDecisionTimerBox();
+    }
+
+    private void StartEventCardDecisionTimer()
+    {
+        _eventCardDecisionRemaining = Mathf.Max(1f, eventCardDecisionSeconds);
+        _eventCardDecisionRunning = true;
+        UpdateEventCardDecisionTimerLabel();
+        if (_eventCardTimerRoot != null)
+            _eventCardTimerRoot.gameObject.SetActive(true);
+    }
+
+    private void StopEventCardDecisionTimer()
+    {
+        _eventCardDecisionRunning = false;
+        if (_eventCardTimerRoot != null)
+            _eventCardTimerRoot.gameObject.SetActive(false);
+    }
+
+    private void UpdateEventCardDecisionTimer()
+    {
+        if (!_eventCardDecisionRunning) return;
+        _eventCardDecisionRemaining = Mathf.Max(0f, _eventCardDecisionRemaining - Time.unscaledDeltaTime);
+        UpdateEventCardDecisionTimerLabel();
+        if (_eventCardDecisionRemaining > 0f) return;
+        HandleEventCardDecisionTimeout();
+    }
+
+    private void UpdateEventCardDecisionTimerLabel()
+    {
+        if (_eventCardTimerText == null) return;
+        int total = Mathf.CeilToInt(Mathf.Max(0f, _eventCardDecisionRemaining));
+        int minutes = total / 60;
+        int seconds = total % 60;
+        _eventCardTimerText.text = $"{minutes}:{seconds:00}";
+        ResizeEventCardDecisionTimerBox();
+    }
+
+    private void ResizeEventCardDecisionTimerBox()
+    {
+        if (_eventCardTimerRoot == null || _eventCardTimerText == null) return;
+        Vector2 pref = _eventCardTimerText.GetPreferredValues(_eventCardTimerText.text);
+        // Keep 5px padding around text on all sides.
+        float width = Mathf.Max(100f, pref.x + 10f);
+        float height = Mathf.Max(70f, pref.y + 10f);
+        _eventCardTimerRoot.sizeDelta = new Vector2(width, height);
+    }
+
+    private void HandleEventCardDecisionTimeout()
+    {
+        _eventCardDecisionRunning = false;
+
+        if (bank != null && moneyResource != null)
+            bank.Add(moneyResource, -200);
+
+        var ptf = PlayerTransactionFeedback.Instance;
+        if (ptf != null)
+        {
+            for (int i = 0; i < 4; i++)
+                ptf.SetPlayerBoardMessageIntro(i, "$200 lost!\nNo decision made");
+        }
+
+        CloseCardAndAdvanceRound();
+    }
+
     private void CloseCardAndAdvanceRound()
     {
         if (eventCards == null || eventCards.Length == 0) return;
 
+        StopEventCardDecisionTimer();
         _cardActive   = false;
         _votingPlayers.Clear();
         _playerVotes.Clear();
@@ -439,6 +588,7 @@ public class EventCardManager : MonoBehaviour
 
         CloseCardAndAdvanceRound();
     }
+
 
     // ── Input (Player/Fire 1 = A, Fire 2 = B, Fire 4 = Y) ───────────────────
     private void SubscribeToPlayers()

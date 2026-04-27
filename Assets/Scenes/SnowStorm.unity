@@ -2811,7 +2811,7 @@ MonoBehaviour:
   energyResource: {fileID: 11400000, guid: 28cb697cecb0e4e4eb7a7ec3c00615ce, type: 2}
   networkResource: {fileID: 11400000, guid: 59e3a4b76d9974c2296fba8f152f52bb, type: 2}
   playersInfo: {fileID: 1118303139}
-  eventIntervalSeconds: 120
+  eventIntervalSeconds: 15
   finalRoundAfterAllCards: 1
   roundLimit: 3
   timerText: {fileID: 498678030}

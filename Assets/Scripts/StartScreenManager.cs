@@ -21,8 +21,10 @@ public class StartScreenManager : MonoBehaviour
     [Header("Apartment Upgrade Voting UI (optional)")]
     [Tooltip("Bottom-of-screen text slots for joined players (index 0-3).")]
     [SerializeField] private TMP_Text[] apartmentVoteTexts = new TMP_Text[4];
+    [SerializeField] private TMP_Text apartmentVoteTimerText;
     [SerializeField] private RectTransform apartmentVoteUiRoot;
     private Canvas apartmentVoteOverlayCanvas;
+    [SerializeField] private float apartmentVoteTimeLimitSeconds = 60f;
     [Header("Keyboard Quick Test (no controllers needed)")]
     [Tooltip("When enabled, simulates multiple voters on one keyboard for apartment-vote testing.")]
     [SerializeField] private bool enableKeyboardQuickVoteTest = true;
@@ -33,6 +35,8 @@ public class StartScreenManager : MonoBehaviour
     private bool waitingForAdvanceRelease = false;
     private Image overlayImage;
     private bool _startingAfterConsensus = false;
+    private bool _apartmentVoteTimerRunning;
+    private float _apartmentVoteSecondsRemaining;
     private enum IntroStage { StartScreen, InstructionScreen, ApartmentUpgradesScreen }
     private IntroStage currentStage = IntroStage.StartScreen;
     private readonly Dictionary<int, ApartmentUpgradeChoice> _apartmentVotes = new Dictionary<int, ApartmentUpgradeChoice>();
@@ -119,6 +123,7 @@ public class StartScreenManager : MonoBehaviour
                     overlayImage.sprite = apartmentUpgradesScreenSprite;
                 EnsureApartmentVoteTextSlots();
                 _apartmentVotes.Clear();
+                StartApartmentVoteTimer();
                 RefreshApartmentVoteUi();
                 return;
             }
@@ -136,6 +141,8 @@ public class StartScreenManager : MonoBehaviour
 
     private void UpdateApartmentUpgradeVoting()
     {
+        UpdateApartmentVoteTimerUiAndTimeout();
+
         bool anyJoined = false;
         var livePlayers = new HashSet<int>();
 
@@ -296,6 +303,7 @@ public class StartScreenManager : MonoBehaviour
         if (apartmentVoteTexts == null || apartmentVoteTexts.Length == 0) return;
         var ptf = PlayerTransactionFeedback.Instance;
         var activeSlots = new HashSet<int>();
+        bool usingXboxFlow = Gamepad.all.Count > 0;
         for (int i = 0; i < apartmentVoteTexts.Length; i++)
         {
             if (apartmentVoteTexts[i] == null) continue;
@@ -314,7 +322,7 @@ public class StartScreenManager : MonoBehaviour
             if (slot == null) continue;
             activeSlots.Add(idx);
 
-            slot.text = BuildVoteStateText(idx);
+            slot.text = BuildVoteStateText(idx, pi, usingXboxFlow);
             ptf?.SetPlayerBoardMessageIntro(idx, slot.text);
         }
 
@@ -325,8 +333,15 @@ public class StartScreenManager : MonoBehaviour
             if (slot == null) continue;
             activeSlots.Add(i);
 
-            slot.text = BuildVoteStateText(i);
+            slot.text = BuildVoteStateText(i, null, usingXboxFlow: false);
             ptf?.SetPlayerBoardMessageIntro(i, slot.text);
+        }
+
+        if (usingXboxFlow && PlayerInput.all.Count == 0 && apartmentVoteTexts.Length > 0 && apartmentVoteTexts[0] != null)
+        {
+            apartmentVoteTexts[0].text = "Pair Controller [Press x]";
+            ptf?.SetPlayerBoardMessageIntro(0, apartmentVoteTexts[0].text);
+            activeSlots.Add(0);
         }
 
         for (int i = 0; i < apartmentVoteTexts.Length; i++)
@@ -349,8 +364,15 @@ public class StartScreenManager : MonoBehaviour
         }
     }
 
-    private string BuildVoteStateText(int playerIndex)
+    private string BuildVoteStateText(int playerIndex, PlayerInput pi, bool usingXboxFlow)
     {
+        if (usingXboxFlow)
+        {
+            var pad = pi != null ? pi.GetDevice<Gamepad>() : null;
+            if (pad == null || !pad.added)
+                return $"<b>P{playerIndex + 1}</b> Pair Controller [Press x]";
+        }
+
         if (_apartmentVotes.TryGetValue(playerIndex, out var vote) && vote != ApartmentUpgradeChoice.None)
             return $"<b>P{playerIndex + 1}</b> {UpgradeDisplayName(vote)} picked";
         return $"<b>P{playerIndex + 1}</b> Waiting on vote...";
@@ -360,6 +382,7 @@ public class StartScreenManager : MonoBehaviour
     {
         gameStarted = true;
         IsGameplayStarted = true;
+        _apartmentVoteTimerRunning = false;
         _startingAfterConsensus = false;
         SetApartmentVoteUiVisible(false);
         ClearApartmentVoteUi();
@@ -390,6 +413,8 @@ public class StartScreenManager : MonoBehaviour
             if (apartmentVoteTexts[i] == null) continue;
             apartmentVoteTexts[i].text = string.Empty;
         }
+        if (apartmentVoteTimerText != null)
+            apartmentVoteTimerText.text = string.Empty;
     }
 
     private void EnsureApartmentUpgradeSpriteAssigned()
@@ -398,7 +423,7 @@ public class StartScreenManager : MonoBehaviour
 
 #if UNITY_EDITOR
         apartmentUpgradesScreenSprite = UnityEditor.AssetDatabase.LoadAssetAtPath<Sprite>(
-            "Assets/Custom Sprites/apartment upgrades.png");
+            "Assets/Custom Sprites/apt upgrades with timer.png");
 #endif
     }
 
@@ -470,6 +495,11 @@ public class StartScreenManager : MonoBehaviour
         }
         if (sharedFont == null) sharedFont = TMP_Settings.defaultFontAsset;
         if (sharedFont == null) sharedFont = Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationSans SDF");
+        var gameplayTimerFont = EventCardManager.Instance != null && EventCardManager.Instance.TimerText != null
+            ? EventCardManager.Instance.TimerText.font
+            : null;
+        if (gameplayTimerFont != null)
+            sharedFont = gameplayTimerFont;
 
         for (int i = 0; i < 4; i++)
         {
@@ -495,6 +525,29 @@ public class StartScreenManager : MonoBehaviour
             tmp.outlineColor = new Color(0f, 0f, 0f, 1f);
             tmp.text = string.Empty;
             apartmentVoteTexts[i] = tmp;
+        }
+
+        if (apartmentVoteTimerText == null)
+        {
+            var timerGo = new GameObject("ApartmentVoteTimerText", typeof(RectTransform), typeof(CanvasRenderer), typeof(TextMeshProUGUI));
+            timerGo.transform.SetParent(apartmentVoteOverlayCanvas.transform, false);
+            var timerRt = timerGo.GetComponent<RectTransform>();
+            timerRt.anchorMin = new Vector2(1f, 1f);
+            timerRt.anchorMax = new Vector2(1f, 1f);
+            timerRt.pivot = new Vector2(1f, 1f);
+            timerRt.anchoredPosition = new Vector2(-180f, -120f);
+            timerRt.sizeDelta = new Vector2(320f, 80f);
+
+            var timerTmp = timerGo.GetComponent<TextMeshProUGUI>();
+            timerTmp.font = sharedFont;
+            timerTmp.fontSize = 59f;
+            timerTmp.alignment = TextAlignmentOptions.TopRight;
+            timerTmp.color = Color.black;
+            timerTmp.textWrappingMode = TextWrappingModes.NoWrap;
+            timerTmp.outlineWidth = 0.2f;
+            timerTmp.outlineColor = new Color(1f, 1f, 1f, 1f);
+            timerTmp.text = string.Empty;
+            apartmentVoteTimerText = timerTmp;
         }
     }
 
@@ -524,5 +577,37 @@ public class StartScreenManager : MonoBehaviour
             apartmentVoteUiRoot.gameObject.SetActive(visible);
         if (visible && apartmentVoteUiRoot != null)
             apartmentVoteUiRoot.SetAsLastSibling();
+    }
+
+    private void StartApartmentVoteTimer()
+    {
+        _apartmentVoteSecondsRemaining = Mathf.Max(1f, apartmentVoteTimeLimitSeconds);
+        _apartmentVoteTimerRunning = true;
+        UpdateApartmentVoteTimerLabel();
+    }
+
+    private void UpdateApartmentVoteTimerUiAndTimeout()
+    {
+        if (!_apartmentVoteTimerRunning) return;
+
+        _apartmentVoteSecondsRemaining = Mathf.Max(0f, _apartmentVoteSecondsRemaining - Time.unscaledDeltaTime);
+        UpdateApartmentVoteTimerLabel();
+
+        if (_apartmentVoteSecondsRemaining > 0f)
+            return;
+
+        _apartmentVoteTimerRunning = false;
+        ApartmentUpgradeSelection.Select(ApartmentUpgradeChoice.None);
+        HomeStationInteraction.Instance?.ApplyApartmentUpgradeRentModifier();
+        StartGameplay();
+    }
+
+    private void UpdateApartmentVoteTimerLabel()
+    {
+        if (apartmentVoteTimerText == null) return;
+        int secondsLeft = Mathf.CeilToInt(Mathf.Max(0f, _apartmentVoteSecondsRemaining));
+        int minutes = secondsLeft / 60;
+        int seconds = secondsLeft % 60;
+        apartmentVoteTimerText.text = $"{minutes}:{seconds:00}";
     }
 }
