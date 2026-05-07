@@ -19,59 +19,38 @@ The game was designed to surface real tensions around urban housing, mutual aid,
 
 ```
 repo/
-├── Oops Rent's Due Unity Game/     # Full Unity project source files
-└── Team Assets/                    # Supporting project materials
-    ├── appendix (past iterations)/ # Early design iterations
-    │   └── character design/
-    │       ├── layout_snowstorm.png
-    │       ├── layout.png
-    │       ├── result banner lose.png
-    │       ├── result banner win.png
-    │       ├── snowstorm game layout.png
-    │       ├── p1 v1.png
-    │       ├── p2 v1.png
-    │       ├── apt v1.png
-    │       ├── background UI.png
-    │       ├── deli v1.png
-    │       ├── landlord v1.png
-    │       ├── office v1.png
-    │       ├── park v1.png
-    │       └── station assets/
-    ├── UI elements/                 # Final UI and game assets
-    │   └── character design/
-    │       ├── game background.png
-    │       ├── game board layout.png
-    │       ├── game logo.png
-    │       ├── Instruction card.png
-    │       ├── start card.png
-    │       ├── upgrades card.png
-    │       ├── p1 v2.png
-    │       ├── p2 v2.png
-    │       ├── p3 v2.png
-    │       ├── p4 v2.png
-    │       ├── event cards/
-    │       │   ├── child care event card.png
-    │       │   ├── internet outage event card.png
-    │       │   └── rat infestation event card.png
-    │       └── station assets/
-    │           ├── apt final.png
-    │           ├── apt menu final.png
-    │           ├── art store final.png
-    │           ├── art store menu final.png
-    │           ├── deli final.png
-    │           ├── deli menu final.png
-    │           ├── factory final.png
-    │           ├── factory menu final.png
-    │           ├── farmers market final.png
-    │           ├── farmers market menu final.png
-    │           ├── grocery final.png
-    │           ├── grocery menu final.png
-    │           ├── park final.png
-    │           ├── park menu final.png
-    │           ├── pet store final.png
-    │           └── pet store menu final.png
-    ├── May 4 - Final Presentation.pptx
-    └── Oops Rent's Due!_1.mp4      # Demo trailer
+├── Oops Rent's Due Unity Game/         # Full Unity project source files
+├── Team Assets/                        # Supporting design and presentation materials
+│   ├── appendix (past iterations)/     # Early layouts, banners, and legacy assets
+│   │   ├── layout.png
+│   │   ├── layout_snowstorm.png
+│   │   ├── result banner lose.png
+│   │   ├── result banner win.png
+│   │   ├── snowstorm game layout.png
+│   │   ├── character design/
+│   │   │   ├── p1 v1.png
+│   │   │   └── p2 v1.png
+│   │   └── station assets/
+│   ├── UI elements/                    # Finalized visual assets used for the game
+│   │   ├── game background.png
+│   │   ├── game board layout.png
+│   │   ├── game logo.png
+│   │   ├── Instruction card.png
+│   │   ├── start card.png
+│   │   ├── upgrades card.png
+│   │   ├── character design/
+│   │   │   ├── p1 v2.png
+│   │   │   ├── p2 v2.png
+│   │   │   ├── p3 v2.png
+│   │   │   └── p4 v2.png
+│   │   ├── event cards/
+│   │   │   ├── child care event card.png
+│   │   │   ├── internet outage event card.png
+│   │   │   └── rat infestation event card.png
+│   │   └── station assets/             # Final station + station-menu sprites
+│   ├── May 4 - Final Presentation.pptx
+│   └── Oops Rent's Due!_1.mp4          # Demo trailer
+└── README.md
 ```
 
 ---
