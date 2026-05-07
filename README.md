@@ -9,7 +9,7 @@
 
 ## Overview
 
-*Oops, Rent's Due!* is a cooperative tabletop-style Unity game in which players work together to make rent as a group while navigating a neighborhood full of jobs, shops, event cards, and community decisions. Players earn money and network points by visiting job stations, spending at local businesses, and responding to community event cards — all while managing shared resources and group dynamics under the pressure of an upcoming rent deadline.
+*Oops, Rent's Due!* is a cooperative mulitplayer Unity game in which players work together to make rent as a group while navigating a neighborhood full of jobs, shops, event cards, and community decisions. Players earn money and network points by visiting job stations, spending at local businesses, and responding to community event cards — all while managing shared resources and group dynamics under the pressure of an upcoming rent deadline.
 
 The game was designed to surface real tensions around urban housing, mutual aid, gentrification, and civic participation through play.
 
