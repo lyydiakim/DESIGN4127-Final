@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7eafdd0c-699c-e211-5e62-fe9adc452da5}</ProjectGuid>
+    <ProjectGuid>{687c3bfa-a129-7eff-6d36-b0e8d595f076}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -46,8 +46,96 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.3.6f1/Unity.app/Contents/Resources/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/ApartmentUpgradeSelection.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
+    <Compile Include="Assets/Scripts/FactoryStationInteraction.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
+    <Compile Include="Assets/Scripts/PlayerTransactionFeedback.cs" />
+    <Compile Include="Assets/Scripts/PetShelterStationInteraction.cs" />
+    <Compile Include="Assets/Scripts/FarmersMarketStationInteraction.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
+    <Compile Include="Assets/Scripts/ResourceHUD.cs" />
     <Compile Include="Assets/Scripts/move.cs" />
+    <Compile Include="Assets/Scripts/StartScreenManager.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
+    <Compile Include="Assets/Scripts/PlayerMovementBoundsDefinition.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
+    <Compile Include="Assets/Scripts/ParkStationInteraction.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
+    <Compile Include="Assets/Scripts/GroceryStationInteraction.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
+    <Compile Include="Assets/Scripts/PlayerGameStats.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets/Scripts/WinLoseManager.cs" />
+    <Compile Include="Assets/Scripts/ResourceBank.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
+    <Compile Include="Assets/Scripts/ResourceStation.cs" />
+    <Compile Include="Assets/Scripts/PlayerResourceBindingPrompts.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
+    <Compile Include="Assets/Scripts/PlayerInstructionDisplay.cs" />
+    <Compile Include="Assets/Scripts/PlayerKeyboardSplitJoin.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
+    <Compile Include="Assets/Scripts/EventCardManager.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
+    <Compile Include="Assets/Scripts/PlayerBottomAreaClamp.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets/Scripts/DeliStationInteraction.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
+    <Compile Include="Assets/Scripts/GamepadXJoinManager.cs" />
+    <Compile Include="Assets/Scripts/ArtStoreStationInteraction.cs" />
+    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
+    <Compile Include="Assets/Scripts/PlayerWalkSpriteAnimation.cs" />
+    <Compile Include="Assets/Scripts/HomeStationInteraction.cs" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Roboto-Bold - License.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Unity - OFL.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+    <None Include="Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold - OFL.txt" />
+    <None Include="Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Roboto-Bold - AFL.txt" />
+    <None Include="Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Anton OFL.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
+    <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
+    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+    <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
+    <None Include="Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Bangers - OFL.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/6000.3.6f1/Unity.app/Contents/Resources/Scripting/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -451,22 +539,25 @@
       <HintPath>/Applications/Unity/Hub/Editor/6000.3.6f1/Unity.app/Contents/Resources/Scripting/Managed/UnityEngine/UnityEditor.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/PackageCache/com.unity.ext.nunit@d8c07649098d/net40/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/PackageCache/com.unity.ext.nunit@d8c07649098d/net40/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Hashing">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.Tests/System.IO.Hashing/System.IO.Hashing.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.Tests/System.IO.Hashing/System.IO.Hashing.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/PackageCache/com.unity.visualscripting@191c0d7e3b69/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/PackageCache/com.unity.visualscripting@191c0d7e3b69/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/PackageCache/com.unity.nuget.newtonsoft-json@4dfd81071c64/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff/Mono.Cecil.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff/Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.Tests/System.Runtime.CompilerServices.Unsafe/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.Tests/System.Runtime.CompilerServices.Unsafe/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/Hub/Editor/6000.3.6f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -838,166 +929,184 @@
       <HintPath>/Applications/Unity/Hub/Editor/6000.3.6f1/Unity.app/Contents/Resources/Scripting/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI.Analytics">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/UnityEditor.UI.Analytics.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/UnityEditor.UI.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="GameAssemblyLab.GameAssemblies.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/GameAssemblyLab.GameAssemblies.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/GameAssemblyLab.GameAssemblies.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rendering.LightTransport.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.Rendering.LightTransport.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Rendering.LightTransport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Services.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.2D.Editor.Overrides">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.2D.Editor.Overrides.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.2D.Editor.Overrides.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Updater">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="PPv2URPConverters">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime.Shared">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Shared.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Shared.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.2D.Runtime">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.2D.Runtime.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.2D.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Searcher.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="GameAssemblyLab.GameAssemblies">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/GameAssemblyLab.GameAssemblies.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/GameAssemblyLab.GameAssemblies.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Components">
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Services.Core.Components.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.UnifiedRayTracing.Runtime">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.UnifiedRayTracing.Runtime.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.UnifiedRayTracing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Analytics">
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Collections">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem.ForUI">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.InputSystem.ForUI.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.InputSystem.ForUI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.GPUDriven.Runtime">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipelines.GPUDriven.Runtime.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipelines.GPUDriven.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Multiplayer.Center.Common">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.Multiplayer.Center.Common.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Multiplayer.Center.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Environments">
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Services.Core.Environments.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.004">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.004.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.004.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Multiplayer.Center.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Collections.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.Collections.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.Collections.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.AIIntegration.Editor">
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.2D.Sprite.AIIntegration.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor.Shared">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Shared.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Shared.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-MIDTERM/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/lydiakim/Documents/GitHub/DESIGN4127-Final/Oops Rent&apos;s Due Unity Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
