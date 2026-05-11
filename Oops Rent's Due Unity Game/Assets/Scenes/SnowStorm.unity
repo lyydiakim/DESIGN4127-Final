@@ -1632,7 +1632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4843716338067795234, guid: 5e5843b85f91c52459dab5b139254b52, type: 3}
       propertyPath: m_ScreenMatchMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4843716338067795234, guid: 5e5843b85f91c52459dab5b139254b52, type: 3}
       propertyPath: m_MatchWidthOrHeight
@@ -2491,6 +2491,7 @@ MonoBehaviour:
   energyResource: {fileID: 11400000, guid: 28cb697cecb0e4e4eb7a7ec3c00615ce, type: 2}
   energyText: {fileID: 1442406825}
   energyIcon: {fileID: 0}
+  fallbackFont: {fileID: 0}
 --- !u!1 &1737092399 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 173444127903498698, guid: 8b90625f2effb4c44b2442233675e1f2, type: 3}
@@ -2587,6 +2588,17 @@ MonoBehaviour:
   startScreenOverlay: {fileID: 1755516373}
   startScreenSprite: {fileID: 21300000, guid: b4f97ffc205824ca8b50a73f64b49dd4, type: 3}
   instructionScreenSprite: {fileID: 21300000, guid: 4af70165b73924a168a8d656cd50d8be, type: 3}
+  apartmentUpgradesScreenSprite: {fileID: 21300000, guid: 7c0a32dd0f1c84007a8f83ace2af3ec6, type: 3}
+  apartmentVoteTexts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  apartmentVoteTimerText: {fileID: 0}
+  apartmentVoteUiRoot: {fileID: 0}
+  apartmentVoteTimeLimitSeconds: 60
+  enableKeyboardQuickVoteTest: 1
+  keyboardQuickTestPlayers: 2
 --- !u!1 &1760285260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2812,10 +2824,19 @@ MonoBehaviour:
   networkResource: {fileID: 11400000, guid: 59e3a4b76d9974c2296fba8f152f52bb, type: 2}
   playersInfo: {fileID: 1118303139}
   eventIntervalSeconds: 15
+  eventCardDecisionSeconds: 60
   finalRoundAfterAllCards: 1
   roundLimit: 3
   timerText: {fileID: 498678030}
   fallbackTimerFont: {fileID: 0}
+  autoCreateRentProgressHud: 1
+  rentProgressText: {fileID: 0}
+  rentProgressFillImage: {fileID: 0}
+  rentProgressRoot: {fileID: 0}
+  rentProgressBackgroundRect: {fileID: 0}
+  rentProgressFillColor: {r: 0.31, g: 0.76, b: 0.34, a: 1}
+  rentProgressBackgroundColor: {r: 0.85, g: 0.85, b: 0.85, a: 1}
+  rentProgressOffset: {x: 0, y: -66}
   _elapsed: 0
   _timerRunning: 0
   _cardActive: 0
@@ -3105,6 +3126,7 @@ MonoBehaviour:
   loseSprite: {fileID: 21300000, guid: d5f49396a6c3547b1b638ba0b931fb3c, type: 3}
   endScreenSprite: {fileID: 21300000, guid: a691cb99acaf044c4b04031f26943540, type: 3}
   endScreenCanvasSortOrder: 10000
+  fallbackFont: {fileID: 0}
 --- !u!4 &1933835987
 Transform:
   m_ObjectHideFlags: 0
@@ -3638,6 +3660,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 884308407
       objectReference: {fileID: 0}
+    - target: {fileID: 1077004829890471211, guid: 8b39ee288bc074f739b8378af33c8094, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077004829890471211, guid: 8b39ee288bc074f739b8378af33c8094, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5144742025363643810, guid: 8b39ee288bc074f739b8378af33c8094, type: 3}
       propertyPath: m_Size.x
       value: 5.2
@@ -3902,6 +3932,14 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 13.57
       objectReference: {fileID: 0}
+    - target: {fileID: 7745132486273328153, guid: 37179014f06cd4a46961472b89e8f786, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745132486273328153, guid: 37179014f06cd4a46961472b89e8f786, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8822334455667788005, guid: 37179014f06cd4a46961472b89e8f786, type: 3}
       propertyPath: bank
       value: 
@@ -4064,6 +4102,14 @@ PrefabInstance:
       propertyPath: bank
       value: 
       objectReference: {fileID: 621925436}
+    - target: {fileID: 9139082017908178951, guid: 0676c398697ec4a29bc94701f49f58fd, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139082017908178951, guid: 0676c398697ec4a29bc94701f49f58fd, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4164,6 +4210,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5646757998814199184, guid: 1e08a74efa48143f584702e6cb5a9b59, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646757998814199184, guid: 1e08a74efa48143f584702e6cb5a9b59, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6447223992659948882, guid: 1e08a74efa48143f584702e6cb5a9b59, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -4254,6 +4308,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1924270441}
     m_Modifications:
+    - target: {fileID: 716589696989855280, guid: 063da1a831b5e4b1283e67ff214c93f8, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 716589696989855280, guid: 063da1a831b5e4b1283e67ff214c93f8, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 811990620526012008, guid: 063da1a831b5e4b1283e67ff214c93f8, type: 3}
       propertyPath: m_Size.x
       value: 6.92
@@ -4405,6 +4467,14 @@ PrefabInstance:
     - target: {fileID: 2904481284826633749, guid: 9cfb6729161fc4e24813070011f517a4, type: 3}
       propertyPath: m_Name
       value: farmers-market
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133310802201177714, guid: 9cfb6729161fc4e24813070011f517a4, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133310802201177714, guid: 9cfb6729161fc4e24813070011f517a4, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6863494608865112675, guid: 9cfb6729161fc4e24813070011f517a4, type: 3}
       propertyPath: m_LocalScale.x
@@ -4594,6 +4664,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4246880208020525973, guid: 8b90625f2effb4c44b2442233675e1f2, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246880208020525973, guid: 8b90625f2effb4c44b2442233675e1f2, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4506227592833435898, guid: 8b90625f2effb4c44b2442233675e1f2, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -4726,6 +4804,14 @@ PrefabInstance:
       propertyPath: rManager
       value: 
       objectReference: {fileID: 92921510}
+    - target: {fileID: 6958005599917557249, guid: f07102642f0754e68a5766878242d8ec, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958005599917557249, guid: f07102642f0754e68a5766878242d8ec, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7551533427487408463, guid: f07102642f0754e68a5766878242d8ec, type: 3}
       propertyPath: m_SortingLayer
       value: 2

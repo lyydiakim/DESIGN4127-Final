@@ -421,10 +421,22 @@ public class StartScreenManager : MonoBehaviour
     {
         if (apartmentUpgradesScreenSprite != null) return;
 
+        // Runtime fallback that works in builds too: load from Assets/Resources/.
+        apartmentUpgradesScreenSprite = Resources.Load<Sprite>("apt upgrades with timer");
+        if (apartmentUpgradesScreenSprite != null) return;
+
 #if UNITY_EDITOR
+        // Editor-only fallback if the asset isn't yet under Resources (AssetDatabase is editor-only).
         apartmentUpgradesScreenSprite = UnityEditor.AssetDatabase.LoadAssetAtPath<Sprite>(
-            "Assets/Custom Sprites/apt upgrades with timer.png");
+            "Assets/Resources/apt upgrades with timer.png");
 #endif
+
+        if (apartmentUpgradesScreenSprite == null)
+        {
+            Debug.LogError("StartScreenManager: 'apartmentUpgradesScreenSprite' is not assigned and " +
+                           "'Resources/apt upgrades with timer' could not be loaded. " +
+                           "The apartment-upgrades-with-timer screen will not show.");
+        }
     }
 
     private void EnsureApartmentVoteTextSlots()
