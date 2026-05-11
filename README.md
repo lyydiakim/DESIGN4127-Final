@@ -50,6 +50,7 @@ repo/
 │   │   └── station assets/             # Final station + station-menu sprites
 │   ├── May 4 - Final Presentation.pptx
 │   └── Oops Rent's Due!_1.mp4          # Demo trailer
+│   └── build         # game build
 └── README.md
 ```
 
